@@ -22,13 +22,13 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="之间居">
-<meta property="og:url" content="http://www.wanglianghui.cn/tags/MVC/index.html">
+<meta property="og:url" content="http://www.wanglianghui.cn/tags/mvc/index.html">
 <meta property="og:site_name" content="之间居">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Levi Wang">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://www.wanglianghui.cn/tags/MVC/">
+<link rel="canonical" href="http://www.wanglianghui.cn/tags/mvc/">
 
 
 <script id="page-configurations">
@@ -41,7 +41,7 @@
   };
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
-  <title>标签: MVC | 之间居</title>
+  <title>标签: mvc | 之间居</title>
   
 
 
@@ -169,55 +169,12 @@
   <div class="post-block">
     <div class="posts-collapse">
       <div class="collection-title">
-        <h2 class="collection-header">MVC
+        <h2 class="collection-header">mvc
           <small>标签</small>
         </h2>
       </div>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2017</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2017-06-10T21:33:42+08:00"
-              content="2017-06-10">
-          06-10
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2017/06/10/mvc-controller/" itemprop="url">
-            <span itemprop="name">MVC之控制器</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2017-06-01T15:04:24+08:00"
-              content="2017-06-01">
-          06-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2017/06/01/mvc-agreement/" itemprop="url">
-            <span itemprop="name">ASP.NET MVC的约定</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
     <div class="collection-year">
       <span class="collection-header">2014</span>
     </div>
@@ -227,55 +184,15 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2014-04-08T20:06:04+08:00"
-              content="2014-04-08">
-          04-08
+              datetime="2014-03-27T14:51:00+08:00"
+              content="2014-03-27">
+          03-27
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2014/04/08/bootstrap/" itemprop="url">
-            <span itemprop="name">MVC那些事之———bootstrap</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2014-04-04T17:48:05+08:00"
-              content="2014-04-04">
-          04-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2014/04/04/razor-syntax2/" itemprop="url">
-            <span itemprop="name">MVC的那点事——Razor篇（下）</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2014-04-04T16:09:04+08:00"
-              content="2014-04-04">
-          04-04
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2014/04/04/razor-syntax1/" itemprop="url">
-            <span itemprop="name">MVC的那点事——Razor篇（上）</span>
+          <a class="post-title-link" href="/2014/03/27/about-mvc/" itemprop="url">
+            <span itemprop="name">关于mvc的一些事情</span>
           </a>
       </div>
 
@@ -478,7 +395,120 @@
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
-    var guest = 'nick,mail,link';
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI',
+      appKey     : 'xLCpMzWwwFK4K3UOboZVg1aK',
+      placeholder: "来吧，说几句",
+      avatar     : 'hide',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : 'https://enfcvfdt.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
+div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Levi Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">86k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:23</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
     guest = guest.split(',').filter(item => {
       return GUEST.includes(item);
     });
