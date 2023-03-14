@@ -166,6 +166,446 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2015/02/18/django-second/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/02/18/django-second/" class="post-title-link" itemprop="url">django使用思路</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2015-02-18 09:43:24" itemprop="dateCreated datePublished" datetime="2015-02-18T09:43:24+08:00">2015-02-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2015-03-03 13:44:38" itemprop="dateModified" datetime="2015-03-03T13:44:38+08:00">2015-03-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2015/02/18/django-second/" class="post-meta-item leancloud_visitors" data-flag-title="django使用思路" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2015/02/18/django-second/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2015/02/18/django-second/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>418</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.创建项目</p>
+<pre><code>django-admin.py startproject djangoweb
+</code></pre>
+<p>2.创建view</p>
+<p>添加view.py文件，在里面添加代码:</p>
+<pre><code>from django.http import HttpResponse    
+
+def hello(request):
+    return HttpResponse(&quot;&lt;h1&gt;hello world!&lt;/h1&gt;&quot;)
+</code></pre>
+<p>3.配置url</p>
+<p>修改urls.py，假设可以用http://服务器地址/hello的方式来访问刚才定义的home这个视图，可以如下设置<br>    from djangoweb.view import hello<br>    urlpatterns = patterns(‘’, url(r’^hello/$’, hello, name=’hello’),)</p>
+<p>这里的尖号（^）和美元符号（$）都是正则表达式符号，分别表示字符串的开头和结尾。</p>
+<p>这是最简单的django项目，如果复杂的话就需要定义模板、视图，下次再说。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2015/02/18/django-first/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/02/18/django-first/" class="post-title-link" itemprop="url">重拾django</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2015-02-18 05:39:15 / 修改时间：06:50:16" itemprop="dateCreated datePublished" datetime="2015-02-18T05:39:15+08:00">2015-02-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2015/02/18/django-first/" class="post-meta-item leancloud_visitors" data-flag-title="重拾django" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2015/02/18/django-first/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2015/02/18/django-first/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>611</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近身体不舒服，做不了正经事，又重新摆弄起来django。上次使用django已经是七八年前的事了吧，那时候虽然早就熟练掌握asp.net，asp.net的使用已经变成了纯粹的体力劳动，所以当听说django的各种神奇，特别是能够自动生成管理界面的时候就心动不已（当时还不了解ror），何况对python语言也早就想用一用。不过那次也就就这django book玩了一遍，后来工作重心的转变也没继续玩。</p>
+<p>这次继续摆弄也是托visual studio的福，因为ptvs的出现，使django开发的ide变得很熟悉，原来没有继续用django或python的一个很大的原因也在于ide的选择出现了困难，虽然用过很多eclipse，pycharm，eric，网上只有有人介绍过的差不多都试过，没有找到趁手的。现在能用visual studio那就不妨再用一下，所谓万事开头难，经历过n多的学习语言的经历，我知道到了一定程度后ide确实不再成为问题，但是一开始的时候好的ide确实给学习带来不少好处。</p>
+<p>首先安装ptvs，可以在这里<a target="_blank" rel="noopener" href="http://pytools.codeplex.com/">下载</a>，安装一般不会有问题，它会自动找到本机安装的python。</p>
+<p>开始使用，第一次创建django项目，它会去下载一些必要的组件，所以时间会有点长，一般来说只要你机器的python版本合适的话，就没问题了。我第一次创建就出问题了，后来发现是我机器的python版本太低所致，去官网下载最新的python后就ok了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2015/02/17/health/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/02/17/health/" class="post-title-link" itemprop="url">健康是福</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2015-02-17 15:08:26 / 修改时间：15:27:54" itemprop="dateCreated datePublished" datetime="2015-02-17T15:08:26+08:00">2015-02-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2015/02/17/health/" class="post-meta-item leancloud_visitors" data-flag-title="健康是福" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2015/02/17/health/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2015/02/17/health/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>340</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现代人生活好了，越来越关注自身的健康问题。君不见各种社交媒体中，特别是最近流行的微信中不是心灵鸡汤，就是养生秘笈，这些东西的流行至少说明大家对健康的关注。</p>
+<p>我大概爹娘给我打的基础比较好，一直以来很少生病，所以以前很少为健康发愁。但是也有那么几次，对健康也是几近渴求。</p>
+<p>在广州读硕士的时候有一次腰椎间盘突出，每每半夜痛醒，夜不能寐找小说看，最后找到了《相约星期二》居然就一口气看完，虽然依然痛，但是第一次感觉健康的珍贵，真心觉得缺什么也不要缺健康。</p>
+<p>第二次是一不小心一个脚趾骨折，从没有没这么受伤过，所以当时也是很忧伤，极度怀念身体健康的时候。</p>
+<p>最近也有两次，睡下去挺好的人，醒来的时候天旋地转，虽然不是痛，但是这种难受的感觉我宁愿痛。所以，又开始怀念健康了。</p>
+<p>keep fit，真的太要紧了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2015/02/07/shortsighted/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/02/07/shortsighted/" class="post-title-link" itemprop="url">各种短视</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2015-02-07 08:45:17 / 修改时间：09:08:18" itemprop="dateCreated datePublished" datetime="2015-02-07T08:45:17+08:00">2015-02-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2015/02/07/shortsighted/" class="post-meta-item leancloud_visitors" data-flag-title="各种短视" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2015/02/07/shortsighted/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2015/02/07/shortsighted/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>512</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>小刚导演说<a target="_blank" rel="noopener" href="http://ent.sina.com.cn/m/c/2015-02-06/doc-icczmvun5879922.shtml">综艺电影是电影行业的自杀</a>，还是有点道理的。不过商业社会各种存在都是合理的，关键是我们的公众需要一定的辨别力。拿研究来说，有些人三五天就写成一篇文章，有些人要一年半载，两者有不同的价值所在，前者多半是普及知识用的，而后者则是专业的知识创造，关键是要能区分这两篇文章背后所蕴含的学术意义，学术圈里实际上还是有自己的判断的，可惜的是现在管理学术圈的不一定懂学术，这也造成了数字学术，因为一个人学术再不济，能当领导数字还是看得懂的，数字多的就是好的。</p>
+<p>电影业的问题也类似，因为电影本身就是大众货，要雅俗共赏，所以观众的鉴赏力很重要，可惜的是现在的大众传媒鉴赏口味都是从娃娃抓起的，看着儿子在追《奔跑吧，兄弟》我也偶尔陪他看一看。看着那些所谓的明星忸怩作态，矫揉造作我是觉得恶心的，设计的活动与情节也比较动物化。不过听说有人看这剧笑炸了肺，我想想还是让儿子看看吧，以免长大后笑点太低，也重蹈覆辙。所以，其实很难阻挡这类综艺电影的发展的，有点知识有点文化的人其实不用理会这些“黑”与“蜜”，做好自己最重要。想想我看的电影很少，基本上不是武侠就是香港的娱乐片，但这些经历似乎没有影响我做严肃的思考，而且我觉得自己是不是太严肃了点。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2015/01/21/passenger-ror-redmine/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -389,437 +829,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/12/04/about-instruction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/12/04/about-instruction/" class="post-title-link" itemprop="url">关于教学</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2014-12-04 14:04:15 / 修改时间：21:51:44" itemprop="dateCreated datePublished" datetime="2014-12-04T14:04:15+08:00">2014-12-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/12/04/about-instruction/" class="post-meta-item leancloud_visitors" data-flag-title="关于教学" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/12/04/about-instruction/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/12/04/about-instruction/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>476</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>斯金纳说我们所做的任何事情和我们本身都是由奖励和惩罚的历史决定的，这句话也许有点偏颇，但是在经济学中有个词叫“路径依赖”说的就是人的行为依赖于他过去的所有行为，所以，学生特别是到了高等教育阶段的学生，他们已经在自己的生活中经历了太多不一样的事件，所以每个人很难得到一样的兴趣。说到底，高等教育中研究怎么让学生有兴趣远比如何让学生听得懂更重要。这是我的一家之言，但是这与我的教学历程是契合的。</p>
-<p>我上课语气总是保持理性与平淡，所以话语缺乏煽动性，我不喜欢去说服学生，总是以一种愿者上钩的姿态来引导学生。我上技能类的课总是粗线条地勾勒各种技能的关键要点，细节的问题只有在学生问的时候才作解释。我上课的案例不是从某本书里抄袭来的，即使有所模仿但必然加入我自己的想法，我甚至都不喜欢用自己曾经讲过的例子，大千世界这么多地方都用得到这些技能我为什么要局限于一隅呢？一直认为，激发起学生的兴趣但又给他们的学习设置障碍，这样才能真正学好，把学生的问题都教没了，那必然导致遇到问题的时候手足无措。</p>
-<p>我自己的学习过程就是这样的，对要学习的内容保持强烈的兴趣，同时克服各种困难。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/11/07/technical-rationality/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/11/07/technical-rationality/" class="post-title-link" itemprop="url">技术理性</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-11-07 11:19:54" itemprop="dateCreated datePublished" datetime="2014-11-07T11:19:54+08:00">2014-11-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2017-03-06 21:27:58" itemprop="dateModified" datetime="2017-03-06T21:27:58+08:00">2017-03-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/11/07/technical-rationality/" class="post-meta-item leancloud_visitors" data-flag-title="技术理性" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/11/07/technical-rationality/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/11/07/technical-rationality/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>198</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>技术理性是哈贝马斯的概念。他根据人与自然的关系以及人与人的关系的两分，把劳动与交往区分开来。决定前者的就是技术理性，这种理性作用下使人与人之间的交往关系不能建立，而决定交往的关系的是交往理性。<br>技术理性只是体现了人的认知兴趣，但不考虑人类群体成员之间的价值观吗，所以技术是中性的。当前科学技术越界到处理人与人之间的关系，因而造成了各种社会问题，我们要约束它，使其在劳动的范围内起作用就可以解决问题。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/10/29/win8-projector-audio/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/10/29/win8-projector-audio/" class="post-title-link" itemprop="url">win8使用投影仪时没声音</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2014-10-29 15:23:14 / 修改时间：15:28:58" itemprop="dateCreated datePublished" datetime="2014-10-29T15:23:14+08:00">2014-10-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/10/29/win8-projector-audio/" class="post-meta-item leancloud_visitors" data-flag-title="win8使用投影仪时没声音" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/10/29/win8-projector-audio/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/10/29/win8-projector-audio/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>184</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今天给石嘴山青年教师培训的时候发现我的机器没有声音输出，这个是非常奇怪的，因为培训前我还用过有声音的，而且这已经是第2次碰到了，所以想办法解决了一下。</p>
-<p>实际上主要是现在的投影有些是通过hdmi来转接的，想我的机器就这样，而win8当用hdmi来投影的时候他的声音输出就是通过hdmi来传输的。所以当碰到这种情况的时候就要修改“播放设备”，改成原来的“喇叭/耳机”就行了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/10/26/public-domain/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/10/26/public-domain/" class="post-title-link" itemprop="url">公共领域</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-10-26 16:57:30" itemprop="dateCreated datePublished" datetime="2014-10-26T16:57:30+08:00">2014-10-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2017-03-06 21:27:42" itemprop="dateModified" datetime="2017-03-06T21:27:42+08:00">2017-03-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/10/26/public-domain/" class="post-meta-item leancloud_visitors" data-flag-title="公共领域" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/10/26/public-domain/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/10/26/public-domain/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>585</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>阿多诺批判文化工业是资本主义社会对大众意识形态的控制工具，同时由于其商业化的特征导致了其服从于商品交换逻辑。</p>
-<p>哈贝马斯在《公共领域的结构变迁》中提出了从封建社会向资本主义社会转变的过程中出现了公共权威与市民社会。公共权威指的是国家、司法手段等，而市民社会则是在公共权威保护下的私有经济领域。后者不但发展了经济关系，也促生了脱离经济活动的人际关系。这是一群资产阶级的文人雅士，他们以理性论证的方式对国家和权威进行争论与批判。在17世纪末，18世纪初，巴黎与伦敦一些由贵族聚会转变而来的沙龙和咖啡厅就是公共领域的雏形，也是现代知识分子活动的基本空间。这个空间非常重要，知识分子可以在这里通过理性论争的方式形成一种公共见解，也就是说个人见解可以在这里上升成为舆论，并且这种舆论独立于文化产业。</p>
-<p>但是在资本主义社会由于公共权威的介入，大众传媒的商业化以及舆论管理技术的发展，这个公共领域名存实亡，逐渐蜕变为一个文化消费的地方。报纸由于商业化其内容必然会走向非政治化、个人化和煽情，而舆论管理技术的发展强调个人是私人公民而非消费者。于是公众成了一种被管理的资源，他们被从公共讨论和决策过程中被驱逐出去，而一些利益集团的主张又被合法化。</p>
-<p>布迪厄的《关于电视》实际上就是接着哈贝马斯，从上述两个方面对电视在资本主义社会中的揭露：反民主的象征暴力与受商业逻辑制约的他律性。</p>
-<p>以上来自《关于电视》</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -891,20 +900,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">172</span>
+        <span class="site-state-item-count">178</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -939,7 +948,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -948,12 +957,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">83k</span>
+    <span title="站点总字数">86k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:19</span>
+    <span title="站点阅读时长">2:23</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

@@ -166,6 +166,442 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/27/about-mvc/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/03/27/about-mvc/" class="post-title-link" itemprop="url">关于mvc的一些事情</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-03-27 14:51:00" itemprop="dateCreated datePublished" datetime="2014-03-27T14:51:00+08:00">2014-03-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2014-04-01 13:12:12" itemprop="dateModified" datetime="2014-04-01T13:12:12+08:00">2014-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/03/27/about-mvc/" class="post-meta-item leancloud_visitors" data-flag-title="关于mvc的一些事情" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/03/27/about-mvc/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/27/about-mvc/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>871</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>MVC推出来的时候，是我上次准备离开开发的时候，当时觉得是个新鲜的东西，但是也就没学习动力了。<br>现在要讲课，心想总要教点与时俱进的东西，因为MVC已经发展到5了，能够这么发展的东西不管如何总有其存在的道理。尽管我现在懂的东西，对付一两门课也绰绰有余。</p>
+<p>先来看看什么是MVC。MVC是一种软件架构模式，它把软件系统分为三个部分：模型（Model），视图（View）和控制器（Controller）。模型（Model） 用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。视图（View） 能够实现数据有目的的显示。在视图中一般没有程序上的逻辑。为了实现视图上的刷新功能，视图需要访问它监视的数据模型（Model），因此应该事先在被它监视的数据那里注册。控制器（Controller）起到不同层面间的组织作用，用于控制应用程序的流程。它处理事件并作出响应。“事件”包括用户的行为和数据模型上的改变。</p>
+<p>总之，MVC的初衷就是为了解耦，让程序中的执行逻辑与显示逻辑分开，对网站来说这样的好处是显而易见的，首先页面设计与功能开发可以相互独立，这就方便了网站的开发与维护；其次，页面与功能的独立，有利于对功能的测试，这为前两年热门的测试驱动的开发提供了方便。此外，MVC也让程序员能够对网页的执行有充分的掌控，相比web form的页面生命周期，MVC让程序员觉得可以无拘无束地控制网页的执行。</p>
+<p>当然，与web form相比，MVC开发的效率会降低，这一方面是MVC会涉及到多个文件的编写，如果没有养成良好的编程习惯，会比较痛苦，另一方面MVC程序的重用率也没有web form高。因为从编程模型来看，web form面向对象的方式可以做更多的封装，而MVC的重用只能通过修改以前的代码了。</p>
+<p>所以总的来说，MVC与web form没有谁更好的说法，只能说谁最适合。MVC是比较适合做一些比较轻量的应用，复杂度不高，这样MVC是比较有优势的。web form从某种意义上是它的补充，这可以从MVC5出来后，vs2013中MVC、web form与web api混合着用可见一斑。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/18/overturn-of-technology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/03/18/overturn-of-technology/" class="post-title-link" itemprop="url">逆袭的技术</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-03-18 11:19:00" itemprop="dateCreated datePublished" datetime="2014-03-18T11:19:00+08:00">2014-03-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2014-04-01 13:54:02" itemprop="dateModified" datetime="2014-04-01T13:54:02+08:00">2014-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/03/18/overturn-of-technology/" class="post-meta-item leancloud_visitors" data-flag-title="逆袭的技术" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/03/18/overturn-of-technology/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/18/overturn-of-technology/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>684</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在文字诞生之后的若干个世纪，由于书写技术的落后，口语文化一度得以复兴。在欧洲，罗马帝国衰亡以后，日耳曼部落相互攻伐，建立彼此的王国，并且政权时常更替，这种混乱多变的政治局面，使原先罗马人在欧洲建立的基于书面文化的政权形式难以为继，取而代之的是更古老的基于日耳曼部落口语传统的政权形式。这样的一种政治变迁产生了一个戏剧性的效果，由于读书写字的外部动力失去，一般人的文化水平戏剧性地降低，学术活动停滞不前，史学家称这个时期为黑暗时代。</p>
+<p>但是从后世来看，黑暗时代名不副实。中世纪除了书本学习刷退了以外，在机械与农业等方面得到了大步前进。中世纪的冶金术得到了改良，农业中发明了重型犁。普通人民的生活水平稳步提高。即使在文化方面，也有加洛林王朝的短暂复兴。</p>
+<p>从另外的角度考虑，中世纪的黑暗也是对文字技术的某种修正。我们知道文字的诞生对人类产生了积极的意义，这种积极意义即使在今天也不可否认。文字作为人类思维外化的工具实际上也存在抑制人的想象力，同时其对理性抽象能力的依赖，实际上造成了心物两分，对严密逻辑的执着追求与对经验技术的鄙视实际上抑制了近代科学的发展。而中世纪政局不稳、经济萧条的局面，导致了文本学习的凋敝与实用技艺的兴起，从而使西方学术走向了兼收并蓄之路。他们在希腊、罗马技术的基础上引入了伊斯兰世界与中国的技术，从而产生了重大的技术突破，在这样的背景下，当西欧人在回归希腊学问时，不再将实用技艺与学术活动分隔开来。这样希腊的严密逻辑、阿拉伯人的数学成就、中世纪的机械工程最终诞生了伽利略、托里彻利等科学巨匠。</p>
+<p>因此，可以这么说，没有这个黑暗的中世纪，就没有欧美的先进科学。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/14/grandfather/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/03/14/grandfather/" class="post-title-link" itemprop="url">外祖父</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2014-03-14 17:05:00 / 修改时间：17:06:32" itemprop="dateCreated datePublished" datetime="2014-03-14T17:05:00+08:00">2014-03-14</time>
+            </span>
+
+          
+            <span id="/2014/03/14/grandfather/" class="post-meta-item leancloud_visitors" data-flag-title="外祖父" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/03/14/grandfather/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/14/grandfather/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>0</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/14/intention-of-technology/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/03/14/intention-of-technology/" class="post-title-link" itemprop="url">技术的意向</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-03-14 16:37:00" itemprop="dateCreated datePublished" datetime="2014-03-14T16:37:00+08:00">2014-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2014-04-01 13:22:48" itemprop="dateModified" datetime="2014-04-01T13:22:48+08:00">2014-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/03/14/intention-of-technology/" class="post-meta-item leancloud_visitors" data-flag-title="技术的意向" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/03/14/intention-of-technology/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/14/intention-of-technology/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>213</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>狐狸在葡萄树下，看着那一串串成熟的葡萄说，那是酸的</p>
+<p>人类拿了把梯子摘了颗葡萄尝了尝说，你骗人</p>
+<p>小蛇好不容易来到了北极，冻僵之前骂了句，这操蛋的冷</p>
+<p>一对小情侣来到了南极，看着一片冰雪美景说，我们结婚吧</p>
+<p>以前的人说，月亮很冷的，不过里面住着个美女</p>
+<p>老美派了个I’m strong的型男上去，一个鸟不拉屎的地方嘛</p>
+<p>以前的人一到夏天就幸福地吃起了西红柿</p>
+<p>现在的人一边吃着西红柿，一边迷茫地说现在是什么季节啊</p>
+<p>技术没什么了不起</p>
+<p>它只不过改变了我们的想法而已</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/02/22/mumu-say/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1174,454 +1610,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/01/28/visit-shao/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/01/28/visit-shao/" class="post-title-link" itemprop="url">访问邵逸夫故居</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-01-28 21:26:00" itemprop="dateCreated datePublished" datetime="2014-01-28T21:26:00+08:00">2014-01-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 16:23:50" itemprop="dateModified" datetime="2014-04-01T16:23:50+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/01/28/visit-shao/" class="post-meta-item leancloud_visitors" data-flag-title="访问邵逸夫故居" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/01/28/visit-shao/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/01/28/visit-shao/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>300</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>昨天到宁波，发现邵逸夫的老家就在不远处，于是休息了一会儿就去勤勇村看看。宁镇公路刚好在修地铁，所以原来蛮宽的路就有点挤，当导航提醒勤勇村到了的时候，发现目的地在路对面，而路中间是地铁工地，所以又多跑了一个多公里到一个缺口的地方转回来。</p>
-<p>运气比较好，一进村第一次停车的地方就是邵氏康乐园，在那里问了一下路，一个大叔指了个大概，我就往那个方向走去。走了有点久，碰到了一个小学生又问了一下，这次这个小学生很热情说我带你过去吧。路上我顺便问了他那里的情况，平时能不能进去。他说平时有人就可以上去。</p>
-<p>邵逸夫的故居在老邵家3号，比较普通的农村房子，房子一点都不显得大。当然没人在屋里，我就在外面拍了几张照片就回来了。</p>
-<p><img src="/images/userPic/shao1.jpg"></p>
-<p><img src="/images/userPic/shao2.jpg"></p>
-<p><img src="/images/userPic/shao3.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/01/14/barcode-identify/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/01/14/barcode-identify/" class="post-title-link" itemprop="url">条码识别</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-01-14 00:44:00" itemprop="dateCreated datePublished" datetime="2014-01-14T00:44:00+08:00">2014-01-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:18:32" itemprop="dateModified" datetime="2014-04-01T13:18:32+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/01/14/barcode-identify/" class="post-meta-item leancloud_visitors" data-flag-title="条码识别" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/01/14/barcode-identify/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/01/14/barcode-identify/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>184</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一直想为图书管理系统中添加一个自动扫描条形码的功能，今天看到了google的Zxing似乎蛮好的，就拿过来试试，发现解码效果不错。但是要使用电脑的摄像头还要使用aforge这个开源组件，这个组件功能很强大，当然我只不过是通过视频来抓取图片，以作为Zxing的处理做准备。实际上aforge有很多机器学习，手势识别的功能，我这样拿来用真是大材小用，有空研究一下它的用法。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/01/10/technology-turn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/01/10/technology-turn/" class="post-title-link" itemprop="url">技术转向</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-01-10 18:30:00" itemprop="dateCreated datePublished" datetime="2014-01-10T18:30:00+08:00">2014-01-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:22:12" itemprop="dateModified" datetime="2014-04-01T13:22:12+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/01/10/technology-turn/" class="post-meta-item leancloud_visitors" data-flag-title="技术转向" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/01/10/technology-turn/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/01/10/technology-turn/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.8k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>“转向”在哲学里是一个分量很重的词，如“认识论转向”、“语言学转向”都意味着哲学研究的一个重大转变。与此相比，当前说教学研究出现了技术转向是缺乏足够的证据的，但是我们更愿意使用“转向”一词来唤起人们对教学研究中的技术问题的关注，进而引出一种新的教学研究的路向。在我们看来，教学研究的技术转向将会在很长时间内成为一种趋势，它具体表现在以下两个方面。</p>
-<p>首先，教学研究的技术转向将牵引着教学研究者把教学中的技术问题当作研究的重心。传统的教学研究很少单独把技术作为一种教学研究的对象，因此，技术主题在教学研究中不可能成为研究的重心。教学研究的技术转向意味着技术将成为教学研究的中心，技术问题成为了一切教学问题得以引出的那个问题。先前的教学研究逻辑认为教学的成功与否其关键在于教学实践是否符合教学理论，教学理论是教学实践的内在理路，因此只有当后者符合前者的时候教学实践才能成功，而技术作为教学的外部存在也必须符合教学理论才能发挥它的作用。这种对技术的理解在当前的教学理论界是非常普遍的，特别是当技术在教学应用中失效时常常会听到的一句批评就是——技术没有符合理论的要求。斯内尔贝克也谈到在教学实践中经常可以听到这么一句话：“课程与教学应该驱动技术，技术不应该驱动课程与教学。”（赖格卢斯,2011,P827）并且说这话的往往并不是狂热的教学理论研究者，而是技术工作者。由此可见，实践要符合理论的观念是根深蒂固的。但是，如果认同这种观点就是把技术看死了，把技术仅仅看做是工具，没有看到技术的文化能力。实际上，教学中的技术虽然有遵循教学理论的必要，但是它同样有塑造教师与学生从而最终影响教学理论的能力，或者说在理论影响技术使用之前是技术塑造了理论。正如高文（2005）在《教学设计研究的昨天、今天与明天》中提到“高新技术自身正蕴含着需要我们去认识、去领悟的全新理念”，“技术的发展最令人激动的事不在于技术本身，而在于由它发起创立的新的思维类型及其对于我们作为一名教育工作者思考问题的方式的冲击”，也就是说技术能够创新理论、带来理论的变革。正是因为技术对理论的这种先在性，我们要把技术作为一切教学研究的中心，从技术中来推知教学发展的内在理路，这是我们提出技术转向的第一层意思。</p>
-<p>其次，教学研究重心的转移意味着教学研究视角的转换，这最终将引起教学研究的范式改变。正如马克思（1995,P57）在《关于费尔巴哈的提纲》中所说的“哲学家们只是用不同的方式解释世界，而问题在于改变世界”，以前的教学研究主要以形成理论解释为最终目的，不可否认我们讲教学研究的技术转向也有形成理论的需求，但是技术作为一种实践中才能定型的东西也带来了新的方法论承诺——教学研究是具体情境中的研究而不是理论中的研究。或者我们从技术研究的角度来看，至少有这么两个角度，一个是静态的，另一个是动态的。静态地研究技术就是研究作为存在者的技术，一切都是现成的，这样研究的好处就在于可以用理论来把握，这也就是马克思所说的“解释世界”。动态地研究技术是研究技术的存在，它必然地要求在活的技术实践中来把握技术，一个手机到底是通讯工具还是暴力手段就看他是用于打电话的情景还是用于砸人的情景，同样当前广泛应用于教学中的信息技术我们很难独断地说它是辅助教学的工具还是破坏教学的工具，只有在它发生作用，也就是“改变世界”的时候我们才能客观地评价它的作用。所以教学研究的技术转向意味着教学研究的范式转变，从“解释世界”转向“改变世界”，这是我们对技术转向思考的第二个方面。</p>
-<p>需要注意的是，技术转向的这两个方面是统一的。如果它仅仅指教学研究转向对技术的关注，那么这种技术转向是太弱了，我们也没必要来提出这么个“技术转向”的词，因为实际上现在的教学研究已经非常关注技术问题了。我们的技术转向更加强调的是教学研究的技术性，即教学的本真如技术一样是在其发生作用的地方被展现出来的，而不是在现成的、已经过去的教学中提取出来的，这是一种对教学研究的信念。但是新的信念的建立还是要建立在技术成功运作的直观的基础上，我们对教学中技术应用过程的认识越深刻，那么对教学研究的技术性理解得越透彻。所以教学研究的技术转向首先是关注教学中的技术应用，其次就是把这种关注所形成的直观上升到对教学研究的信念，这两者是相互牵引的。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2013/12/30/family-time/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2013/12/30/family-time/" class="post-title-link" itemprop="url">family-time</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2013-12-30 09:06:00" itemprop="dateCreated datePublished" datetime="2013-12-30T09:06:00+08:00">2013-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:26:48" itemprop="dateModified" datetime="2014-04-01T13:26:48+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2013/12/30/family-time/" class="post-meta-item leancloud_visitors" data-flag-title="family-time" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2013/12/30/family-time/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2013/12/30/family-time/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>231</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>美国回来的三个周末各有一天一直跟家里人一起，抛却所有工作的烦恼，享受family time。</p>
-<p>第一个周末去兰溪钓鱼，顺便去吃了兰庆鸡子果，不知道是饿了还是怎么的，觉得很好吃，老板也很好玩。</p>
-<p>第二个周末空气不好没出去，室内活动。</p>
-<p>昨天，想起黄大仙上面有些孔雀等小动物可以玩，带上去看了看。虽然很冷，但是小孩子有得玩是不怕冷的。</p>
-<p>这是我在美国感慨最多的地方，不知道自己能够做到什么地步，虽然不可能像他们一样下了班就什么不管了。但是周末弄个一天陪家里人，努力一下还是可以做到的。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1693,20 +1681,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">172</span>
+        <span class="site-state-item-count">178</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1741,7 +1729,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1750,12 +1738,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">83k</span>
+    <span title="站点总字数">86k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:19</span>
+    <span title="站点阅读时长">2:23</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

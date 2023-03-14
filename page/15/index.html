@@ -166,6 +166,454 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/04/razor-syntax1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/04/razor-syntax1/" class="post-title-link" itemprop="url">MVC的那点事——Razor篇（上）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2014-04-04 16:09:04 / 修改时间：17:47:18" itemprop="dateCreated datePublished" datetime="2014-04-04T16:09:04+08:00">2014-04-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/04/razor-syntax1/" class="post-meta-item leancloud_visitors" data-flag-title="MVC的那点事——Razor篇（上）" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/04/razor-syntax1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/04/razor-syntax1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现在的asp.net网站开发中用master模板还是比较多的，毕竟它跟原来的asp.net用法接近，学习成本很低，而且作为页面布局也够了。它最大的问题可能就是灵活性了，随着MVC的流行，razor模板大有取代master的趋势。razor提供了更灵活的写法，也使一般前端页面有更方便的调用后台代码的功能，大有超越code behind，回归asp时代的感觉，是微软网站开发技术的否定之否定。</p>
+<h2 id="razor页面的调用逻辑"><a href="#razor页面的调用逻辑" class="headerlink" title="razor页面的调用逻辑"></a>razor页面的调用逻辑</h2><p>在采用razor作为模板技术的网页中，默认的在View文件夹内有一个_ViewStart.cshtml文件（这个cshtml扩展名非常有意思，“c sharp html”可以使用c#编程语言的html文档，这个html绝对牛b），这个文件就是网页的默认模版，在这个网站的所有页面不用任何声明就是以该文件作为模版而创建的。顺便说一下，如果不希望用默认的模板怎么办呢？在页面上写上以下类似语句：<code>Layout = &quot;~/Views/Shared/_GreenLayout.cshtml&quot; </code></p>
+<p>模版是作为公共部分而存在的，那么特殊部分是如何引入的呢？</p>
+<ul>
+<li>RenderBody</li>
+</ul>
+<p>在_ViewStart.cshtml中有个<code>@RenderBody()</code>，这个代码的意思，该网页的主体部分就由这个语句引入，在模版页面里该代码只能使用一次，并且不用参数。但是一个模板只能有一个部分可以由外部引入，那太不灵活了，估计就没人会有兴趣用，master模板都比它强多了，所以<code>@RenderSection</code>就出来补充它了。</p>
+<ul>
+<li>RenderSection</li>
+</ul>
+<p>RenderSection是_ViewStart.cshtml模版中的占位符，哪里需要内容，就在哪里出现，跟RenderBody不同的是，它是需要参数的如<code>@RenderSection(&quot;Menu&quot;)</code>——在这个地方插入一个菜单，而且是必须的（默认是必须的），引用该模版的页面如果没有的话就会报错。当然如果不是必须的，那就应该这样写<code>@RenderSection(&quot;Menu&quot;,false)</code>，意思就是说，你看着办吧。</p>
+<ul>
+<li>RenderPage</li>
+</ul>
+<p>RenderPage顾名思义是引入一个页面，使用的方式如<code>@RenderPage(“~/Views/Shared/_Header.cshtml”)</code>，看起来没什么难度。</p>
+<ul>
+<li>Html.Partial</li>
+</ul>
+<p>三个看起来很像的Render兄弟之外，razor还提供了另一个引入其他页面的方法Html.Partial，如<code>            @Html.Partial(&quot;_ExternalLoginsListPartial&quot;, new &#123; Action = &quot;ExternalLogin&quot;, ReturnUrl = ViewBag.ReturnUrl &#125;)</code>这样的存在，看起来很高大上。</p>
+<p>看完了这四个类似的方法确实解决了页面特殊部分的引入问题，但是这四者的区别在哪里呢？且听下回分解。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/04/reveal-js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/04/reveal-js/" class="post-title-link" itemprop="url">一个网页幻灯片框架REVEAL.JS</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-04-04 14:57:50" itemprop="dateCreated datePublished" datetime="2014-04-04T14:57:50+08:00">2014-04-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-03-06 21:32:34" itemprop="dateModified" datetime="2017-03-06T21:32:34+08:00">2017-03-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/04/reveal-js/" class="post-meta-item leancloud_visitors" data-flag-title="一个网页幻灯片框架REVEAL.JS" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/04/reveal-js/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/04/reveal-js/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>269</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>无意中发现一个网页幻灯片框架，根据他的介绍，比prezi还牛，因为prezi是基于flash的，而它是基于html的。</p>
+<p>顾名思义，他是一个用html来实现幻灯片效果的东东，这类产品以前也接触过一些，还是蛮好玩的，但是他们的代价就是需要自己写代码，因而是Geek的玩物。不过这款产品有更加高端的特性——手势识别。kinect大家用过的，它的识别主要是通过多个摄像头得到3d数据来识别人体的活动的。REVEAL.JS牛逼的地方就在于他用普通电脑自带的摄像头，实现通过手势来实现幻灯片的上下左右的翻动。这里是<a target="_blank" rel="noopener" href="http://www.webhek.com/misc/gestures-reveal-js/#/" title="Reveal.js">它的地址</a>，注意要用chrome浏览器。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/02/strange/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/02/strange/" class="post-title-link" itemprop="url">奇怪的事</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2014-04-02 11:59:53 / 修改时间：12:30:18" itemprop="dateCreated datePublished" datetime="2014-04-02T11:59:53+08:00">2014-04-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/02/strange/" class="post-meta-item leancloud_visitors" data-flag-title="奇怪的事" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/02/strange/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/02/strange/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>242</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>下午要给学生讲网页程序的各种验证，顺便就把自己的机器弄了个花生壳解析出去。奇怪的事情就是用apache、ror、nodejs都可以解析出去，iis的网站却不能解析。而且我还用apache程序试了试80端口，没有问题，所以我丝毫不怀疑是防火墙的问题。实在没办法在防火墙里添加了一个规则，让80端口开放，iis网站居然ok了。</p>
+<p>今天开始把<a target="_blank" rel="noopener" href="http://www.wanglianghui.cn这个姓名域名用起来了,原来的wanglh.cn想想还是不要用算了.不过还有两年到期,到时候也做个转向到这个网站吧./">www.wanglianghui.cn这个姓名域名用起来了，原来的wanglh.cn想想还是不要用算了。不过还有两年到期，到时候也做个转向到这个网站吧。</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/01/use-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/01/use-hexo/" class="post-title-link" itemprop="url">使用hexo来发blog</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-04-01 15:01:26" itemprop="dateCreated datePublished" datetime="2014-04-01T15:01:26+08:00">2014-04-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-03-06 21:32:02" itemprop="dateModified" datetime="2017-03-06T21:32:02+08:00">2017-03-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/01/use-hexo/" class="post-meta-item leancloud_visitors" data-flag-title="使用hexo来发blog" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/01/use-hexo/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/01/use-hexo/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>424</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近重装机器，系统里的东西也都七零八落，不过反正要从头开始就用一些最新的东西吧。</p>
+<p>原来的octopress使用起来不是很方便，以前装机器的时候就想换其他的博客系统，如python下的好多系统都试过，包括这次的hexo，不过那时候的hexo确实不咋的，但是昨天看到后眼前一亮，就这货了。</p>
+<p>安装node，安装git，然后安装hexo。不过在找主题的时候花了点时间，pacman太过小清新，我大叔不敢下手，freemind蛮酷的，不过不够现成，最后chenall了。刚好最近上课也要讲一些bootstrap，看它跟这个有关系，就载下来了。</p>
+<p>不过chenall还是开了个玩笑，我差点废了他。他居然推荐了一个还没出来的hexo版本，最后还算有缘，无意中看到了说是直接下开发版，也太幽默了，版本号跟我原来安装的一样。为了这个主题还安装了minimist、lodash。最近为了rss安装了hexo-generator-feed。不过总算结束这几天的折腾，开始工作了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/01/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -389,442 +837,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/27/about-mvc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/27/about-mvc/" class="post-title-link" itemprop="url">关于mvc的一些事情</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-03-27 14:51:00" itemprop="dateCreated datePublished" datetime="2014-03-27T14:51:00+08:00">2014-03-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:12:12" itemprop="dateModified" datetime="2014-04-01T13:12:12+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/03/27/about-mvc/" class="post-meta-item leancloud_visitors" data-flag-title="关于mvc的一些事情" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/27/about-mvc/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/27/about-mvc/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>871</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>MVC推出来的时候，是我上次准备离开开发的时候，当时觉得是个新鲜的东西，但是也就没学习动力了。<br>现在要讲课，心想总要教点与时俱进的东西，因为MVC已经发展到5了，能够这么发展的东西不管如何总有其存在的道理。尽管我现在懂的东西，对付一两门课也绰绰有余。</p>
-<p>先来看看什么是MVC。MVC是一种软件架构模式，它把软件系统分为三个部分：模型（Model），视图（View）和控制器（Controller）。模型（Model） 用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。视图（View） 能够实现数据有目的的显示。在视图中一般没有程序上的逻辑。为了实现视图上的刷新功能，视图需要访问它监视的数据模型（Model），因此应该事先在被它监视的数据那里注册。控制器（Controller）起到不同层面间的组织作用，用于控制应用程序的流程。它处理事件并作出响应。“事件”包括用户的行为和数据模型上的改变。</p>
-<p>总之，MVC的初衷就是为了解耦，让程序中的执行逻辑与显示逻辑分开，对网站来说这样的好处是显而易见的，首先页面设计与功能开发可以相互独立，这就方便了网站的开发与维护；其次，页面与功能的独立，有利于对功能的测试，这为前两年热门的测试驱动的开发提供了方便。此外，MVC也让程序员能够对网页的执行有充分的掌控，相比web form的页面生命周期，MVC让程序员觉得可以无拘无束地控制网页的执行。</p>
-<p>当然，与web form相比，MVC开发的效率会降低，这一方面是MVC会涉及到多个文件的编写，如果没有养成良好的编程习惯，会比较痛苦，另一方面MVC程序的重用率也没有web form高。因为从编程模型来看，web form面向对象的方式可以做更多的封装，而MVC的重用只能通过修改以前的代码了。</p>
-<p>所以总的来说，MVC与web form没有谁更好的说法，只能说谁最适合。MVC是比较适合做一些比较轻量的应用，复杂度不高，这样MVC是比较有优势的。web form从某种意义上是它的补充，这可以从MVC5出来后，vs2013中MVC、web form与web api混合着用可见一斑。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/18/overturn-of-technology/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/18/overturn-of-technology/" class="post-title-link" itemprop="url">逆袭的技术</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-03-18 11:19:00" itemprop="dateCreated datePublished" datetime="2014-03-18T11:19:00+08:00">2014-03-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:54:02" itemprop="dateModified" datetime="2014-04-01T13:54:02+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/03/18/overturn-of-technology/" class="post-meta-item leancloud_visitors" data-flag-title="逆袭的技术" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/18/overturn-of-technology/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/18/overturn-of-technology/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>684</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在文字诞生之后的若干个世纪，由于书写技术的落后，口语文化一度得以复兴。在欧洲，罗马帝国衰亡以后，日耳曼部落相互攻伐，建立彼此的王国，并且政权时常更替，这种混乱多变的政治局面，使原先罗马人在欧洲建立的基于书面文化的政权形式难以为继，取而代之的是更古老的基于日耳曼部落口语传统的政权形式。这样的一种政治变迁产生了一个戏剧性的效果，由于读书写字的外部动力失去，一般人的文化水平戏剧性地降低，学术活动停滞不前，史学家称这个时期为黑暗时代。</p>
-<p>但是从后世来看，黑暗时代名不副实。中世纪除了书本学习刷退了以外，在机械与农业等方面得到了大步前进。中世纪的冶金术得到了改良，农业中发明了重型犁。普通人民的生活水平稳步提高。即使在文化方面，也有加洛林王朝的短暂复兴。</p>
-<p>从另外的角度考虑，中世纪的黑暗也是对文字技术的某种修正。我们知道文字的诞生对人类产生了积极的意义，这种积极意义即使在今天也不可否认。文字作为人类思维外化的工具实际上也存在抑制人的想象力，同时其对理性抽象能力的依赖，实际上造成了心物两分，对严密逻辑的执着追求与对经验技术的鄙视实际上抑制了近代科学的发展。而中世纪政局不稳、经济萧条的局面，导致了文本学习的凋敝与实用技艺的兴起，从而使西方学术走向了兼收并蓄之路。他们在希腊、罗马技术的基础上引入了伊斯兰世界与中国的技术，从而产生了重大的技术突破，在这样的背景下，当西欧人在回归希腊学问时，不再将实用技艺与学术活动分隔开来。这样希腊的严密逻辑、阿拉伯人的数学成就、中世纪的机械工程最终诞生了伽利略、托里彻利等科学巨匠。</p>
-<p>因此，可以这么说，没有这个黑暗的中世纪，就没有欧美的先进科学。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/14/grandfather/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/14/grandfather/" class="post-title-link" itemprop="url">外祖父</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2014-03-14 17:05:00 / 修改时间：17:06:32" itemprop="dateCreated datePublished" datetime="2014-03-14T17:05:00+08:00">2014-03-14</time>
-            </span>
-
-          
-            <span id="/2014/03/14/grandfather/" class="post-meta-item leancloud_visitors" data-flag-title="外祖父" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/14/grandfather/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/14/grandfather/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/14/intention-of-technology/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/14/intention-of-technology/" class="post-title-link" itemprop="url">技术的意向</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-03-14 16:37:00" itemprop="dateCreated datePublished" datetime="2014-03-14T16:37:00+08:00">2014-03-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:22:48" itemprop="dateModified" datetime="2014-04-01T13:22:48+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/03/14/intention-of-technology/" class="post-meta-item leancloud_visitors" data-flag-title="技术的意向" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/14/intention-of-technology/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/14/intention-of-technology/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>213</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>狐狸在葡萄树下，看着那一串串成熟的葡萄说，那是酸的</p>
-<p>人类拿了把梯子摘了颗葡萄尝了尝说，你骗人</p>
-<p>小蛇好不容易来到了北极，冻僵之前骂了句，这操蛋的冷</p>
-<p>一对小情侣来到了南极，看着一片冰雪美景说，我们结婚吧</p>
-<p>以前的人说，月亮很冷的，不过里面住着个美女</p>
-<p>老美派了个I’m strong的型男上去，一个鸟不拉屎的地方嘛</p>
-<p>以前的人一到夏天就幸福地吃起了西红柿</p>
-<p>现在的人一边吃着西红柿，一边迷茫地说现在是什么季节啊</p>
-<p>技术没什么了不起</p>
-<p>它只不过改变了我们的想法而已</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -896,20 +908,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">172</span>
+        <span class="site-state-item-count">178</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -944,7 +956,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -953,12 +965,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">83k</span>
+    <span title="站点总字数">86k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:19</span>
+    <span title="站点阅读时长">2:23</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
