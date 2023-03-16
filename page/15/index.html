@@ -166,6 +166,161 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/04/razor-syntax2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/04/razor-syntax2/" class="post-title-link" itemprop="url">MVC的那点事——Razor篇（下）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2014-04-04 17:48:05 / 修改时间：20:41:02" itemprop="dateCreated datePublished" datetime="2014-04-04T17:48:05+08:00">2014-04-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/04/razor-syntax2/" class="post-meta-item leancloud_visitors" data-flag-title="MVC的那点事——Razor篇（下）" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/04/razor-syntax2/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/04/razor-syntax2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在上一篇我罗列了razor模板中四种替换方法，分别是RenderBody，RenderSection，RenderPage与Html.Partial，但是这看起来实现了相似功能的东西，其区别在哪里？今天这篇就以这个主题来讲讲。</p>
+<ul>
+<li>RenderBody</li>
+</ul>
+<p>RenderBody主要是实现模版页面也内容页面的合体，所以不用任何参数，就这个用。如我们访问index页面，那么就把index.cshtml与_ViewStart.cshtml合起来，用index.cshtml里面的内容来替代<code>@RenderBody</code>的部分。</p>
+<ul>
+<li>RenderSection</li>
+</ul>
+<p>RenderBody在一个布局页面里只能出现一次，所以有很多时候都是不过瘾的，因为我们有更多的内容需要替换，就出现了RenderSection。具体的用法就不说了，但是要注意一旦定义了Section，那么在内容页面就要有这么一个节<code>@section SectionName &#123; //todo &#125;</code>，否则在RenderSection的时候要增加一个参数，表示不一定要有这个section，具体上一篇中已经提到过了。</p>
+<ul>
+<li>RenderPage</li>
+</ul>
+<p>RenderBody与RenderSection里面的内容都是放在内容页面里面的，也就是他们都在同一个cshtml中，但是有时候我们需要引入第三个文件，甚至这第三个文件还可以根据调用的参数的不同呈现出不同的形态，这个时候RenderPage就出现了。简单点的就这么用<code>@RenderPage(“~/Views/Shared/_Header.cshtml”) </code>，复杂点的带参数的用法<code>@RenderPage(“~/Views/Shared/_Header.cshtml”,new&#123;parm=&quot;my&quot;,parm2=&quot;you&quot;) </code>，在接受页面里可以这样来接受参数<code>@PageData[&quot;param&quot;]</code>。</p>
+<ul>
+<li>Html.Partial</li>
+</ul>
+<p>在我写这一段的时候，我发现了Html下面还有很多类似的方法，如RenderPartial,RenderAction。这里有Render与没有Render的区别大概在于没有Render的一般用于静态的东西，它会把内容在内存中做一下缓存。</p>
+<p>RenderPage与RenderPartial的区别大概在于RenderPage调用的页面只能使用其传递过去的数据。而RenderPartial是可以使用viewdata、model等数据的。</p>
+<p>Html.RenderPartial和Html.RenderAction的区别在于：Html.RenderPartial适合用在重复使用的UserControl，并且只需要透过Model来呈现内容。Html.RenderAction则会先去呼叫Controller的Action方法，如果此UserControl是需要透过资料库取得资料来呈现（透过Action来读取资料库），此时会比较适合使用此方式。</p>
+<p>通过这上下两篇，我们主要是把razor里面模板替换的各种方法解析了一下，但是对于razor的整体的语法还是没有提到，这里就简单地抄一下<a target="_blank" rel="noopener" href="http://www.w3chtml.com/aspnet/razor-syntax.html">w3chtml</a>上的内容。</p>
+<p>C# 的主要 Razor 语法规则：</p>
+<ul>
+<li><pre><code>Razor 代码封装于 @&#123; ... &#125; 中
+</code></pre>
+</li>
+<li><pre><code>行内表达式（变量和函数）以 @ 开头
+</code></pre>
+</li>
+<li><pre><code>代码语句以分号结尾
+</code></pre>
+</li>
+<li><pre><code>字符串由引号包围
+</code></pre>
+</li>
+<li><pre><code>C# 代码对大小写敏感
+</code></pre>
+</li>
+<li><pre><code>C# 文件的扩展名是 .cshtml
+</code></pre>
+</li>
+</ul>
+<p>例子：</p>
+<p>单行代码块：<code>@&#123; var myMessage =    &quot;Hello World&quot;; &#125;</code></p>
+<p>行内表达式或变量：<code>&lt;p&gt;The value of myMessage is: @myMessage&lt;/p&gt;</code></p>
+<p>多行语句代码块：</p>
+<pre><code>@&#123;
+var greeting = &quot;Welcome to our site!&quot;;
+var weekDay = DateTime.Now.DayOfWeek;
+var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
+&#125;
+&lt;p&gt;The greeting is: @greetingMessage&lt;/p&gt;
+</code></pre>
+<p>上述网站对razor的用法什么的还是讲得很详细，所以关于razor的其他内容就不在赘述了。下一步是进入到MVC的内部的时候了，不过MVC5里用了bootstrap，如果不了解好像也不够意思，有时间也讲讲。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/04/razor-syntax1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -719,124 +874,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/28/a-terrible-day/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/28/a-terrible-day/" class="post-title-link" itemprop="url">这蛋疼的一天</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-03-28 22:33:00" itemprop="dateCreated datePublished" datetime="2014-03-28T22:33:00+08:00">2014-03-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:13:08" itemprop="dateModified" datetime="2014-04-01T13:13:08+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/03/28/a-terrible-day/" class="post-meta-item leancloud_visitors" data-flag-title="这蛋疼的一天" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/28/a-terrible-day/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/28/a-terrible-day/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>凌晨的时候发现，我的s230u进不了系统了。原因就是自带的系统安装iis屡次不成功，我有点想自己搞定这个机器的系统，但是对这个系统有没有特别有信心，因为首先win8的激活很麻烦，我的机子是在美国买的，万一安装的系统机子不认没办法激活，其次对固态硬盘+机械盘的方式安装系统其一些烦人的设置不清楚，说实在对这里的一系列技术名词一头雾水，什么uefi、irst、gpt、raid等。所以一直没有动这台机器，不过前面有一次系统盘空间太少的时候清理了一下，后来发现机器不能恢复了，大概我在操作的时候把一些隐藏分区给删掉了，而且也把win8在本机的一些安装文件也清理掉了。总之，今天凌晨的是我已经没有耐心再去折腾它了，虽然最近实际上也没什么空。</p>
-<p>总之，在某次操作重启之后机器彻底歇菜了。当时我用了一起以前做的u盘启动盘也进不去，心慌意乱中就睡觉去了。</p>
-<p>早上很早就起来，也上网查了很多资料，但是总感觉不得其法，于是决定送修。打了几个电话，问清楚金华的客户服务中心，就送过去了。那里的技术人员居然很不自信地说试试看，我一下子就有点火，这也太不敬业了，他们还要我把机器留下，我说那不如我自己拿回去折腾。后来来了个人，说他可以帮我搞下，但是要收钱，我说多少，今天能够弄好我愿意出。于是把机器放哪里就回来了。反正最近大概太累了，耳朵老是像塞了个棉花一样，感觉不舒服，我想休息一下算了。</p>
-<p>下楼，发现车上被华丽丽滴贴条子了，处女贴。奇怪的是边上的车似乎都没问题啊，而且看时间刚贴的。想想算了，自己违停在线，先回家拿社保卡。到家老婆说先去校医院看看吧。我看看时间觉得去中心医院早上也结束了，就去校医院看。</p>
-<p>医院那个鸟人大概正在不爽，爱理不理。我说我耳朵这个样子，你看看能不能配点药。他居然说，这个你要去大医院去检查一下，我不敢给你配药的，废话n多。马上走人。</p>
-<p>老婆好不容易逮到机会说中午一起去吃饭，那就去啦。外婆家。吃饭前顺便挂了个号。</p>
-<p>吃了饭去了医院，那时候早上的那个技术人员打电话来了，他们搞不定，让我回去拿机器吧。刚好医院下午开门，我是第二个。大概是擅长看鼻子的，一看我的症状说你这个应该是鼻子引起的耳朵问题，先做个鼻镜。鼻镜做出来没什么问题，然后就给我开了点药。</p>
-<p>从医院出来去拿机器，拿回家自己继续搞，结果很快就有思路，机器搞定了。这大概是全天的唯一亮点。</p>
-<p>现在再来回顾这一天吧，虽然不爽还是要面对。首先是电脑坏了，找专门的维修公司居然还没搞定，还拿了张罚单回来；其次，去看病，被庸医害，学校的那个牢骚多，后面的那个医生也是有问题，做鼻镜那就算了，关键是开的药不靠谱，从鼻镜明显可以看到没什么炎症，还开了很重的消炎药。回来后查了一下两种药副作用都有点强，于是这药的100多块钱又浪费了。</p>
-<p>今天一天的遭遇我只能说现在的专业技术人员真的不靠谱。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -908,7 +945,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">143</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -921,7 +958,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">178</span>
+        <span class="site-state-item-count">180</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -965,12 +1002,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">86k</span>
+    <span title="站点总字数">87k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:23</span>
+    <span title="站点阅读时长">2:24</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
