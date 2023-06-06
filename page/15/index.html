@@ -166,6 +166,152 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/08/bootstrap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/08/bootstrap/" class="post-title-link" itemprop="url">MVC那些事之———bootstrap</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-04-08 20:06:04" itemprop="dateCreated datePublished" datetime="2014-04-08T20:06:04+08:00">2014-04-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2014-04-11 21:25:48" itemprop="dateModified" datetime="2014-04-11T21:25:48+08:00">2014-04-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/08/bootstrap/" class="post-meta-item leancloud_visitors" data-flag-title="MVC那些事之———bootstrap" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/08/bootstrap/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/08/bootstrap/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>MVC5把bootstrap作为其中的一个组件，所以我们需要学习用它来做前台的开发。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>首先从bootstrap官方网站上下载它的发布包并解压到网站的根目录，然后在需要使用bootstrap的页面上添加样式表与javascript，如下面的代码所示：</p>
+<pre><code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;container-fluid&quot;&gt;
+               &lt;h1&gt;Hello world!&lt;/h1&gt;
+        &lt;/div&gt;
+        &lt;script src=&quot;js/jquery-2.1.0.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>样式表添加<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;</code>，要放在head之间</p>
+<p>javascript添加</p>
+<pre><code>&lt;script src=&quot;js/jquery-2.1.0.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>最好放在页面内容后面，这里要注意的是bootstrap依赖于jquery，所以在引用bootstrap代码之前先添加jquery。</p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>container作为一个容器，它会设置一个合理的宽度，并把它包含的内容居中</p>
+<p>row作为一行，col-md-4表示占据一行12列中的4列，根据屏幕大小的不同col-md-n中的md可以使xs（超小屏幕）、sm（小屏幕）、lg（大屏幕），md表示中等大小的屏幕。所以下面的代码可以在一些布局系统中看到：</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;        
+        &lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;        
+        &lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>这里container是不能嵌套的，但是row这些都可以嵌套。</p>
+<p>关于列，我们还可以做一下偏移，如<code>&lt;div class=&quot;col-md-4 col-md-offset-4&quot;&gt;&lt;/div&gt;</code>表示一个四列的内容向右偏移4列。</p>
+<h2 id="css组件"><a href="#css组件" class="headerlink" title="css组件"></a>css组件</h2><h2 id="javascript插件"><a href="#javascript插件" class="headerlink" title="javascript插件"></a>javascript插件</h2><p>实际上下面两个参考地址上的教程已经很详细了，我也就不写这个内容，等以后用多了再来写心得。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/aehyok/p/3404867.html">http://www.cnblogs.com/aehyok/p/3404867.html</a></p>
+<p><a target="_blank" rel="noopener" href="http://v3.bootcss.com/getting-started/">http://v3.bootcss.com/getting-started/</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/06/qingming/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -762,118 +908,6 @@ var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/01/use-hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/04/01/use-hexo/" class="post-title-link" itemprop="url">使用hexo来发blog</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-04-01 15:01:26" itemprop="dateCreated datePublished" datetime="2014-04-01T15:01:26+08:00">2014-04-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2017-03-06 21:32:02" itemprop="dateModified" datetime="2017-03-06T21:32:02+08:00">2017-03-06</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/04/01/use-hexo/" class="post-meta-item leancloud_visitors" data-flag-title="使用hexo来发blog" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/04/01/use-hexo/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/01/use-hexo/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>424</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近重装机器，系统里的东西也都七零八落，不过反正要从头开始就用一些最新的东西吧。</p>
-<p>原来的octopress使用起来不是很方便，以前装机器的时候就想换其他的博客系统，如python下的好多系统都试过，包括这次的hexo，不过那时候的hexo确实不咋的，但是昨天看到后眼前一亮，就这货了。</p>
-<p>安装node，安装git，然后安装hexo。不过在找主题的时候花了点时间，pacman太过小清新，我大叔不敢下手，freemind蛮酷的，不过不够现成，最后chenall了。刚好最近上课也要讲一些bootstrap，看它跟这个有关系，就载下来了。</p>
-<p>不过chenall还是开了个玩笑，我差点废了他。他居然推荐了一个还没出来的hexo版本，最后还算有缘，无意中看到了说是直接下开发版，也太幽默了，版本号跟我原来安装的一样。为了这个主题还安装了minimist、lodash。最近为了rss安装了hexo-generator-feed。不过总算结束这几天的折腾，开始工作了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -945,20 +979,20 @@ var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">145</span>
+          <span class="site-state-item-count">146</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">182</span>
+        <span class="site-state-item-count">184</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1002,12 +1036,12 @@ var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">88k</span>
+    <span title="站点总字数">89k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:26</span>
+    <span title="站点阅读时长">2:28</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
