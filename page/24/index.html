@@ -166,6 +166,122 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/26/remote-access-ubuntu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2012/08/26/remote-access-ubuntu/" class="post-title-link" itemprop="url">ubuntu的远程桌面</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2012-08-26 11:14:00" itemprop="dateCreated datePublished" datetime="2012-08-26T11:14:00+08:00">2012-08-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2014-04-01 13:43:00" itemprop="dateModified" datetime="2014-04-01T13:43:00+08:00">2014-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2012/08/26/remote-access-ubuntu/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu的远程桌面" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2012/08/26/remote-access-ubuntu/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/26/remote-access-ubuntu/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>676</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>ubuntu的自带的远程桌面挺好用，唯一的缺点就是需要在服务器先登录一次才能用，有时候这个有点苛求。所以一直在找一种能够自动登录的远程桌面。先后试过了xrdp，vnc4server，xrdp倒是挺好，能够用windows的远程桌面连接，但是有些键盘操作有点问题。vnc4server跟系统自带的远程桌面类似，都需要本地登录后才能用（据说可以ssh登录后启动，但是我试了一下vnc4server服务器在ssh下启动不了，启动了后进去发现也只有桌面，而且也嫌它麻烦）。这样就转向了x11vnc。</p>
+<p><strong>安装</strong><br>    sudo apt-get install vino vinagre x11vnc<br><strong>设置vnc密码</strong><br>    sudo x11vnc -storepasswd<br>这样就在当前用户的目录下的.vnc目录中创建了一个passwd的文件用来存放vnc密码。  </p>
+<p>网上说要给x11vnc设一个单一的密码，其实这个没必要，用vnc的密码就行了，如果要设就执行如下语句<br>    sudo x11vnc -storepasswd in /etc/x11vnc.pass<br>这里还有个文件权限问题</p>
+<p>配置x11vnc为跟随系统自动启动需要新建一个文件/etc/init/x11vnc.conf，在里面写上如下文本：<br>    start on login-session-start  </p>
+<pre><code>script  
+    x11vnc -display :0 -auth /var/run/lightdm/root/:0 -forever -bg -o /var/log/x11vnc.log -rfbauth /home/zjnuwlh/.vnc/passwd -rfbport 5900  
+end script  
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/25/ruby-installation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -743,130 +859,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/14/tai-wan/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2012/08/14/tai-wan/" class="post-title-link" itemprop="url">台湾行</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2012-08-14 09:39:00" itemprop="dateCreated datePublished" datetime="2012-08-14T09:39:00+08:00">2012-08-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:43:54" itemprop="dateModified" datetime="2014-04-01T13:43:54+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2012/08/14/tai-wan/" class="post-meta-item leancloud_visitors" data-flag-title="台湾行" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2012/08/14/tai-wan/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/14/tai-wan/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>带着一种对台湾的神秘感去了趟台湾，8天的行程绕台湾岛转了一圈。白天景点，晚上一般先去逛逛当地的商店，回来后看电视上的节目，一般是奥运节目或者当地的新闻与时评类节目，如果看电视剧，看到的都是怀旧类的。8天行程除了由于台风没去成阿里山，其他的该去的都去了，整个行程还是蛮轻松的，团里甚至有人觉得可以压缩到4天左右，当然考虑到台湾的面积可能也差不多，不过我还是喜欢这么轻松地走。</p>
-<p>第一天下飞机还早就去了野柳风景区，可惜风雨实在太大了，大家看了一下只能撤，接着去九份，那个高山上蛮小的、但也有点味道的老街，那里还有个求婚的圣地。风雨越来越大，回来我们住进了台北的福荣大酒店，晚上就看各地的新闻，担心台风影响我们的行程。</p>
-<p>第二天由于台风的影响，一些景点去不了，就去了101，诚品书局，中午吃了牛肉面，诚品书局下面的豆花不错。一路上看到洪水没过的地方，有些地方只露出了路灯，杆子不见了，一些地方只看到了树顶，才知道浩浩荡荡的洪水涌到了大街上。之后去苗栗住宿了，这一个晚上大家都没出去，因为还有风雨。</p>
-<p>第三天早上先去中台禅寺，午饭后去日月潭，中台禅寺倒是金碧辉煌，日月潭却没有想象的那么好，因为实在看不出哪里是日潭，哪里是月潭，这里有个卖茶叶蛋的据说中央台都报道过，所以大家都吃了两个，10台币一个，上一次吃茶叶蛋大概10多年前了吧。这里有宋美龄香烟买，可惜警示标志太过触目，最终没买。午餐在一个原住民文化村中用餐，末了还有牛樟菌、沉香等土特产的展示，想想泰国的蛇药，最终也没买。之后去嘉义住宿了，这个晚上很多人出去了。</p>
-<p>第四天接到通知说阿里山上不去了，因为前一天晚间10点左右那里的道路塌方了。所以改成去台南了，但是据说还是要路过阿里山脚下的茶叶店，大家去买高山茶。说实话，没福建的铁观音好喝，当然价格也比不上。下午在台南看了亿载金城与郑成功的皇城，然后驱车去高雄，高雄的六合夜市游客真多，真的是摩肩接踵，导游把我们带到夜市我们就自由活动了，去边上的三多商圈逛逛，然后再来夜市吃夜宵，中间还乘坐了高雄的捷运。搞笑的是导游还煞有介事地像我们介绍一些他认为好的夜宵摊，当然是悄悄地暗示，不过最后我们发现所有他指点过的地方都有马英九的签名照片。10点多点回酒店乘捷运，发现一个车厢就我们几个人，怪不得都说高雄的捷运是亏本的。六合夜市的捷运站是美丽岛站，离我们住的中正大酒店2站，高雄的这家酒店是这次行程中最差的一个了。</p>
-<p>第五天先游览大狗英国领事馆，据说高雄本地原住民称他们住的地方为“taka”，在闽南语中就是打狗的意思，所以高雄港原来被叫做打狗港，后来日本人统治期间变成了高雄。中山大学就在领事馆边上，没进去，不过应该蛮漂亮的，校园就在海边，海水也挺干净的。中饭前去了珠宝店，饭后去了猫鼻头，体味了一下惊涛拍岸的雄壮。晚上住垦丁，据说海角7号就在这里拍的。垦丁的本地人应该还是比较保守吧，晚上逛的时候感觉到的。</p>
-<p>第六天去台东，参观珊瑚博物馆，然后去花莲，这段路蛮长的，中间看了一部台湾版的阿凡达——《赛德克·巴莱》，山路崎岖后面的人有吐了。沿途经过了水往上流，大家水平比较高都马上猜出了原因，接着的北回归线牌大家都不要下去了，最后来到了太鲁阁国家风景区，风景没什么留下印象，但是司机大哥的车技见识了一下，在一天路宽只比我们的车宽不了多少的地方，司机大哥利索地掉头，我们坐在后面的几乎看到车要掉下悬崖了，司机大哥还是那么淡定，加油门踩刹车，该怎么还是怎么。晚上住花莲，这个酒店是这次行程最好的了，花莲是个旅游开发的比较好的地方。</p>
-<p>第七天早上先去花岗石加工中心，这里主要是卖玉石的，然后乘火车去宜兰，感受了一下台湾的火车，蛮不错的。宜兰下车就直接去台北，所以大家有点纳闷，为什么不直接火车到台北呢，不过没人问。这次台北看了下士林官邸，台北故宫，还走了些手信店与免税店，饭后去西门町，所谓西门町都是些小孩子在那里，年纪大点的游客都没进去。晚上回到第一天的福荣酒店就住。</p>
-<p>第八天由于台风影响我们的航班取消了，但是还是把我们带到了机场，然后就在那里等所有可能的飞机，中间也有点小插曲，最后6点半的飞机总算把我们送回大陆，宁波下的飞机，宁波中青旅的车把我们送回金华，到的时候已经半夜了。</p>
-<p>说实在，风景是没有留下什么深刻的印象，不过台湾人，至少我们接触的服务行业的确实非常礼貌，非常有修养。台湾禁烟也很成功，可惜大陆游客抹黑了。有时候我想如果在每个地方写上一条“公共场所吸烟等于随地大小便”，看看抽烟的人会不会少点。</p>
-<p>台湾机场的东西很便宜，对比国内的机场我觉得太好了，导游说这是斗争的结果。实际上看台湾的那些电视节目也有这种感觉，实际上也算一种鞭策吧。文明人应该知道知错就改。</p>
-<p>下次如果去台湾最好自由行吧，据说台湾的民宿又便宜又好。这次去台湾实际上对台湾还是没有消除我的神秘感，因为还是远离他们大多数人的生活的。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span>
+    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -934,7 +930,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">144</span>
+          <span class="site-state-item-count">145</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -947,7 +943,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">180</span>
+        <span class="site-state-item-count">182</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -991,12 +987,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">87k</span>
+    <span title="站点总字数">88k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:24</span>
+    <span title="站点阅读时长">2:26</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
