@@ -166,6 +166,173 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/21/media-file-upload/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/05/21/media-file-upload/" class="post-title-link" itemprop="url">媒体文件上传</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-05-21 10:28:01" itemprop="dateCreated datePublished" datetime="2014-05-21T10:28:01+08:00">2014-05-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-03-06 21:37:22" itemprop="dateModified" datetime="2017-03-06T21:37:22+08:00">2017-03-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">教学工作</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/05/21/media-file-upload/" class="post-meta-item leancloud_visitors" data-flag-title="媒体文件上传" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/05/21/media-file-upload/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/21/media-file-upload/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>同学们在开发asp.net作品的时候经常会用到要把一些文件上传到服务器上，但是这里的迷惑就是这些文件在服务器中是如何存在的？是在文件系统中还是在数据库？如果在文件系统中该如何提取？如果是在数据库中该如何存取？</p>
+<p>我的建议是如果是小文件，而且数量有限可以放到数据库中，如果文件很大，同时数量非常多（随着系统的使用越来越多）还是存到文件系统中，然后把访问路径存到数据库中。</p>
+<p>但是不管怎样，作为学习我们还是要学会这两种存取文件的方式。下面我们以用户头像文件为例来说明这两种方法。</p>
+<h2 id="1-存放到文件系统中"><a href="#1-存放到文件系统中" class="headerlink" title="1.存放到文件系统中"></a>1.存放到文件系统中</h2><p>这种方式比较简单，主要是把头像文件上传到特定的文件夹中，同时把它的url相对路径存到数据库中就好了。代码如下</p>
+<pre><code>    if (fuAvart.FileContent != null)
+    &#123;
+        //文件存取路径，存放在avart目录下以用户名命名的目录下
+        string path = Server.MapPath(&quot;~/avart/&quot; + HttpContext.Current.User.Identity.Name) + &quot;\\&quot;;
+        //图片的url相对路径
+        string url = &quot;~/avart/&quot; + HttpContext.Current.User.Identity.Name + &quot;/&quot; + fuAvart.FileName;
+        //如果路径不存在要先创建
+        if (!Directory.Exists(path))
+            Directory.CreateDirectory(path);
+        //文件保存到相关路径下
+        fuAvart.SaveAs(path + fuAvart.FileName);
+        //把路径保存到数据库中
+        string sql = &quot;update users set avarturl=&#39;&quot; + url + &quot;&#39; where username=&#39;&quot; + HttpContext.Current.User.Identity.Name + &quot;&#39;&quot;;
+        DataBase.RunSQL(sql);
+        iAvart.ImageUrl = url;
+    &#125;
+</code></pre>
+<p>这种方式的提取也很简单，就是直接把图片的url值赋值给image控件就行了。一句话<code>iAvart.ImageUrl = reader[&quot;avarturl&quot;].ToString();</code> </p>
+<p>本部分数据库字段avarturl的类型为nvarchar（256）。</p>
+<h2 id="2-存放到数据库中"><a href="#2-存放到数据库中" class="headerlink" title="2.存放到数据库中"></a>2.存放到数据库中</h2><p>把图片存放到数据库中需要有一个image类型的字段，<br>在上传过程中，把图片文件转化成文件流，并把它作为sql命令的参数来执行</p>
+<pre><code>    if (fuAvart.FileContent != null)
+    &#123;
+        string sql = &quot;update users set avart=@avart where username=@username&quot;;
+        SqlParameter[] prams = new SqlParameter[]&#123;
+            new SqlParameter(&quot;@avart&quot;,System.Data.SqlDbType.Image,fuAvart.FileBytes.Length),
+            new SqlParameter(&quot;@username&quot;,System.Data.SqlDbType.VarChar,50)
+        &#125;;
+        prams[0].Value = fuAvart.FileBytes;
+        prams[1].Value = HttpContext.Current.User.Identity.Name;
+        DataBase.RunSQL(sql, prams);
+        iAvart.ImageUrl = &quot;avart.aspx&quot;;
+    &#125;
+</code></pre>
+<p>因为图片的显示需要一个新的页面，所以新创建一个文件avart.aspx，page_load中的代码如下：</p>
+<pre><code>    string sql = &quot;select * from users where username=&#39;&quot; + HttpContext.Current.User.Identity.Name + &quot;&#39;&quot;;
+    SqlDataReader reader = null;
+    DataBase.RunSQL(sql, out reader);
+    //设置页面缓冲输出
+    Response.Buffer = true;
+    //清除缓冲区中的所有内容
+    Response.Clear();
+    if (reader.Read() &amp;&amp; reader[&quot;avart&quot;] != DBNull.Value)
+    &#123;
+        byte[] file = (byte[])reader[&quot;avart&quot;];
+        //把二进制字符串写入HTTP输出流
+        Response.OutputStream.Write(file,0,file.Length); 
+    &#125;
+    reader.Close();
+    //向客户端发送所有缓冲的内容
+    Response.Flush();
+    ////将当前所有缓冲的输出发送到客户端,并停止该页的执行
+    Response.End();
+</code></pre>
+<p>需要显示头像的地方<code> iAvart.ImageUrl = &quot;avart.aspx&quot;;</code></p>
+<p>本部分数据库字段avart，类型image</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/16/kant/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -789,142 +956,6 @@ toolbars: [
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/06/teacher-entertainment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/05/06/teacher-entertainment/" class="post-title-link" itemprop="url">娱乐教师与教师的娱乐</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2014-05-06 16:06:55 / 修改时间：16:18:04" itemprop="dateCreated datePublished" datetime="2014-05-06T16:06:55+08:00">2014-05-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/05/06/teacher-entertainment/" class="post-meta-item leancloud_visitors" data-flag-title="娱乐教师与教师的娱乐" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/05/06/teacher-entertainment/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/06/teacher-entertainment/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>881</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><em>本文来自网络，希望教师能够过得好点。</em></p>
-<p>一个教师去世后，和上帝喝茶。</p>
-<p>上帝问：“教师职业，很轻松，你还没有到退休年龄，怎么就死了？”</p>
-<p>教师好像遇到了知音，激动地说：“我亲爱的上帝，你知道教师有N种死法吗？”</p>
-<p>“说来听听。”</p>
-<blockquote>
-<p>绩效工资骗死你；别人奖金吓死你；两基验收累死你；</p>
-<p>各种捐款捐死你；职称评定等死你；政治任务压死你；</p>
-<p>调皮学生气死你；野蛮家长打死你；房子车子想死你；</p>
-<p>造假资料抄死你；竞聘上岗玩死你；检查教案赶死你； </p>
-<p>教育改革累死你；假期培训忙死你；不涨工资穷死你；</p>
-<p>调动工作卡死你；光辉职业哄死你；一生操劳病死你。</p>
-</blockquote>
-<p>上帝认为他太能说了，改变不了职业习惯，每天会这样絮絮叨叨的，会打扰天堂的幽静，于是就把他打入了地狱。 </p>
-<p>刚过了一个星期，阎王就满头大汗找上门来说：“上帝呀，赶紧把他弄走吧”。 </p>
-<p>上帝问：“怎么回事？”</p>
-<p>阎王说：“地狱的小鬼们都被他激活了，天天写教案，填表格，搞教研，交论文，谈教育创新，科教兴冥，他还要我去做学科建设，名师工程，班主任培训，学生导师，兼职辅导员，绩效考核，师德建设，青年教师导师，家长学校校长，让所有人满意。” </p>
-<p>上帝大怒：“让他上天堂，看我怎么收拾他”。</p>
-<p>一个月后，阎王遇见上帝，问：“亲爱的上帝，那个喋喋不休的老师被您收拾得怎么样了？ ”</p>
-<p>上帝停住脚步，回答说：“你这样同我说话，犯了三个错误，第一，你应该先导入，回顾上次我们的谈话概要，再开始今天的谈话！第二，这个世界根本就没有上帝，只有学生才是上帝！第三，我没有时间和你闲扯蛋，我还有一节公开课、两个课题、一份中考模拟卷没完成呢。最后，我再警告你，和我谈话的时候，必须有教案！ ”</p>
-<p>阎王目瞪口呆之时，上帝的秘书弱弱地提醒说：“刚才还漏了一点，还要开发选修课程。” </p>
-<p>最后上帝对阎王说：把我这篇关于教师职业论文传达给每一个小鬼：</p>
-<blockquote>
-<p>《教师是个好行业》</p>
-<p>虽然下班晚，但是上班早啊！</p>
-<p>虽然不起眼，但是责任大啊！ </p>
-<p>虽然奖金少，但是扣得多啊！</p>
-<p>虽然人员少，但是任务多啊！</p>
-<p>虽然福利薄，但是制度厚啊！</p>
-<p>找工作就应该找这样的：</p>
-<p>赚着屈指可数的工资，做着关系民族兴亡的事情！</p>
-<p>拿着卖白菜的钱， 操着卖白粉的心！</p>
-<p>工作是高端大气上档次， 工资是低调奢华有内涵！</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -996,20 +1027,20 @@ toolbars: [
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">147</span>
+          <span class="site-state-item-count">148</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">185</span>
+        <span class="site-state-item-count">186</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1053,12 +1084,12 @@ toolbars: [
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">90k</span>
+    <span title="站点总字数">91k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:30</span>
+    <span title="站点阅读时长">2:32</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
