@@ -166,6 +166,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2013/11/08/layer-plugin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2013/11/08/layer-plugin/" class="post-title-link" itemprop="url">分层开发与插件化开发</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2013-11-08 21:27:00" itemprop="dateCreated datePublished" datetime="2013-11-08T21:27:00+08:00">2013-11-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2014-04-01 13:29:12" itemprop="dateModified" datetime="2014-04-01T13:29:12+08:00">2014-04-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2013/11/08/layer-plugin/" class="post-meta-item leancloud_visitors" data-flag-title="分层开发与插件化开发" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2013/11/08/layer-plugin/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2013/11/08/layer-plugin/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>550</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>分层的方法把数据库操作与前台页面显示成功地隔离开来了，但是从开发的角度来说却并不是一个好主意，因为开发一个功能，它需要在每个层进行开发，这样一个大项目当有很多人开发的时候，每个人都需要把所有的代码下载下来，并且需要在各个层上修改代码。最好的情况也是需要在数据库操作层把所有细粒度的数据库操作都提供了，以供上一层的所有数据库操作，这样一来无可避免地导致浪费，而且对上一层的开发来说也会有不方便的地方，万一需要的功能在底层没有提供，又要去向底层的开发人员去要求。总之，分层的开发随着项目规模的扩大，层数越多，麻烦越多。</p>
+<p>插件开发的最大特点是模块化，面向功能进行开发，每个人负责自己的功能模块而不用管别人。模块之间的独立性比较好，当然这个也会带来潜在的问题，就是重用性的问题，一些公共的模块如何复用，这是插件化开发带来的新问题。</p>
+<p>osgi.net修改了默认的.net程序的加载顺序，默认的.net程序可执行程序都在bin目录下面，osgi.net多了一个plugin目录，里面是按功能组织的文件夹，一般来说有多少个文件夹就有多少个功能模块，而原来的bin目录下是一些通用的程序集。</p>
+<p>关于osgi.net插件的情况详细请看<a target="_blank" rel="noopener" href="http://www.cnblogs.com/baihmpgy/p/3305215.html">http://www.cnblogs.com/baihmpgy/p/3305215.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2013/10/09/flood/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -723,116 +835,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2013/09/24/help-american/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2013/09/24/help-american/" class="post-title-link" itemprop="url">help an American in America</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2013-09-24 23:02:00" itemprop="dateCreated datePublished" datetime="2013-09-24T23:02:00+08:00">2013-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 14:20:26" itemprop="dateModified" datetime="2014-04-01T14:20:26+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2013/09/24/help-american/" class="post-meta-item leancloud_visitors" data-flag-title="help an American in America" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2013/09/24/help-american/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2013/09/24/help-american/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>699</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Today, when I wrote something in lounge B, a man came in and asked me for help. In fact, I didn’t catch his question, but I got to know it’s something about the TV set in lounge A. So I said what’s wrong with the TV set. Still, I didn’t understand his words, but I catch the word “remote”. Oh, I see. He must have trouble in using the TV set without the remote. Then I said:”I’ll show you.” Then I went to the TV set and show him the button on the bottom of the set. Then change the channels and tune the volume, he said thank you with a smile. I said welcome and really got proud of helping an american in america.</p>
-<p>You see, it’s not so hard for you to communicate with foreigners even you don’t catch what they said. Sometimes, a keyword or a guesture can show you the meaning, especially in context of what you talked about. So, be brave to communicate with someone!</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -904,7 +906,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">148</span>
+          <span class="site-state-item-count">149</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -917,7 +919,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">187</span>
+        <span class="site-state-item-count">189</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
