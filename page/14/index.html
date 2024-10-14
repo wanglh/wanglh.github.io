@@ -166,6 +166,172 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/14/usage-for-ueditor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/05/14/usage-for-ueditor/" class="post-title-link" itemprop="url">ueditor在asp.net中的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-05-14 23:28:45" itemprop="dateCreated datePublished" datetime="2014-05-14T23:28:45+08:00">2014-05-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-03-06 21:37:22" itemprop="dateModified" datetime="2017-03-06T21:37:22+08:00">2017-03-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">教学工作</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/05/14/usage-for-ueditor/" class="post-meta-item leancloud_visitors" data-flag-title="ueditor在asp.net中的使用" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/05/14/usage-for-ueditor/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/14/usage-for-ueditor/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>学生作品中要用到格式化输入内容的功能，于是就用到了在线html编辑器，用过很多的编辑器，从最早的freetextbox，到后来的fck editor，不过近来还是看好百度出的ueditor，KindEditor 貌似也不错。在这里就以ueditor为例来讲讲怎么使用ueditor。</p>
+<p><strong>1.下载</strong></p>
+<p>当前最新的是1.3.6版，可以在这里<a target="_blank" rel="noopener" href="http://ueditor.baidu.com/website/download.html">下载</a>,选择自己需要的版本。</p>
+<p><strong>2.使用</strong></p>
+<p>首先，把下载下来的代码解压到你的应用程序根目录，并把该目录改成ueditor（关于路径需要在editor_config.js中修改相应配置）；</p>
+<p>其次，在需要使用编辑器的页面添加如下代码，<strong>注意这里的js文件的路径</strong>：</p>
+<pre><code>&lt;!-- 加载编辑器的容器 --&gt;
+&lt;script id=&quot;editor&quot; type=&quot;text/plain&quot;&gt;&lt;/script&gt;
+    这里写你的初始化内容
+&lt;/script&gt;
+&lt;!-- 配置文件 --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;ueditor.config.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 编辑器源码文件 --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;ueditor.all.js&quot;&gt;&lt;/script&gt;
+&lt;!-- 实例化编辑器 --&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    UE.getEditor(&#39;editor&#39;);
+&lt;/script&gt;
+</code></pre>
+<p>再次，在asp.net里面获取编辑器里面的内容，代码如下：</p>
+<pre><code>string content=Request.Params[&quot;editorValue&quot;];
+</code></pre>
+<p>与取值相对应的是赋值，这个比较复杂，一般来说我们在代码中先定义一个public的字符串变量Content，把上述代码</p>
+<pre><code>&lt;script id=&quot;editor&quot; type=&quot;text/plain&quot;&gt;&lt;/script&gt;
+   修改这里
+&lt;/script&gt;
+</code></pre>
+<p>改成</p>
+<pre><code>&lt;script id=&quot;editor&quot; type=&quot;text/plain&quot;&gt;&lt;/script&gt;
+    &lt;% =Content %&gt;
+&lt;/script&gt;
+</code></pre>
+<p>这样在当你要给编辑器赋值的时候，只要给Content赋值就行了。</p>
+<p><strong>3.配置</strong></p>
+<p>ueditor默认的一些路径都是从根目录开始的，如<code>/myProject/ueditor/</code>，所以修改了路径后要修改<code>window.UEDITOR_HOME_URL</code>的值，<code>editor_config.js</code>里还有很多上传有关的路径要修改，没有什么特殊要求，可以用默认的。</p>
+<p>此外ueditor的按钮也是可以定制的，因为实际上用不上那么多的按钮，也太复杂了。可以在<code>editor_config.js</code>中修改，也可以在编辑器实例化的时候写代码。</p>
+<pre><code>//单行工具   
+toolbars: [
+    [&#39;fullscreen&#39;, &#39;source&#39;, &#39;undo&#39;, &#39;redo&#39;, &#39;bold&#39;]
+]
+
+//多行工具，竖线 &#39;|&#39; 代表按钮之间的分割线
+toolbars: [
+[&#39;fullscreen&#39;, &#39;source&#39;, &#39;undo&#39;, &#39;redo&#39;],
+[&#39;bold&#39;, &#39;italic&#39;, &#39;underline&#39;, &#39;fontborder&#39;, &#39;strikethrough&#39;, &#39;superscript&#39;, &#39;subscript&#39;, &#39;removeformat&#39;, &#39;formatmatch&#39;, &#39;autotypeset&#39;, &#39;blockquote&#39;, &#39;pasteplain&#39;, &#39;|&#39;, &#39;forecolor&#39;, &#39;backcolor&#39;, &#39;insertorderedlist&#39;, &#39;insertunorderedlist&#39;, &#39;selectall&#39;, &#39;cleardoc&#39;]
+]
+</code></pre>
+<p>建议修改按钮的时候把原先的按钮配置先注释掉，再重新选择你需要的按钮。</p>
+<p><strong>4.注意事项</strong></p>
+<p>可能会出现如下错误：</p>
+<blockquote>
+<p>从客户端(editorValue=”……”)中检测到有潜在危险的 Request.Form 值</p>
+</blockquote>
+<p>这个需要在web.config中设置，有两个地方，第一个地方添加<code>requestValidationMode=&quot;2.0&quot;</code>，第二个地方添加<code>validateRequest=&quot;false&quot;</code>，最后的结果类似下面的代码：</p>
+<pre><code>    &lt;httpRuntime targetFramework=&quot;4.5&quot; requestValidationMode=&quot;2.0&quot; /&gt;
+    &lt;pages validateRequest=&quot;false&quot;&gt;
+</code></pre>
+<p>今天上课的时候还发现，如果你创建的是网站website而不是项目project，那么整个website在启动的时候会出错，其原因就在于ueditor目录中的<code>app_code</code>中有一些它自己的代码，你需要把它放到根目录下的<code>app_code</code>下面，否则网站不理解这些代码，也就会出错。【2014/5/21 20:19:55 更新】</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/11/happy-mothers-day/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -720,122 +886,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/26/svnmanager-installation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/04/26/svnmanager-installation/" class="post-title-link" itemprop="url">windows下svnmanager1.10的安装</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-04-26 16:05:26" itemprop="dateCreated datePublished" datetime="2014-04-26T16:05:26+08:00">2014-04-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2015-02-01 17:51:10" itemprop="dateModified" datetime="2015-02-01T17:51:10+08:00">2015-02-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/04/26/svnmanager-installation/" class="post-meta-item leancloud_visitors" data-flag-title="windows下svnmanager1.10的安装" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/04/26/svnmanager-installation/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/26/svnmanager-installation/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>906</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>以前都是在ubuntu下安装svnmanager，很多问题都没出现，这次新机器来了后安装了一次，发现问题还蛮多的。</p>
-<p>第一个问题就是创建svn库的问题，在页面上创建了，数据库里也有了，但是硬盘上就是没有相应的目录，svnmanager也不报错。看了看apache的错误日志有“’LANG’ 不是内部或外部命令，也不是可运行的程序或批处理文件”字样，一开始以为是我的配置问题，找了好久，包括命令行的路径什么的。是在没辙，只能去看程序，php没用过，但能看的大概，当然问题也找到了。在datamodule.php这个文件中，<code>$ret = exec(&quot;LANG=&quot;.$lang.&quot;;$svnadmin_cmd --config-dir $svn_config_dir create $a_dir&quot;);</code>，这句话非常可疑，因为这里刚好也是执行一个Lang开头的命令行，而且根据我对svnadmin创建svn库的了解，实际上用svnadmin create [目录名]就行了，把这句改成<code>$ret = exec(&quot;svnadmin create $a_dir&quot;);</code>，问题解决了。（LANG命令在linux系统中是设置当前默认的语言，windows下没用，所以在该文件中还存在另两个类似的命令也要改掉，只要把<code>LANG=&quot;.$lang.&quot;;</code>去掉就行了）</p>
-<p>第二个问题是删除svn库的时候，物理目录已经删除了，但是报错，然后数据库中还保存相应的信息，要进行第二次删除。其实问题跟第二次类似。<code>$ret = exec(&quot;move /y $arg_repo_path $arg_trash_path&quot;);</code>，这句话根据作者的理解如果执行正常的话是没有返回值的，但是不同的系统这个返回值是不一样的。所以只能把它后面的一个判断删除，问题也解决了。</p>
-<p>最后别忘了安装<a target="_blank" rel="noopener" href="http://pear.php.net/package/PEAR/download">pear</a>与<a target="_blank" rel="noopener" href="http://pear.php.net/package/VersionControl_SVN/download">VersionControl_SVN</a>，这个是操作subversion的关键，但是这里的安装，如果仅仅是给svnmanager用的话也不用弄得很复杂，只要把这两个下载来的包，解压到svnmanager的安装目录下就行了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -903,7 +957,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">150</span>
+          <span class="site-state-item-count">151</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -916,7 +970,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">191</span>
+        <span class="site-state-item-count">192</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
