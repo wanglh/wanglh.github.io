@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.wanglianghui.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="动态网站的课程快要结束了，虽然今年为了让学生能够早点尝到成功的滋味，把自动代码生成等内容往前提，但是效果并不好，原因也跟之前一样，学生在课外没有投入额外的学习时间，编程知识的巩固与技能的掌握所必须的练习不能保证，所以这类课其实跟老师讲了什么关系并不大，关键是有多少学生能够在课外有兴趣去投入到这些内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习网站开发">
+<meta property="og:url" content="http://www.wanglianghui.cn/2019/05/31/learnprograming/index.html">
+<meta property="og:site_name" content="之间居">
+<meta property="og:description" content="动态网站的课程快要结束了，虽然今年为了让学生能够早点尝到成功的滋味，把自动代码生成等内容往前提，但是效果并不好，原因也跟之前一样，学生在课外没有投入额外的学习时间，编程知识的巩固与技能的掌握所必须的练习不能保证，所以这类课其实跟老师讲了什么关系并不大，关键是有多少学生能够在课外有兴趣去投入到这些内容。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-05-31T00:46:18.000Z">
+<meta property="article:modified_time" content="2019-05-31T15:52:32.000Z">
+<meta property="article:author" content="Levi Wang">
+<meta property="article:tag" content="技术学习">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.wanglianghui.cn/2019/05/31/learnprograming/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+  <title>学习网站开发 | 之间居</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">之间居</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">之间的github之旅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言簿</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2019/05/31/learnprograming/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          学习网站开发
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-05-31 08:46:18 / 修改时间：23:52:32" itemprop="dateCreated datePublished" datetime="2019-05-31T08:46:18+08:00">2019-05-31</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">教学工作</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2019/05/31/learnprograming/" class="post-meta-item leancloud_visitors" data-flag-title="学习网站开发" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2019/05/31/learnprograming/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2019/05/31/learnprograming/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>动态网站的课程快要结束了，虽然今年为了让学生能够早点尝到成功的滋味，把自动代码生成等内容往前提，但是效果并不好，原因也跟之前一样，学生在课外没有投入额外的学习时间，编程知识的巩固与技能的掌握所必须的练习不能保证，所以这类课其实跟老师讲了什么关系并不大，关键是有多少学生能够在课外有兴趣去投入到这些内容。</p>
+<span id="more"></span>
+
+<p>当然值得安慰的是也有一些学生已经有入门的迹象，也有同学表示要继续深入下去，那么怎么进一步学习呢？以后我也不会再给他们上课，但是我确实也希望其中有几个人能够在这方面能够继续学习下去，在这里也算是分享一下自己的学习经验，给需要的同学看看。</p>
+<p>在诸如网站开发之类的编程开发类课程，我的一个首要的目标就是需要学生建立一个对整个网站运行起来的一个整体的观念，这个是非常粗粒度的，但是有这样的观念后，在后期网站出问题的时候可以更好地去判断问题在哪里。所以我在上课的时候，很多时候并不细讲一些实现细节问题，而是把整个过程讲一遍，但是能够理解我这种安排，并在整体上有印象的人并不多。但是如果在我的课程后面要自学，这一步必须要走。也就是对整个asp.net网站的流程机制，页面交互中的数据来回要能够非常清晰地知道。</p>
+<p>在了解了整体的网站建设与运行的大致轮廓之后，就可以根据我上课所讲的知识去着手开发一个系统，最好这个系统你会有较为持续的兴趣。在这个过程中，你会发现你需要实现很多东西，但是很多知识并不具备，现在网络条件好，一般初学者所要解决的问题，或者一般网站中所要实现的功能或多或少能够在网上找到一些解决方法。在这个过程中有两点很重要，第一就是要有学习的毅力，在一个自己并不是很熟悉的环境中学习开发，经常会受挫，很多人会放弃。有些时候看网上的解决方法，但是你自己就是实现不了，这些都很正常，因为技术的使用其实都是有条件的，但是网上的文章很多时候都是写给自己看的，一些先决条件并没有写得很仔细，所以直接拿来会有问题。第二个要点就是要注意举一反三，其实编程本身并没有那么难，况且现在资料很充分，但是如果什么都要去找现成的答案的话，那是很浪费时间的，这个时候就需要你能够想到跟自己所要解决的问题的情景较为接近的问题，从这些自己相对比较熟的地方来接近新近要解决的问题。如果能够独立完成一万行代码左右的网站，基本上已经可以工作了。</p>
+<p>在前面的开发过程中，或者今后的学习中我也建议不能仅仅用老师上课的知识，或者网上找来的临时解决方案。因为老师上课为了让同学接受很多都是往简单里讲，而网上的临时解决方案又比较碎片化。那么有一个更好的学习方法就是去学习一些开源软件或者开源的框架。这是把所学的编程知识系统化，同时又建立自己开发习惯的好途径。我在我学asp.net的时候，当时国内没有什么资料，我的所有学习材料是两个，一个是微软的msdn，这个在visual studio中直接通过帮助可以激活的，另一个是微软当时提供的starter kit，这里面有几个典型的应用，譬如有门户，内容管理系统有一个商店petshop，我对三层架构的理解就是从petshop开始的。从这些经典的代码中，我学习到了很多自学所想不到的代码写法以及一些简单框架。所以在熟悉了asp.net基本网站开发以后，我建议从一些知名的开源软件或框架中去学习。其实动软代码生成也是一种，这里的三层思想还是值得学习的，虽然现在asp.net在推行MVC，但是两者也并不矛盾。</p>
+<p>有些要看入门教程的话，w3school与菜鸟教程也不错。如果一定要推荐什么资料，我觉得还是看个人的特点，譬如有些喜欢看视频(我从来没耐心看一个视频演示，所以也从来不看，文字快多了)那么可以找些慕课，网易云课堂上还是有很多培训都不错的，腾讯最近也在上这方面的东西。喜欢看文字的可以订阅博客园、csdn上的博客文章、csdn上的问答系统也是我早期学习常去的地方、开源网站github、国外比较知名的stack overflow。</p>
+<p>我自身技术学习的经历比较特殊，我在不同操作系统(windows、Ubuntu、mac）下使用过多种语言编程，所有技术相关的都是通过自学而来的，所以自学能力还比较强，有些新东西并没怎么学就会了，这个大概就是对一个领域熟悉了以后，很多东西的学习都是有加速度的。同学们自学的时候一开始可以慢慢的，但是等你积累了一定经验后自然会快起来。</p>
+<p>从某种意义上我并不是一个好的老师，因为好多学生的困惑我不能感知到，我的优势就在于我对我所教的内容比较熟悉，应该说用来对付教学绰绰有余。接下去我在想如何设计一个精准教学的系统，用来帮助我更好地教授学生我所掌握的知识。</p>
+
+    </div>
+
+    
+    
+    <div class="post-widgets">
+    <div
+      class="social-share"
+      
+        data-sites="weibo,wechat,qzone,facebook,twitter"
+      
+      
+        data-wechat-qrcode-title="请打开微信扫一扫"
+      
+      
+    >
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" rel="tag"># 技术学习</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/04/27/difficulty/" rel="prev" title="困难">
+      <i class="fa fa-chevron-left"></i> 困难
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/31/django-admin/" rel="next" title="django后台管理的基本使用">
+      django后台管理的基本使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Levi Wang"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Levi Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">153</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">197</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zjnuwlh@gmail.com" title="E-Mail → mailto:zjnuwlh@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/tiediy" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;tiediy" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Levi Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">99k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:45</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI',
+      appKey     : 'xLCpMzWwwFK4K3UOboZVg1aK',
+      placeholder: "来吧，说几句",
+      avatar     : 'hide',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : 'https://enfcvfdt.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
