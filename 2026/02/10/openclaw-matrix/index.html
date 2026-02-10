@@ -28,7 +28,7 @@
 <meta property="og:description" content="这个寒假很有意思，事先知道前面两周比较忙，所以把要干的活安排到两周后，结果两周后openclaw横空出世，看宣传很牛，尝试了一下也感觉很有意思，结果到今天又快过去10天了，事情没怎么做，但是openclaw倒是尝试了下，为了纪念这段意外逝去的时间，把这里的一些东西记下来。主要是讲讲在国内，如何更好地尝试openclaw。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-02-10T08:08:29.000Z">
-<meta property="article:modified_time" content="2026-02-10T09:36:01.872Z">
+<meta property="article:modified_time" content="2026-02-10T13:04:32.421Z">
 <meta property="article:author" content="Levi Wang">
 <meta property="article:tag" content="matrix">
 <meta property="article:tag" content="openclaw">
@@ -199,7 +199,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2026-02-10 16:08:29 / 修改时间：17:36:01" itemprop="dateCreated datePublished" datetime="2026-02-10T16:08:29+08:00">2026-02-10</time>
+              <time title="创建时间：2026-02-10 16:08:29 / 修改时间：21:04:32" itemprop="dateCreated datePublished" datetime="2026-02-10T16:08:29+08:00">2026-02-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -238,14 +238,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
+              <span>3.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -269,6 +269,10 @@
 
 <p>对了，matrix中人不多，可能很多也是为了openclaw才来的，但是挺不错的，我配置不出来的时候问了个问题就有热心人士回答，虽然没有用上，但是挺暖心的。</p>
 <p>最后吐槽一下，我用的是qwen的免费额度，但是自从我的openclaw自动帮我安装完依赖后，她就一直回复我 <code>429 Free allocated quota exceeded.</code>，不知道什么时候是个尽头。其实我没用掉多少大模型token，不知道什么地方超限了。</p>
+<!-- more -->
+
+<p>晚上才发现  <code>429 Free allocated quota exceeded.</code> 原来是qwen大模型的问题，它默认是oauth的方式认证，这种方式直接通过网页认证，默认的免费token量不大，用完了就没了。但是阿里的bailian大模型平台其实提供了169个模型，每个模型百万token，还是非常多的。不过这个配置还是要看下文档的，我这里留一个可行的配置信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">  &quot;bailian&quot;: &#123;</span><br><span class="line">    &quot;baseUrl&quot;: &quot;https://dashscope.aliyuncs.com/compatible-mode/v1&quot;,</span><br><span class="line">    &quot;apiKey&quot;: &quot;sk-你的apikey&quot;,</span><br><span class="line">    &quot;api&quot;: &quot;openai-completions&quot;,</span><br><span class="line">    &quot;models&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;id&quot;: &quot;qwen-plus&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;Qwen plus&quot;,</span><br><span class="line">        &quot;reasoning&quot;: false,</span><br><span class="line">        &quot;input&quot;: [</span><br><span class="line">          &quot;text&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;cost&quot;: &#123;</span><br><span class="line">          &quot;input&quot;: 0,</span><br><span class="line">          &quot;output&quot;: 0,</span><br><span class="line">          &quot;cacheRead&quot;: 0,</span><br><span class="line">          &quot;cacheWrite&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;contextWindow&quot;: 200000,</span><br><span class="line">        &quot;maxTokens&quot;: 8192</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;id&quot;: &quot;qwen-code-plus&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;Qwen code plus&quot;,</span><br><span class="line">        &quot;reasoning&quot;: false,</span><br><span class="line">        &quot;input&quot;: [</span><br><span class="line">          &quot;text&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;cost&quot;: &#123;</span><br><span class="line">          &quot;input&quot;: 0,</span><br><span class="line">          &quot;output&quot;: 0,</span><br><span class="line">          &quot;cacheRead&quot;: 0,</span><br><span class="line">          &quot;cacheWrite&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;contextWindow&quot;: 200000,</span><br><span class="line">        &quot;maxTokens&quot;: 8192</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -438,12 +442,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">102k</span>
+    <span title="站点总字数">103k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:50</span>
+    <span title="站点阅读时长">2:52</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
