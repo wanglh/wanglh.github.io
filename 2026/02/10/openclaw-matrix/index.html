@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.wanglianghui.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="这个寒假很有意思，事先知道前面两周比较忙，所以把要干的活安排到两周后，结果两周后openclaw横空出世，看宣传很牛，尝试了一下也感觉很有意思，结果到今天又快过去10天了，事情没怎么做，但是openclaw倒是尝试了下，为了纪念这段意外逝去的时间，把这里的一些东西记下来。主要是讲讲在国内，如何更好地尝试openclaw。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="openclaw中使用matrix终端的配置">
+<meta property="og:url" content="http://www.wanglianghui.cn/2026/02/10/openclaw-matrix/index.html">
+<meta property="og:site_name" content="之间居">
+<meta property="og:description" content="这个寒假很有意思，事先知道前面两周比较忙，所以把要干的活安排到两周后，结果两周后openclaw横空出世，看宣传很牛，尝试了一下也感觉很有意思，结果到今天又快过去10天了，事情没怎么做，但是openclaw倒是尝试了下，为了纪念这段意外逝去的时间，把这里的一些东西记下来。主要是讲讲在国内，如何更好地尝试openclaw。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-02-10T08:08:29.000Z">
+<meta property="article:modified_time" content="2026-02-10T09:30:32.800Z">
+<meta property="article:author" content="Levi Wang">
+<meta property="article:tag" content="matrix">
+<meta property="article:tag" content="openclaw">
+<meta property="article:tag" content="人工智能">
+<meta property="article:tag" content="技术探索">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.wanglianghui.cn/2026/02/10/openclaw-matrix/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+  <title>openclaw中使用matrix终端的配置 | 之间居</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">之间居</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">之间的github之旅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言簿</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2026/02/10/openclaw-matrix/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          openclaw中使用matrix终端的配置
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-02-10 16:08:29 / 修改时间：17:30:32" itemprop="dateCreated datePublished" datetime="2026-02-10T16:08:29+08:00">2026-02-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2026/02/10/openclaw-matrix/" class="post-meta-item leancloud_visitors" data-flag-title="openclaw中使用matrix终端的配置" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2026/02/10/openclaw-matrix/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2026/02/10/openclaw-matrix/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>这个寒假很有意思，事先知道前面两周比较忙，所以把要干的活安排到两周后，结果两周后openclaw横空出世，看宣传很牛，尝试了一下也感觉很有意思，结果到今天又快过去10天了，事情没怎么做，但是openclaw倒是尝试了下，为了纪念这段意外逝去的时间，把这里的一些东西记下来。主要是讲讲在国内，如何更好地尝试openclaw。</p>
+<span id="more"></span>
+
+<p>我第一次安装的时候还叫moltbot（1月27日），也就是它的第二个阶段，安装成功了，但是要挑选即时通讯工具的时候我发现我几乎没有选择（我以前不用飞书，所以因此优化了一天时间了解了飞书），等我了解了飞书的时候，这个东西已经改名为openclaw，我安装了1月31日的那个版本，也调通了飞书。然后就发现很多云服务器供应商推出了一键部署的套餐，但是当时还是想自己先了解，没有用。接下去探索微信，结果发现是企业微信，所以一般人用不了，qq机器人倒是可以。这个时候发现免费版的飞书api调用是有限度的，没了api限度那就白瞎了那一通探索（今天发现飞书把免费版的api调用从1万次提高到了5万次，但是仅在2月份有效）。于是探索qq与钉钉的机器人，后来看了下这两个也有类似限制，免费版的调用次数是有额度的，所以要找一个没有这种限制的即时通讯工具。在这个过程中尝试了imessage，可行，因为我有两个mbp，但是不好用，因为要两台电脑一起用，后来也看到了bluebubble，但是手机安装bluebubble需要科学上网，这个也不适合，而且还需要我在电脑上运行一个bluebubble的服务器端，这个我接受不了。此外我又了解了telegram之类的工具，很多工具国内是禁止使用的，也不好，最后发现matrix还不错可以尝试。中间大学寝室聚会，有一天半的时间没干，就在某云下单了一个一键部署的服务器。</p>
+<p>同学聚会结束就开始搜索网上资料，找到了<a target="_blank" rel="noopener" href="https://blog.mygraphql.com/zh/posts/ai/ai-personal-assistant/openclaw-matrix-channel/">为 OpenClaw 加入 Matrix Channel</a>，还有就是openclaw文档中的内容<a target="_blank" rel="noopener" href="https://docs.openclaw.ai/channels/matrix">Matrix - OpenClaw</a>。所以，一开始以为需要自己安装Matrix服务器，但是那个一键部署服务器不是我熟悉的ubuntu，安装命令用dnf而不是apt，很多操作都需要查资料。所以当看到matrix可以用第三方服务器的时候果断放弃，最后挑了一个国内友好的服务器，<a target="_blank" rel="noopener" href="https://chat.neboer.site/%EF%BC%8C%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%B0%B1%E6%98%AF%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AE%E3%80%81%E8%B0%83%E8%AF%95%E4%BA%86%E3%80%82">https://chat.neboer.site/，接下来就是安装、配置、调试了。</a></p>
+<p>安装插件，可以按照官方文档操作，没什么难度。就是会有两个问题，我安装了两台机器，重复安装的问题都存在，但是依赖条件安装只有一台有。重复插件只要删除其中一个目录就行了，依赖条件就看它报错报少了什么就安装什么，一般也不难。有一台机器缺依赖，神奇的是openclaw自己把这个依赖条件安装好了，在这个过程中它还自作主张修改了package.json文件，搞得我心惊胆战，但后来安装后没什么问题，总算放心了。</p>
+<p>如果插件安装好了，配置可以按照插件提示来做，有两种方案，一种方案是直接提供accesstoken，另一种方案是提供用户名&#x2F;密码。因为对matrix不熟悉，这里走了些弯路。其实matrix配置就三个要素：服务器地址、用户名、密码。但是这里的服务器地址不一定是web访问的地址，譬如web访问<a target="_blank" rel="noopener" href="https://chat.neboer.site/">https://chat.neboer.site/</a>，但是它的服务器地址是<a href="https://matrix.neboer.site:8448，这个坑好久才出来。还有它的用户名是需要全名，就是你注册时候的用户名再加冒号服务器地址，譬如">https://matrix.neboer.site:8448，这个坑好久才出来。还有它的用户名是需要全名，就是你注册时候的用户名再加冒号服务器地址，譬如</a> <strong>@zjnuwlh:chat.neboer.site</strong> 这样的。如果这三个东西搞明白，不管是官方文档还是其他教程里面的获取accesstoken的命令行就是靠谱的，否则都是返回不了token。当然如果熟悉matrix的人，完全可以在客户端的 <strong>帮助与关于</strong> 这里获取，他这里有现成的。</p>
+<p>最后需要说明的是，为了对话，你需要两个matrix账号，一个绑定openclaw，一个你来发消息。我的相关配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&quot;matrix&quot;: &#123;</span><br><span class="line">  &quot;enabled&quot;: true,</span><br><span class="line">  &quot;homeserver&quot;: &quot;https://matrix.neboer.site:8448&quot;,</span><br><span class="line">  &quot;encryption&quot;: true,</span><br><span class="line">  &quot;dm&quot;: &#123;</span><br><span class="line">    &quot;policy&quot;: &quot;allowlist&quot;,</span><br><span class="line">    &quot;allowFrom&quot;: [</span><br><span class="line">      &quot;@第一个账号:chat.neboer.site&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;userId&quot;: &quot;@第二个账号:chat.neboer.site&quot;,</span><br><span class="line">  &quot;password&quot;: &quot;我的密码&quot;,</span><br><span class="line">  &quot;deviceName&quot;: &quot;OpenClaw&quot;,</span><br><span class="line">  &quot;groupPolicy&quot;: &quot;open&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对了，matrix中人不多，可能很多也是为了openclaw才来的，但是挺不错的，我配置不出来的时候问了个问题就有热心人士回答，虽然没有用上，但是挺暖心的。</p>
+<p>最后吐槽一下，我用的是qwen的免费额度，但是自从我的openclaw自动帮我安装完依赖后，她就一直回复我 <code>429 Free allocated quota exceeded.</code>，不知道什么时候是个尽头。其实我没用掉多少大模型token，不知道什么地方超限了。</p>
+
+    </div>
+
+    
+    
+    <div class="post-widgets">
+    <div
+      class="social-share"
+      
+        data-sites="weibo,wechat,qzone,facebook,twitter"
+      
+      
+        data-wechat-qrcode-title="请打开微信扫一扫"
+      
+      
+    >
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" rel="tag"># 人工智能</a>
+              <a href="/tags/openclaw/" rel="tag"># openclaw</a>
+              <a href="/tags/matrix/" rel="tag"># matrix</a>
+              <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/" rel="tag"># 技术探索</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/02/04/Hexo-upgrade/" rel="prev" title="Hexo升级">
+      <i class="fa fa-chevron-left"></i> Hexo升级
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Levi Wang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Levi Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zjnuwlh@gmail.com" title="E-Mail → mailto:zjnuwlh@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/tiediy" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;tiediy" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Levi Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">102k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:50</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI',
+      appKey     : 'xLCpMzWwwFK4K3UOboZVg1aK',
+      placeholder: "来吧，说几句",
+      avatar     : 'hide',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : 'https://enfcvfdt.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
