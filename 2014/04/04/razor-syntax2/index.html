@@ -263,11 +263,11 @@
 <ul>
 <li>RenderSection</li>
 </ul>
-<p>RenderBody在一个布局页面里只能出现一次，所以有很多时候都是不过瘾的，因为我们有更多的内容需要替换，就出现了RenderSection。具体的用法就不说了，但是要注意一旦定义了Section，那么在内容页面就要有这么一个节<code>@section SectionName &#123; //todo &#125;</code>，否则在RenderSection的时候要增加一个参数，表示不一定要有这个section，具体上一篇中已经提到过了。</p>
+<p>RenderBody在一个布局页面里只能出现一次，所以有很多时候都是不过瘾的，因为我们有更多的内容需要替换，就出现了RenderSection。具体的用法就不说了，但是要注意一旦定义了Section，那么在内容页面就要有这么一个节<code>@section SectionName { //todo }</code>，否则在RenderSection的时候要增加一个参数，表示不一定要有这个section，具体上一篇中已经提到过了。</p>
 <ul>
 <li>RenderPage</li>
 </ul>
-<p>RenderBody与RenderSection里面的内容都是放在内容页面里面的，也就是他们都在同一个cshtml中，但是有时候我们需要引入第三个文件，甚至这第三个文件还可以根据调用的参数的不同呈现出不同的形态，这个时候RenderPage就出现了。简单点的就这么用<code>@RenderPage(“~/Views/Shared/_Header.cshtml”) </code>，复杂点的带参数的用法<code>@RenderPage(“~/Views/Shared/_Header.cshtml”,new&#123;parm=&quot;my&quot;,parm2=&quot;you&quot;) </code>，在接受页面里可以这样来接受参数<code>@PageData[&quot;param&quot;]</code>。</p>
+<p>RenderBody与RenderSection里面的内容都是放在内容页面里面的，也就是他们都在同一个cshtml中，但是有时候我们需要引入第三个文件，甚至这第三个文件还可以根据调用的参数的不同呈现出不同的形态，这个时候RenderPage就出现了。简单点的就这么用<code>@RenderPage(“~/Views/Shared/_Header.cshtml”) </code>，复杂点的带参数的用法<code>@RenderPage(“~/Views/Shared/_Header.cshtml”,new{parm=&quot;my&quot;,parm2=&quot;you&quot;) </code>，在接受页面里可以这样来接受参数<code>@PageData[&quot;param&quot;]</code>。</p>
 <ul>
 <li>Html.Partial</li>
 </ul>
@@ -277,7 +277,7 @@
 <p>通过这上下两篇，我们主要是把razor里面模板替换的各种方法解析了一下，但是对于razor的整体的语法还是没有提到，这里就简单地抄一下<a target="_blank" rel="noopener" href="http://www.w3chtml.com/aspnet/razor-syntax.html">w3chtml</a>上的内容。</p>
 <p>C# 的主要 Razor 语法规则：</p>
 <ul>
-<li><pre><code>Razor 代码封装于 @&#123; ... &#125; 中
+<li><pre><code>Razor 代码封装于 @{ ... } 中
 </code></pre>
 </li>
 <li><pre><code>行内表达式（变量和函数）以 @ 开头
@@ -297,14 +297,14 @@
 </li>
 </ul>
 <p>例子：</p>
-<p>单行代码块：<code>@&#123; var myMessage =    &quot;Hello World&quot;; &#125;</code></p>
+<p>单行代码块：<code>@{ var myMessage =	&quot;Hello World&quot;; }</code></p>
 <p>行内表达式或变量：<code>&lt;p&gt;The value of myMessage is: @myMessage&lt;/p&gt;</code></p>
 <p>多行语句代码块：</p>
-<pre><code>@&#123;
+<pre><code>@{
 var greeting = &quot;Welcome to our site!&quot;;
 var weekDay = DateTime.Now.DayOfWeek;
 var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
-&#125;
+}
 &lt;p&gt;The greeting is: @greetingMessage&lt;/p&gt;
 </code></pre>
 <p>上述网站对razor的用法什么的还是讲得很详细，所以关于razor的其他内容就不在赘述了。下一步是进入到MVC的内部的时候了，不过MVC5里用了bootstrap，如果不了解好像也不够意思，有时间也讲讲。</p>
@@ -421,20 +421,20 @@ var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -478,12 +478,12 @@ var greetingMessage = greeting + &quot; Here in Huston it is: &quot; + weekDay;
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

@@ -241,7 +241,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>418</span>
+              <span>480</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -271,7 +271,7 @@ def hello(request):
     return HttpResponse(&quot;&lt;h1&gt;hello world!&lt;/h1&gt;&quot;)
 </code></pre>
 <p>3.配置url</p>
-<p>修改urls.py，假设可以用http://服务器地址/hello的方式来访问刚才定义的home这个视图，可以如下设置<br>    from djangoweb.view import hello<br>    urlpatterns = patterns(‘’, url(r’^hello/$’, hello, name=’hello’),)</p>
+<p>修改urls.py，假设可以用http:&#x2F;&#x2F;服务器地址&#x2F;hello的方式来访问刚才定义的home这个视图，可以如下设置<br>    from djangoweb.view import hello<br>    urlpatterns &#x3D; patterns(‘’, url(r’^hello&#x2F;$’, hello, name&#x3D;’hello’),)</p>
 <p>这里的尖号（^）和美元符号（$）都是正则表达式符号，分别表示字符串的开头和结尾。</p>
 <p>这是最简单的django项目，如果复杂的话就需要定义模板、视图，下次再说。</p>
 
@@ -386,20 +386,20 @@ def hello(request):
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -443,12 +443,12 @@ def hello(request):
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

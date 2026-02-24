@@ -242,7 +242,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -299,7 +299,7 @@
 <p>此外ueditor的按钮也是可以定制的，因为实际上用不上那么多的按钮，也太复杂了。可以在<code>editor_config.js</code>中修改，也可以在编辑器实例化的时候写代码。</p>
 <pre><code>//单行工具   
 toolbars: [
-    [&#39;fullscreen&#39;, &#39;source&#39;, &#39;undo&#39;, &#39;redo&#39;, &#39;bold&#39;]
+	[&#39;fullscreen&#39;, &#39;source&#39;, &#39;undo&#39;, &#39;redo&#39;, &#39;bold&#39;]
 ]
 
 //多行工具，竖线 &#39;|&#39; 代表按钮之间的分割线
@@ -312,13 +312,13 @@ toolbars: [
 <p><strong>4.注意事项</strong></p>
 <p>可能会出现如下错误：</p>
 <blockquote>
-<p>从客户端(editorValue=”……”)中检测到有潜在危险的 Request.Form 值</p>
+<p>从客户端(editorValue&#x3D;”……”)中检测到有潜在危险的 Request.Form 值</p>
 </blockquote>
 <p>这个需要在web.config中设置，有两个地方，第一个地方添加<code>requestValidationMode=&quot;2.0&quot;</code>，第二个地方添加<code>validateRequest=&quot;false&quot;</code>，最后的结果类似下面的代码：</p>
 <pre><code>    &lt;httpRuntime targetFramework=&quot;4.5&quot; requestValidationMode=&quot;2.0&quot; /&gt;
     &lt;pages validateRequest=&quot;false&quot;&gt;
 </code></pre>
-<p>今天上课的时候还发现，如果你创建的是网站website而不是项目project，那么整个website在启动的时候会出错，其原因就在于ueditor目录中的<code>app_code</code>中有一些它自己的代码，你需要把它放到根目录下的<code>app_code</code>下面，否则网站不理解这些代码，也就会出错。【2014/5/21 20:19:55 更新】</p>
+<p>今天上课的时候还发现，如果你创建的是网站website而不是项目project，那么整个website在启动的时候会出错，其原因就在于ueditor目录中的<code>app_code</code>中有一些它自己的代码，你需要把它放到根目录下的<code>app_code</code>下面，否则网站不理解这些代码，也就会出错。【2014&#x2F;5&#x2F;21 20:19:55 更新】</p>
 
     </div>
 
@@ -432,20 +432,20 @@ toolbars: [
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -489,12 +489,12 @@ toolbars: [
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

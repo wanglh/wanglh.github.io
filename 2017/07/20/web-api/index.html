@@ -240,14 +240,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -274,7 +274,7 @@
 <p>最后，修改web api控制器里面的代码逻辑。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//查看该农户本周是否有人检查过</span><br><span class="line">// GET api/&lt;controller&gt;/5</span><br><span class="line">public bool Get(int id)</span><br><span class="line">&#123;</span><br><span class="line">    WangLH.BLL.FarmerScore fs = new WangLH.BLL.FarmerScore();</span><br><span class="line">    return fs.IsChecked(id);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// POST api/&lt;controller&gt;</span><br><span class="line">//接受的参数是对象的话，客户端传递过来的是json，它会自动映射</span><br><span class="line">public void Post([FromBody]FarmerScore fscore)</span><br><span class="line">&#123;</span><br><span class="line">    WangLH.BLL.FarmerScore fs = new WangLH.BLL.FarmerScore();</span><br><span class="line">    fs.Add(fscore);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>从这里可以看到，跟我们原来在MVC中开发一个控制器一样，基本上没什么变化。只不过访问地址变成了“http://网站地址/api/controller名称”。 同时在web api中数据访问的方式也是预先设定的，通过不同的http verb来进行不同的数据库操作，如get对应了select操作，post对应了create操作，put对应了update操作，而delete对应的就是delete操作。</p>
+<p>从这里可以看到，跟我们原来在MVC中开发一个控制器一样，基本上没什么变化。只不过访问地址变成了“http:&#x2F;&#x2F;网站地址&#x2F;api&#x2F;controller名称”。 同时在web api中数据访问的方式也是预先设定的，通过不同的http verb来进行不同的数据库操作，如get对应了select操作，post对应了create操作，put对应了update操作，而delete对应的就是delete操作。</p>
 <p>其实对学生来说，如果搞不清那么多东西，那就只要知道什么样的访问地址，采用什么样的http verb访问，达到什么效果就好了。</p>
 <p>还有一种常用的需要web api返回一个对象的方法，这里返回值的类型可以写成IHttpActionResult，它实际上会把返回的对象解析成json字符串，在前端调用的时候直接解析json字符串就行了。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//返回评分的列表</span><br><span class="line">public IHttpActionResult Get()</span><br><span class="line">&#123;</span><br><span class="line">    WangLH.BLL.FarmerScore fs = new WangLH.BLL.FarmerScore();</span><br><span class="line">    var list = fs.GetScoreView();</span><br><span class="line">    return Json &lt; List&lt;ScoreView&gt; &gt; (list);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -299,8 +299,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/web-api/" rel="tag"># web api</a>
               <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag"># 微信小程序</a>
+              <a href="/tags/web-api/" rel="tag"># web api</a>
           </div>
 
         
@@ -390,20 +390,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -447,12 +447,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

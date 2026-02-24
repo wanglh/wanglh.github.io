@@ -242,7 +242,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>676</span>
+              <span>742</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -262,11 +262,11 @@
 
       
         <p>ubuntu的自带的远程桌面挺好用，唯一的缺点就是需要在服务器先登录一次才能用，有时候这个有点苛求。所以一直在找一种能够自动登录的远程桌面。先后试过了xrdp，vnc4server，xrdp倒是挺好，能够用windows的远程桌面连接，但是有些键盘操作有点问题。vnc4server跟系统自带的远程桌面类似，都需要本地登录后才能用（据说可以ssh登录后启动，但是我试了一下vnc4server服务器在ssh下启动不了，启动了后进去发现也只有桌面，而且也嫌它麻烦）。这样就转向了x11vnc。</p>
-<p><strong>安装</strong><br>    sudo apt-get install vino vinagre x11vnc<br><strong>设置vnc密码</strong><br>    sudo x11vnc -storepasswd<br>这样就在当前用户的目录下的.vnc目录中创建了一个passwd的文件用来存放vnc密码。  </p>
-<p>网上说要给x11vnc设一个单一的密码，其实这个没必要，用vnc的密码就行了，如果要设就执行如下语句<br>    sudo x11vnc -storepasswd in /etc/x11vnc.pass<br>这里还有个文件权限问题</p>
-<p>配置x11vnc为跟随系统自动启动需要新建一个文件/etc/init/x11vnc.conf，在里面写上如下文本：<br>    start on login-session-start  </p>
+<p><strong>安装</strong><br>	sudo apt-get install vino vinagre x11vnc<br><strong>设置vnc密码</strong><br>	sudo x11vnc -storepasswd<br>这样就在当前用户的目录下的.vnc目录中创建了一个passwd的文件用来存放vnc密码。  </p>
+<p>网上说要给x11vnc设一个单一的密码，其实这个没必要，用vnc的密码就行了，如果要设就执行如下语句<br>	sudo x11vnc -storepasswd in &#x2F;etc&#x2F;x11vnc.pass<br>这里还有个文件权限问题</p>
+<p>配置x11vnc为跟随系统自动启动需要新建一个文件&#x2F;etc&#x2F;init&#x2F;x11vnc.conf，在里面写上如下文本：<br>	start on login-session-start  </p>
 <pre><code>script  
-    x11vnc -display :0 -auth /var/run/lightdm/root/:0 -forever -bg -o /var/log/x11vnc.log -rfbauth /home/zjnuwlh/.vnc/passwd -rfbport 5900  
+	x11vnc -display :0 -auth /var/run/lightdm/root/:0 -forever -bg -o /var/log/x11vnc.log -rfbauth /home/zjnuwlh/.vnc/passwd -rfbport 5900  
 end script  
 </code></pre>
 
@@ -382,20 +382,20 @@ end script
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -439,12 +439,12 @@ end script
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

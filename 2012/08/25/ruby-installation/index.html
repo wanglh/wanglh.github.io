@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"www.wanglianghui.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="ubuntu下安装ROR推荐用[RVM][1]，安装rvm    curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable 单独安装ruby    sudo curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable –ruby 安装Rails    sudo curl -L https:&#x2F;&#x2F;get.rvm.io | s">
+  <meta name="description" content="ubuntu下安装ROR推荐用[RVM][1]，安装rvm    curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable 单独安装ruby    sudo curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable –ruby 安装Rails	sudo curl -L https:&#x2F;&#x2F;get.rvm.io | sudo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu下RoR环境的安装">
 <meta property="og:url" content="http://www.wanglianghui.cn/2012/08/25/ruby-installation/index.html">
 <meta property="og:site_name" content="之间居">
-<meta property="og:description" content="ubuntu下安装ROR推荐用[RVM][1]，安装rvm    curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable 单独安装ruby    sudo curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable –ruby 安装Rails    sudo curl -L https:&#x2F;&#x2F;get.rvm.io | s">
+<meta property="og:description" content="ubuntu下安装ROR推荐用[RVM][1]，安装rvm    curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable 单独安装ruby    sudo curl -L https:&#x2F;&#x2F;get.rvm.io | sudo bash -s stable –ruby 安装Rails	sudo curl -L https:&#x2F;&#x2F;get.rvm.io | sudo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2012-08-25T00:31:00.000Z">
 <meta property="article:modified_time" content="2014-04-01T05:40:06.000Z">
@@ -242,7 +242,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>955</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -263,23 +263,19 @@
       
         <p>ubuntu下安装ROR推荐用[RVM][1]，<br>安装rvm<br>    curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable</p>
 <p>单独安装ruby<br>    sudo curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable –ruby</p>
-<p>安装Rails<br>    sudo curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable –rails<br>可惜这样安装好的rails似乎没用，最后还是执行<br>    sudo apt-get install rails</p>
-<p><a target="_blank" rel="noopener" href="http://www.imagemagick.org/script/install-source.php#unix">安装ImageMagick</a><br>下载ImageMagick源代码并解压<br>    ./configure<br>    make<br>    sudo make install<br>    sudo ldconfig /usr/local/lib</p>
-<p>安装bundler<br>    sudo gem install bundler  </p>
+<p>安装Rails<br>	sudo curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable –rails<br>可惜这样安装好的rails似乎没用，最后还是执行<br>	sudo apt-get install rails</p>
+<p>[安装ImageMagick][2]<br>下载ImageMagick源代码并解压<br>	.&#x2F;configure<br>	make<br>	sudo make install<br>	sudo ldconfig &#x2F;usr&#x2F;local&#x2F;lib</p>
+<p>安装bundler<br>	sudo gem install bundler  </p>
 <p>修改redmine下的配置文件  </p>
-<p>到redmine目录下执行<br>    sudo bundle install –without development test<br>其他的参阅<a target="_blank" rel="noopener" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall" title="redmine安装">redmine安装</a></p>
-<p>安装passenger<br>    sudo gem install passenger<br>    sudo passenger-install-apache2-module<br>其他配置什么的根据安装过程的提示来写</p>
-<p>安装svnmanager<br>配置config.php<br>添加数据库<br>用admin/admin登录后马上创建管理员账号，创建的时候最后一个密码就填写admin。<br>下面安装php对svn的支持，否则不能在svnmanager中设置用户对库的权限<br>    sudo apt-get install php5 php5-mysql php5-sqlite php-pear<br>    sudo pear install -a VersionControl_SVN-0.4.0 </p>
+<p>到redmine目录下执行<br>	sudo bundle install –without development test<br>其他的参阅[redmine安装][3]</p>
+<p>安装passenger<br>	sudo gem install passenger<br>	sudo passenger-install-apache2-module<br>其他配置什么的根据安装过程的提示来写</p>
+<p>安装svnmanager<br>配置config.php<br>添加数据库<br>用admin&#x2F;admin登录后马上创建管理员账号，创建的时候最后一个密码就填写admin。<br>下面安装php对svn的支持，否则不能在svnmanager中设置用户对库的权限<br>	sudo apt-get install php5 php5-mysql php5-sqlite php-pear<br>	sudo pear install -a VersionControl_SVN-0.4.0 </p>
 <p>注意svnmanager要写内容的两个文件（access与password）的权限要修改。</p>
 <p><strong>参考</strong><br>[1]: <a target="_blank" rel="noopener" href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a> “rvm安装”  </p>
 <ol>
-<li><a target="_blank" rel="noopener" href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a>  </li>
-</ol>
-<ol start="2">
-<li><a target="_blank" rel="noopener" href="http://www.imagemagick.org/script/install-source.php#unix">http://www.imagemagick.org/script/install-source.php#unix</a>  </li>
-</ol>
-<ol start="3">
-<li><a target="_blank" rel="noopener" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a><br>[2]: <a target="_blank" rel="noopener" href="http://www.imagemagick.org/script/install-source.php#unix">http://www.imagemagick.org/script/install-source.php#unix</a>  </li>
+<li><a target="_blank" rel="noopener" href="http://www.imagemagick.org/script/install-source.php#unix">http://www.imagemagick.org/script/install-source.php#unix</a><br>[3]: <a target="_blank" rel="noopener" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a> “redmine安装”  </li>
+<li><a target="_blank" rel="noopener" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
 </ol>
 
     </div>
@@ -394,20 +390,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -451,12 +447,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

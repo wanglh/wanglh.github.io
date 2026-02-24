@@ -235,14 +235,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -263,11 +263,11 @@
 <p>这里几个文件的作用如下：</p>
 <ul>
 <li><strong>HelloWorld:</strong> 项目的容器。</li>
-<li> <strong>manage.py:</strong> 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。 </li>
-<li> <strong>HelloWorld/<strong>init</strong>.py:</strong> 一个空文件，告诉 Python 该目录是一个 Python 包。</li>
-<li> <strong>HelloWorld/settings.py:</strong> 该 Django 项目的设置/配置。</li>
-<li> <strong>HelloWorld/urls.py:</strong> 该 Django 项目的 URL 声明; 一份由 Django 驱动的网站”目录”。</li>
-<li> <strong>HelloWorld/wsgi.py:</strong> 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。</li>
+<li><strong>manage.py:</strong> 一个实用的命令行工具，可让你以各种方式与该 Django 项目进行交互。 </li>
+<li><strong>HelloWorld&#x2F;<strong>init</strong>.py:</strong> 一个空文件，告诉 Python 该目录是一个 Python 包。</li>
+<li><strong>HelloWorld&#x2F;settings.py:</strong> 该 Django 项目的设置&#x2F;配置。</li>
+<li><strong>HelloWorld&#x2F;urls.py:</strong> 该 Django 项目的 URL 声明; 一份由 Django 驱动的网站”目录”。</li>
+<li><strong>HelloWorld&#x2F;wsgi.py:</strong> 一个 WSGI 兼容的 Web 服务器的入口，以便运行你的项目。</li>
 </ul>
 <p>Django 自动管理工具是 django.contrib 的一部分。你可以在项目的 settings.py 中的 INSTALLED_APPS 看到它：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = (</span><br><span class="line">    &#x27;django.contrib.admin&#x27;,</span><br><span class="line">    &#x27;django.contrib.auth&#x27;,</span><br><span class="line">    &#x27;django.contrib.contenttypes&#x27;,</span><br><span class="line">    &#x27;django.contrib.sessions&#x27;,</span><br><span class="line">    &#x27;django.contrib.messages&#x27;,</span><br><span class="line">    &#x27;django.contrib.staticfiles&#x27;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
@@ -278,8 +278,8 @@
 <p>做好上述准备后，启动开发服务器，然后在浏览器中访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/admin/%EF%BC%8C%E5%B0%B1%E4%BC%9A%E6%9C%89%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95%E7%AA%97%E5%8F%A3%E5%87%BA%E7%8E%B0%EF%BC%8C%E8%BF%99%E4%B8%AA%E8%A1%A8%E6%98%8E%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%B7%B2%E7%BB%8F%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E4%BA%86%E3%80%82">http://127.0.0.1:8000/admin/，就会有一个登录窗口出现，这个表明后台管理工具已经可以使用了。</a></p>
 <p>为了创建管理账号，我们需要在命令号运行<strong>python manage.py createsuperuser</strong> 来创建超级用户。</p>
 <p>到此为止，后台管理工具已经可以用了。</p>
-<h2 id="设置中文界面"><a href="#设置中文界面" class="headerlink" title="设置中文界面"></a>设置中文界面</h2><p>django后台默认是英文界面，对于中文用户来说就不方便了，这里只要在settings.py 中 把LANGUAGE_CODE = ‘en-us’改成LANGUAGE_CODE = ‘zh-Hans’即可。</p>
-<p>顺便把设置TIME_ZONE = ‘Asia/Shanghai’ 。</p>
+<h2 id="设置中文界面"><a href="#设置中文界面" class="headerlink" title="设置中文界面"></a>设置中文界面</h2><p>django后台默认是英文界面，对于中文用户来说就不方便了，这里只要在settings.py 中 把LANGUAGE_CODE &#x3D; ‘en-us’改成LANGUAGE_CODE &#x3D; ‘zh-Hans’即可。</p>
+<p>顺便把设置TIME_ZONE &#x3D; ‘Asia&#x2F;Shanghai’ 。</p>
 <h2 id="model准备"><a href="#model准备" class="headerlink" title="model准备"></a>model准备</h2><p>最近要为学科评估开发一个信息系统，所以在项目目录下添加models.py文件，并在其中添加了相应的数据模型，其中大部分都是如下样子。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class user(models.Model):</span><br><span class="line">    username = models.CharField(verbose_name=&#x27;用户名&#x27;,max_length=50)</span><br><span class="line">    password = models.CharField(verbose_name=&#x27;密码&#x27;,max_length=50)</span><br><span class="line">    name = models.CharField(verbose_name=&#x27;姓名&#x27;,max_length=50)</span><br><span class="line">    email = models.CharField(verbose_name=&#x27;Email&#x27;,max_length=50)</span><br><span class="line">    lastLogin=models.DateField(verbose_name=&#x27;最近登录&#x27;)</span><br><span class="line">    class Meta:</span><br><span class="line">        # 指定数据表名称</span><br><span class="line">        # db_table = &#x27;wang_user&#x27;</span><br><span class="line">        # 指定模型在后台显示的名称</span><br><span class="line">        verbose_name = &#x27;用户&#x27;</span><br><span class="line">        # 去除后台显示的名称默认添加的 &#x27;s&#x27;</span><br><span class="line">        verbose_name_plural = verbose_name</span><br><span class="line"></span><br><span class="line">class td(models.Model):</span><br><span class="line">    tdlb = models.CharField(verbose_name=&#x27;团队类别&#x27;,max_length=50)</span><br><span class="line">    tdmc = models.CharField(verbose_name=&#x27;团队名称&#x27;,max_length=50)</span><br><span class="line">    xsdtr = models.CharField(verbose_name=&#x27;学术带头人&#x27;,max_length=50)</span><br><span class="line">    dtrcsny = models.CharField(verbose_name=&#x27;带头人出生年月&#x27;,max_length=50)</span><br><span class="line">    zzje = models.FloatField(verbose_name=&#x27;资助金额&#x27;)</span><br><span class="line">    zznx = models.CharField(verbose_name=&#x27;资助年限&#x27;,max_length=50)</span><br><span class="line">    bz = models.CharField(verbose_name=&#x27;备注&#x27;,max_length=50)</span><br><span class="line">    class Meta:</span><br><span class="line">        # 指定数据表名称</span><br><span class="line">        # db_table = &#x27;wang_td&#x27;</span><br><span class="line">        # 指定模型在后台显示的名称</span><br><span class="line">        verbose_name = &#x27;团队&#x27;</span><br><span class="line">        # 去除后台显示的名称默认添加的 &#x27;s&#x27;</span><br><span class="line">        verbose_name_plural = verbose_name</span><br></pre></td></tr></table></figure>
 
@@ -408,20 +408,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -465,12 +465,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

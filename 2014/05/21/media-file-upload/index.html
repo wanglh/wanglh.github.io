@@ -243,7 +243,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -267,7 +267,7 @@
 <p>但是不管怎样，作为学习我们还是要学会这两种存取文件的方式。下面我们以用户头像文件为例来说明这两种方法。</p>
 <h2 id="1-存放到文件系统中"><a href="#1-存放到文件系统中" class="headerlink" title="1.存放到文件系统中"></a>1.存放到文件系统中</h2><p>这种方式比较简单，主要是把头像文件上传到特定的文件夹中，同时把它的url相对路径存到数据库中就好了。代码如下</p>
 <pre><code>    if (fuAvart.FileContent != null)
-    &#123;
+    {
         //文件存取路径，存放在avart目录下以用户名命名的目录下
         string path = Server.MapPath(&quot;~/avart/&quot; + HttpContext.Current.User.Identity.Name) + &quot;\\&quot;;
         //图片的url相对路径
@@ -281,23 +281,23 @@
         string sql = &quot;update users set avarturl=&#39;&quot; + url + &quot;&#39; where username=&#39;&quot; + HttpContext.Current.User.Identity.Name + &quot;&#39;&quot;;
         DataBase.RunSQL(sql);
         iAvart.ImageUrl = url;
-    &#125;
+    }
 </code></pre>
 <p>这种方式的提取也很简单，就是直接把图片的url值赋值给image控件就行了。一句话<code>iAvart.ImageUrl = reader[&quot;avarturl&quot;].ToString();</code> </p>
 <p>本部分数据库字段avarturl的类型为nvarchar（256）。</p>
 <h2 id="2-存放到数据库中"><a href="#2-存放到数据库中" class="headerlink" title="2.存放到数据库中"></a>2.存放到数据库中</h2><p>把图片存放到数据库中需要有一个image类型的字段，<br>在上传过程中，把图片文件转化成文件流，并把它作为sql命令的参数来执行</p>
 <pre><code>    if (fuAvart.FileContent != null)
-    &#123;
+    {
         string sql = &quot;update users set avart=@avart where username=@username&quot;;
-        SqlParameter[] prams = new SqlParameter[]&#123;
+        SqlParameter[] prams = new SqlParameter[]{
             new SqlParameter(&quot;@avart&quot;,System.Data.SqlDbType.Image,fuAvart.FileBytes.Length),
             new SqlParameter(&quot;@username&quot;,System.Data.SqlDbType.VarChar,50)
-        &#125;;
+        };
         prams[0].Value = fuAvart.FileBytes;
         prams[1].Value = HttpContext.Current.User.Identity.Name;
         DataBase.RunSQL(sql, prams);
         iAvart.ImageUrl = &quot;avart.aspx&quot;;
-    &#125;
+    }
 </code></pre>
 <p>因为图片的显示需要一个新的页面，所以新创建一个文件avart.aspx，page_load中的代码如下：</p>
 <pre><code>    string sql = &quot;select * from users where username=&#39;&quot; + HttpContext.Current.User.Identity.Name + &quot;&#39;&quot;;
@@ -308,11 +308,11 @@
     //清除缓冲区中的所有内容
     Response.Clear();
     if (reader.Read() &amp;&amp; reader[&quot;avart&quot;] != DBNull.Value)
-    &#123;
+    {
         byte[] file = (byte[])reader[&quot;avart&quot;];
         //把二进制字符串写入HTTP输出流
         Response.OutputStream.Write(file,0,file.Length); 
-    &#125;
+    }
     reader.Close();
     //向客户端发送所有缓冲的内容
     Response.Flush();
@@ -436,20 +436,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">155</span>
+          <span class="site-state-item-count">156</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">201</span>
+        <span class="site-state-item-count">203</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -493,12 +493,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">103k</span>
+    <span title="站点总字数">108k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:52</span>
+    <span title="站点阅读时长">2:59</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
