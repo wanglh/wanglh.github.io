@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <author>
+    <name>Levi Wang</name>
+  </author>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  <id>http://www.wanglianghui.cn/</id>
+  <link href="http://www.wanglianghui.cn/" rel="alternate"/>
+  <link href="http://www.wanglianghui.cn/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, Levi Wang</rights>
+  <subtitle>之间的github之旅</subtitle>
+  <title>之间居</title>
+  <updated>2026-03-02T00:00:29.827Z</updated>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="AI教育" scheme="http://www.wanglianghui.cn/categories/AI%E6%95%99%E8%82%B2/"/>
+    <category term="智能周报" scheme="http://www.wanglianghui.cn/categories/AI%E6%95%99%E8%82%B2/%E6%99%BA%E8%83%BD%E5%91%A8%E6%8A%A5/"/>
+    <category term="AI教育" scheme="http://www.wanglianghui.cn/tags/AI%E6%95%99%E8%82%B2/"/>
+    <category term="智能周报" scheme="http://www.wanglianghui.cn/tags/%E6%99%BA%E8%83%BD%E5%91%A8%E6%8A%A5/"/>
+    <content>
+      <![CDATA[<h1 id="智能教育周报-2026-03-02"><a href="#智能教育周报-2026-03-02" class="headerlink" title="智能教育周报 - 2026-03-02"></a>智能教育周报 - 2026-03-02</h1><h2 id="本周摘要"><a href="#本周摘要" class="headerlink" title="本周摘要"></a>本周摘要</h2><p>本周共发现 20 篇新报道。</p><h3 id="eSchool-News"><a href="#eSchool-News" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  Profiles in Innovation Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/profiles-in-innovation/">查看原文</a></li></ul><h3 id="eSchool-News-1"><a href="#eSchool-News-1" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  E-rate Funding Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/it-leadership/e-rate-funding/">查看原文</a></li></ul><h3 id="eSchool-News-2"><a href="#eSchool-News-2" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  Internet Connectivity Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/it-leadership/internet-connectivity/">查看原文</a></li></ul><h3 id="eSchool-News-3"><a href="#eSchool-News-3" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  IT Innovations Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/it-leadership/it-innovations/">查看原文</a></li></ul><h3 id="eSchool-News-4"><a href="#eSchool-News-4" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  K-12 Cybersecurity Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/it-leadership/k-12-cybersecurity/">查看原文</a></li></ul><h3 id="eSchool-News-5"><a href="#eSchool-News-5" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  School Data Management Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/it-leadership/school-data-management/">查看原文</a></li></ul><h3 id="eSchool-News-6"><a href="#eSchool-News-6" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  Student Data Security Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/it-leadership/student-data-security/">查看原文</a></li></ul><h3 id="eSchool-News-7"><a href="#eSchool-News-7" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  Teaching Trends Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/innovative-teaching/teaching-trends/">查看原文</a></li></ul><h3 id="eSchool-News-8"><a href="#eSchool-News-8" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  Classroom Management Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/innovative-teaching/classroom-management/">查看原文</a></li></ul><h3 id="eSchool-News-9"><a href="#eSchool-News-9" class="headerlink" title="eSchool News"></a>eSchool News</h3><ul><li><strong>来源</strong>: eSchoolNews</li><li><strong>发布时间</strong>:  Curriculum &amp; Assessment Archives</li><li><strong>链接</strong>: <a href="https://www.eschoolnews.com/innovative-teaching/curriculum-assessment/">查看原文</a></li></ul><h3 id="Featured-Contributors-eCampus-News"><a href="#Featured-Contributors-eCampus-News" class="headerlink" title="Featured Contributors - eCampus News"></a>Featured Contributors - eCampus News</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2024-02-26</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/featured-contributors/">查看原文</a></li></ul><h3 id="eCampus-News-Newsline-Archives"><a href="#eCampus-News-Newsline-Archives" class="headerlink" title="eCampus News - Newsline Archives"></a>eCampus News - Newsline Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2025-11-11</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/newsline/">查看原文</a></li></ul><h3 id="EDUCAUSE-2024-Best-of-Show-Preview-eCampus-News"><a href="#EDUCAUSE-2024-Best-of-Show-Preview-eCampus-News" class="headerlink" title="EDUCAUSE 2024 Best of Show Preview - eCampus News"></a>EDUCAUSE 2024 Best of Show Preview - eCampus News</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2024-10-01</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/best-of-show-educause-2024/">查看原文</a></li></ul><h3 id="eCampus-News-Policy-Archives"><a href="#eCampus-News-Policy-Archives" class="headerlink" title="eCampus News - Policy Archives"></a>eCampus News - Policy Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2026-01-09</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/campus-leadership/policy/">查看原文</a></li></ul><h3 id="eCampus-News-Sustainability-Archives"><a href="#eCampus-News-Sustainability-Archives" class="headerlink" title="eCampus News - Sustainability Archives"></a>eCampus News - Sustainability Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2026-01-30</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/campus-leadership/sustainability/">查看原文</a></li></ul><h3 id="eCampus-News-Faculty-Staff-Archives"><a href="#eCampus-News-Faculty-Staff-Archives" class="headerlink" title="eCampus News - Faculty &amp; Staff Archives"></a>eCampus News - Faculty &amp; Staff Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2026-02-27</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/campus-leadership/faculty-staff/">查看原文</a></li></ul><h3 id="eCampus-News-Community-Colleges-Archives"><a href="#eCampus-News-Community-Colleges-Archives" class="headerlink" title="eCampus News - Community Colleges Archives"></a>eCampus News - Community Colleges Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2025-10-08</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/campus-leadership/community-colleges/">查看原文</a></li></ul><h3 id="eCampus-News-Recruitment-Enrollment-Archives"><a href="#eCampus-News-Recruitment-Enrollment-Archives" class="headerlink" title="eCampus News - Recruitment &amp; Enrollment Archives"></a>eCampus News - Recruitment &amp; Enrollment Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2026-02-24</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/campus-leadership/recruitment-enrollment/">查看原文</a></li></ul><h3 id="eCampus-News-Data-Analytics-Archives"><a href="#eCampus-News-Data-Analytics-Archives" class="headerlink" title="eCampus News - Data &amp; Analytics Archives"></a>eCampus News - Data &amp; Analytics Archives</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>: 2026-01-09</li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/it-leadership/data-analytics/">查看原文</a></li></ul><h3 id="IT-Management"><a href="#IT-Management" class="headerlink" title="IT Management"></a>IT Management</h3><ul><li><strong>来源</strong>: eCampusNews</li><li><strong>发布时间</strong>:  Higher Education News </li><li><strong>链接</strong>: <a href="https://www.ecampusnews.com/it-leadership/">查看原文</a></li></ul><hr><p><strong>数据来源</strong>: eSchoolNews, eCampusNews<br><strong>生成时间</strong>: 2026-03-02<br><strong>数据库记录数</strong>: 30</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2026/03/02/smart-education-weekly-report/</id>
+    <link href="http://www.wanglianghui.cn/2026/03/02/smart-education-weekly-report/"/>
+    <published>2026-03-01T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="智能教育周报-2026-03-02"><a href="#智能教育周报-2026-03-02" class="headerlink" title="智能教育周报 - 2026-03-02"></a>智能教育周报 - 2026-03-02</h1><h2 id="本]]>
+    </summary>
+    <title>2026-03-02 智能教育周报</title>
+    <updated>2026-03-02T00:00:29.827Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="教育科技" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/"/>
+    <category term="AI教育" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/AI%E6%95%99%E8%82%B2/"/>
+    <category term="教育" scheme="http://www.wanglianghui.cn/tags/%E6%95%99%E8%82%B2/"/>
+    <category term="AI" scheme="http://www.wanglianghui.cn/tags/AI/"/>
+    <category term="智能教育" scheme="http://www.wanglianghui.cn/tags/%E6%99%BA%E8%83%BD%E6%95%99%E8%82%B2/"/>
+    <category term="高等教育" scheme="http://www.wanglianghui.cn/tags/%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2/"/>
+    <content>
+      <![CDATA[<h2 id="📚-智能教育日报-2026年02月28日"><a href="#📚-智能教育日报-2026年02月28日" class="headerlink" title="📚 智能教育日报 (2026年02月28日)"></a>📚 智能教育日报 (2026年02月28日)</h2><blockquote><p>今日AI教育要闻 | 来源: eCampus News</p></blockquote><hr><h3 id="🔥-今日焦点"><a href="#🔥-今日焦点" class="headerlink" title="🔥 今日焦点"></a>🔥 今日焦点</h3><p><strong>今日暂无AI教育相关报道</strong></p><hr><h3 id="📊-趋势总结"><a href="#📊-趋势总结" class="headerlink" title="📊 趋势总结"></a>📊 趋势总结</h3><p>今日AI教育领域的主要趋势:</p><ol><li><strong>AI技能培养滞后</strong>: 高校AI课程设置不足，学生多自学</li><li><strong>学术诚信挑战</strong>: AI在作业中的使用引发诚信争议</li><li><strong>伦理框架建设</strong>: 高等教育机构正在制定AI使用指南</li></ol><hr><p><em>本简报由自动脚本于 2026年02月28日 生成</em><br><em>数据来源: eCampus News</em></p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2026/02/28/smart-education-daily-report/</id>
+    <link href="http://www.wanglianghui.cn/2026/02/28/smart-education-daily-report/"/>
+    <published>2026-02-28T12:29:49.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="📚-智能教育日报-2026年02月28日"><a href="#📚-智能教育日报-2026年02月28日" class="headerlink" title="📚 智能教育日报 (2026年02月28日)"></a>📚 智能教育日报 (2026年02月28]]>
+    </summary>
+    <title>智能教育日报 2026-02-28</title>
+    <updated>2026-02-28T12:29:49.949Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="实践探索" scheme="http://www.wanglianghui.cn/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/"/>
+    <category term="人工智能" scheme="http://www.wanglianghui.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <category term="openclaw" scheme="http://www.wanglianghui.cn/tags/openclaw/"/>
+    <category term="matrix" scheme="http://www.wanglianghui.cn/tags/matrix/"/>
+    <category term="技术探索" scheme="http://www.wanglianghui.cn/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/"/>
+    <content>
+      <![CDATA[<p>这个寒假很有意思，事先知道前面两周比较忙，所以把要干的活安排到两周后，结果两周后openclaw横空出世，看宣传很牛，尝试了一下也感觉很有意思，结果到今天又快过去10天了，事情没怎么做，但是openclaw倒是尝试了下，为了纪念这段意外逝去的时间，把这里的一些东西记下来。主要是讲讲在国内，如何更好地尝试openclaw。</p><span id="more"></span><p>我第一次安装的时候还叫moltbot（1月27日），也就是它的第二个阶段，安装成功了，但是要挑选即时通讯工具的时候我发现我几乎没有选择（我以前不用飞书，所以因此优化了一天时间了解了飞书），等我了解了飞书的时候，这个东西已经改名为openclaw，我安装了1月31日的那个版本，也调通了飞书。然后就发现很多云服务器供应商推出了一键部署的套餐，但是当时还是想自己先了解，没有用。接下去探索微信，结果发现是企业微信，所以一般人用不了，qq机器人倒是可以。这个时候发现免费版的飞书api调用是有限度的，没了api限度那就白瞎了那一通探索（今天发现飞书把免费版的api调用从1万次提高到了5万次，但是仅在2月份有效）。于是探索qq与钉钉的机器人，后来看了下这两个也有类似限制，免费版的调用次数是有额度的，所以要找一个没有这种限制的即时通讯工具。在这个过程中尝试了imessage，可行，因为我有两个mbp，但是不好用，因为要两台电脑一起用，后来也看到了bluebubble，但是手机安装bluebubble需要科学上网，这个也不适合，而且还需要我在电脑上运行一个bluebubble的服务器端，这个我接受不了。此外我又了解了telegram之类的工具，很多工具国内是禁止使用的，也不好，最后发现matrix还不错可以尝试。中间大学寝室聚会，有一天半的时间没干，就在某云下单了一个一键部署的服务器。</p><p>同学聚会结束就开始搜索网上资料，找到了<a href="https://blog.mygraphql.com/zh/posts/ai/ai-personal-assistant/openclaw-matrix-channel/">为 OpenClaw 加入 Matrix Channel</a>，还有就是openclaw文档中的内容<a href="https://docs.openclaw.ai/channels/matrix">Matrix - OpenClaw</a>。所以，一开始以为需要自己安装Matrix服务器，但是那个一键部署服务器不是我熟悉的ubuntu，安装命令用dnf而不是apt，很多操作都需要查资料。所以当看到matrix可以用第三方服务器的时候果断放弃，最后挑了一个国内友好的服务器，<a href="https://chat.neboer.site/">https://chat.neboer.site/</a>，接下来就是安装、配置、调试了。</p><p>安装插件，可以按照官方文档操作，没什么难度。就是会有两个问题，我安装了两台机器，重复安装的问题都存在，但是依赖条件安装只有一台有。重复插件只要删除其中一个目录就行了，依赖条件就看它报错报少了什么就安装什么，一般也不难。有一台机器缺依赖，神奇的是openclaw自己把这个依赖条件安装好了，在这个过程中它还自作主张修改了package.json文件，搞得我心惊胆战，但后来安装后没什么问题，总算放心了。</p><p>如果插件安装好了，配置可以按照插件提示来做，有两种方案，一种方案是直接提供accesstoken，另一种方案是提供用户名&#x2F;密码。因为对matrix不熟悉，这里走了些弯路。其实matrix配置就三个要素：服务器地址、用户名、密码。但是这里的服务器地址不一定是web访问的地址，譬如web访问<a href="https://chat.neboer.site/">https://chat.neboer.site/</a>，但是它的服务器地址是<a href="https://matrix.neboer.site:8448/">https://matrix.neboer.site:8448</a>，这个坑好久才出来。还有它的用户名是需要全名，就是你注册时候的用户名再加冒号服务器地址，譬如 <strong>@zjnuwlh:chat.neboer.site</strong> 这样的。如果这三个东西搞明白，不管是官方文档还是其他教程里面的获取accesstoken的命令行就是靠谱的，否则都是返回不了token。当然如果熟悉matrix的人，完全可以在客户端的 <strong>帮助与关于</strong> 这里获取，他这里有现成的。</p><p>最后需要说明的是，为了对话，你需要两个matrix账号，一个绑定openclaw，一个你来发消息。我的相关配置如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&quot;matrix&quot;: &#123;</span><br><span class="line">  &quot;enabled&quot;: true,</span><br><span class="line">  &quot;homeserver&quot;: &quot;https://matrix.neboer.site:8448&quot;,</span><br><span class="line">  &quot;encryption&quot;: true,</span><br><span class="line">  &quot;dm&quot;: &#123;</span><br><span class="line">    &quot;policy&quot;: &quot;allowlist&quot;,</span><br><span class="line">    &quot;allowFrom&quot;: [</span><br><span class="line">      &quot;@第一个账号:chat.neboer.site&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;userId&quot;: &quot;@第二个账号:chat.neboer.site&quot;,</span><br><span class="line">  &quot;password&quot;: &quot;我的密码&quot;,</span><br><span class="line">  &quot;deviceName&quot;: &quot;OpenClaw&quot;,</span><br><span class="line">  &quot;groupPolicy&quot;: &quot;open&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>对了，matrix中人不多，可能很多也是为了openclaw才来的，但是挺不错的，我配置不出来的时候问了个问题就有热心人士回答，虽然没有用上，但是挺暖心的。</p><p>最后吐槽一下，我用的是qwen的免费额度，但是自从我的openclaw自动帮我安装完依赖后，她就一直回复我 <code>429 Free allocated quota exceeded.</code>，不知道什么时候是个尽头。其实我没用掉多少大模型token，不知道什么地方超限了。</p><!-- more --><p>晚上才发现  <code>429 Free allocated quota exceeded.</code> 原来是qwen大模型的问题，它默认是oauth的方式认证，这种方式直接通过网页认证，默认的免费token量不大，用完了就没了。但是阿里的bailian大模型平台其实提供了169个模型，每个模型百万token，还是非常多的。不过这个配置还是要看下文档的，我这里留一个可行的配置信息：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">  &quot;bailian&quot;: &#123;</span><br><span class="line">    &quot;baseUrl&quot;: &quot;https://dashscope.aliyuncs.com/compatible-mode/v1&quot;,</span><br><span class="line">    &quot;apiKey&quot;: &quot;sk-你的apikey&quot;,</span><br><span class="line">    &quot;api&quot;: &quot;openai-completions&quot;,</span><br><span class="line">    &quot;models&quot;: [</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;id&quot;: &quot;qwen-plus&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;Qwen plus&quot;,</span><br><span class="line">        &quot;reasoning&quot;: false,</span><br><span class="line">        &quot;input&quot;: [</span><br><span class="line">          &quot;text&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;cost&quot;: &#123;</span><br><span class="line">          &quot;input&quot;: 0,</span><br><span class="line">          &quot;output&quot;: 0,</span><br><span class="line">          &quot;cacheRead&quot;: 0,</span><br><span class="line">          &quot;cacheWrite&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;contextWindow&quot;: 200000,</span><br><span class="line">        &quot;maxTokens&quot;: 8192</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;id&quot;: &quot;qwen-code-plus&quot;,</span><br><span class="line">        &quot;name&quot;: &quot;Qwen code plus&quot;,</span><br><span class="line">        &quot;reasoning&quot;: false,</span><br><span class="line">        &quot;input&quot;: [</span><br><span class="line">          &quot;text&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;cost&quot;: &#123;</span><br><span class="line">          &quot;input&quot;: 0,</span><br><span class="line">          &quot;output&quot;: 0,</span><br><span class="line">          &quot;cacheRead&quot;: 0,</span><br><span class="line">          &quot;cacheWrite&quot;: 0</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;contextWindow&quot;: 200000,</span><br><span class="line">        &quot;maxTokens&quot;: 8192</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2026/02/10/openclaw-matrix/</id>
+    <link href="http://www.wanglianghui.cn/2026/02/10/openclaw-matrix/"/>
+    <published>2026-02-10T08:08:29.000Z</published>
+    <summary>
+      <![CDATA[<p>这个寒假很有意思，事先知道前面两周比较忙，所以把要干的活安排到两周后，结果两周后openclaw横空出世，看宣传很牛，尝试了一下也感觉很有意思，结果到今天又快过去10天了，事情没怎么做，但是openclaw倒是尝试了下，为了纪念这段意外逝去的时间，把这里的一些东西记下来。主要是讲讲在国内，如何更好地尝试openclaw。</p>]]>
+    </summary>
+    <title>openclaw中使用matrix终端的配置</title>
+    <updated>2026-02-10T13:04:32.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="hexo" scheme="http://www.wanglianghui.cn/tags/hexo/"/>
+    <category term="博客系统" scheme="http://www.wanglianghui.cn/tags/%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/"/>
+    <content>
+      <![CDATA[<p>很久没用hexo，发现他又有升级了，到处找升级方案，官网似乎没相关信息，但是在一个博客网站上看到了，<a href="https://note.weizwz.com/hexo/basic/hexo-update">在这里做一个链接</a>。下面是一个简单的步骤与相关命令。</p><span id="more"></span><h2 id="1-定位到hexo博客根目录下-运行-hexo-v-查看当前版本"><a href="#1-定位到hexo博客根目录下-运行-hexo-v-查看当前版本" class="headerlink" title="1. 定位到hexo博客根目录下, 运行 hexo -v, 查看当前版本."></a>1. 定位到hexo博客根目录下, 运行 <code>hexo -v</code>, 查看当前版本.</h2><h2 id="2-npm-i-hexo-cli-g-全局安装-hexo-cli"><a href="#2-npm-i-hexo-cli-g-全局安装-hexo-cli" class="headerlink" title="2. npm i hexo-cli -g, 全局安装 hexo-cli"></a>2. <code>npm i hexo-cli -g</code>, 全局安装 hexo-cli</h2><h2 id="3-npm-install-g-npm-check-安装-npm-check，若已安装可以跳过"><a href="#3-npm-install-g-npm-check-安装-npm-check，若已安装可以跳过" class="headerlink" title="3. npm install -g npm-check, 安装 npm-check，若已安装可以跳过"></a>3. <code>npm install -g npm-check</code>, 安装 npm-check，若已安装可以跳过</h2><h2 id="4-npm-check-检查系统插件是否需要升级"><a href="#4-npm-check-检查系统插件是否需要升级" class="headerlink" title="4. npm-check, 检查系统插件是否需要升级"></a>4. <code>npm-check</code>, 检查系统插件是否需要升级</h2><h2 id="5-npm-install-g-npm-upgrade-安装-npm-upgrade，若已安装可以跳过"><a href="#5-npm-install-g-npm-upgrade-安装-npm-upgrade，若已安装可以跳过" class="headerlink" title="5. npm install -g npm-upgrade, 安装 npm-upgrade，若已安装可以跳过"></a>5. <code>npm install -g npm-upgrade</code>, 安装 npm-upgrade，若已安装可以跳过</h2><h2 id="6-npm-upgrade-更新-package-json"><a href="#6-npm-upgrade-更新-package-json" class="headerlink" title="6. npm-upgrade, 更新 package.json"></a>6. <code>npm-upgrade</code>, 更新 package.json</h2><h2 id="7-npm-update-save，升级系统项"><a href="#7-npm-update-save，升级系统项" class="headerlink" title="7. npm update --save，升级系统项"></a>7. <code>npm update --save</code>，升级系统项</h2><p>这一套下来该升级的都会升级好。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2026/02/04/Hexo-upgrade/</id>
+    <link href="http://www.wanglianghui.cn/2026/02/04/Hexo-upgrade/"/>
+    <published>2026-02-04T14:12:54.000Z</published>
+    <summary>
+      <![CDATA[<p>很久没用hexo，发现他又有升级了，到处找升级方案，官网似乎没相关信息，但是在一个博客网站上看到了，<a href="https://note.weizwz.com/hexo/basic/hexo-update">在这里做一个链接</a>。下面是一个简单的步骤与相关命令。</p>]]>
+    </summary>
+    <title>Hexo升级</title>
+    <updated>2026-02-04T14:19:40.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="实践探索" scheme="http://www.wanglianghui.cn/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/"/>
+    <category term="zotero" scheme="http://www.wanglianghui.cn/tags/zotero/"/>
+    <category term="科研软件" scheme="http://www.wanglianghui.cn/tags/%E7%A7%91%E7%A0%94%E8%BD%AF%E4%BB%B6/"/>
+    <content>
+      <![CDATA[<p>听介绍说zotero-AI-Butler挺好用，用了一下，感觉对论文阅读有好处，所以就把它设置起来，因为通义千问有个免费的200万token，所以先是用它来做了测试，需要设置的主要是4个地方，一个是ai提供商选择“openai兼容”，二是api地址：<a href="https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions%EF%BC%8C%E4%B8%89%E6%98%AFAPI%E5%AF%86%E5%8C%99%EF%BC%8C%E5%9B%9B%E6%98%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E2%80%9Cqwen-plus%E2%80%9D%E3%80%82%E4%BD%BF%E7%94%A8%E4%BA%86%E4%B8%80%E4%B8%8B%E6%95%88%E6%9E%9C%E4%B8%8D%E9%94%99%E3%80%82">https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions，三是API密匙，四是使用的模型“qwen-plus”。使用了一下效果不错。</a></p><span id="more"></span><p>考虑到虽然送了200万token，但是毕竟有用完的时候，所以看看能不能用ollama本地模型，测试了一下，发现可行，设置如下：</p><blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ai提供商：“openai兼容”</span><br><span class="line">api地址：http://localhost:11434/v1/chat/completions</span><br><span class="line">API密匙：任意</span><br><span class="line">使用的模型看看本地安装的任一大模型名称如deepseek-r1:14b</span><br></pre></td></tr></table></figure></blockquote><p>设置好了，那就可以任意使用zotero-AI-Butler，当然效果肯定也跟大模型有关</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2026/01/18/zotero-AI-Butler-Ollama/</id>
+    <link href="http://www.wanglianghui.cn/2026/01/18/zotero-AI-Butler-Ollama/"/>
+    <published>2026-01-18T03:43:43.000Z</published>
+    <summary>
+      <![CDATA[<p>听介绍说zotero-AI-Butler挺好用，用了一下，感觉对论文阅读有好处，所以就把它设置起来，因为通义千问有个免费的200万token，所以先是用它来做了测试，需要设置的主要是4个地方，一个是ai提供商选择“openai兼容”，二是api地址：<a href="https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions%EF%BC%8C%E4%B8%89%E6%98%AFAPI%E5%AF%86%E5%8C%99%EF%BC%8C%E5%9B%9B%E6%98%AF%E4%BD%BF%E7%94%A8%E7%9A%84%E6%A8%A1%E5%9E%8B%E2%80%9Cqwen-plus%E2%80%9D%E3%80%82%E4%BD%BF%E7%94%A8%E4%BA%86%E4%B8%80%E4%B8%8B%E6%95%88%E6%9E%9C%E4%B8%8D%E9%94%99%E3%80%82">https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions，三是API密匙，四是使用的模型“qwen-plus”。使用了一下效果不错。</a></p>]]>
+    </summary>
+    <title>zotero-AI-Butler使用Ollama实现AI管家</title>
+    <updated>2026-01-18T06:01:15.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="实践探索" scheme="http://www.wanglianghui.cn/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/"/>
+    <category term="人工智能" scheme="http://www.wanglianghui.cn/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    <category term="智能体" scheme="http://www.wanglianghui.cn/tags/%E6%99%BA%E8%83%BD%E4%BD%93/"/>
+    <category term="dify" scheme="http://www.wanglianghui.cn/tags/dify/"/>
+    <content>
+      <![CDATA[<p>过年前后deepseek在全球火了一把，假期没事也折腾了一下dify，昨天用dify很快地配置了一个钉钉群机器人，所以今天起来觉得是不是也可以很快地配置一个微信的机器人。所以就找了资料。</p><span id="more"></span><!-- more --><!-- more --><!-- more --><p>这个方案需要三个组件：dify，<a href="https://github.com/hanfangyuan4396/dify-on-wechat">dify-on-wechat</a>以及<a href="https://github.com/Devo919/Gewechat">Gewechat</a>，原因是dify-on-wechat最初配置的itchat不稳定，我在mac根本就登录不了（登录成功后因为出错马上要再次刷二维码）。</p><p>dify用docker compose启动没什么难度。</p><p>安装Gewechat我用网站的指示也没什么难度就好了，同时用docker启动。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 从阿里云镜像仓库拉取(国内)</span><br><span class="line">docker pull registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine</span><br><span class="line">docker tag registry.cn-chengdu.aliyuncs.com/tu1h/wechotd:alpine gewe</span><br><span class="line"></span><br><span class="line"># 创建数据目录并启动服务</span><br><span class="line">mkdir -p gewechat/data  </span><br><span class="line">docker run -itd -v ./gewechat/data:/root/temp -p 2531:2531 -p 2532:2532 --restart=always --name=gewe gewe</span><br></pre></td></tr></table></figure><p>Dify on WeChat的安装按照网站的也可以的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/hanfangyuan4396/dify-on-wechat</span><br><span class="line">cd dify-on-wechat/</span><br><span class="line"># 安装核心依赖（必选）</span><br><span class="line">pip3 install -r requirements.txt  </span><br><span class="line"># 国内可以在该命令末尾添加 &quot;-i https://mirrors.aliyun.com/pypi/simple&quot; 参数，使用阿里云镜像源安装依赖</span><br></pre></td></tr></table></figure><p>最后是填写配置文件，在dify-on-wechat目录下有一个config.json（config-template.json复制一份），主要填写如下内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;channel_type&quot;: &quot;gewechat&quot;,</span><br><span class="line">    &quot;dify_api_base&quot;: &quot;http://本机地址/v1&quot;,</span><br><span class="line">    &quot;dify_api_key&quot;: &quot;这个在dify的聊天助手中生成&quot;,</span><br><span class="line">    &quot;dify_app_type&quot;: &quot;chatbot&quot;,</span><br><span class="line">    &quot;gewechat_app_id&quot;: &quot;这里留空第一次启动程序自动填&quot;,</span><br><span class="line">    &quot;gewechat_base_url&quot;: &quot;http://本机地址:2531/v2/api&quot;,</span><br><span class="line">    &quot;gewechat_callback_url&quot;: &quot;http://本机地址:9919/v2/api/callback/collect&quot;,</span><br><span class="line">    &quot;gewechat_download_url&quot;: &quot;http://本机地址:2532/download&quot;,</span><br><span class="line">    &quot;gewechat_token&quot;: &quot;这里留空第一次启动程序自动填&quot;</span><br></pre></td></tr></table></figure><p>配置好以后，在dify-on-wechat目录中执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python app.py</span><br></pre></td></tr></table></figure><p>然后就跳出一个二维码，扫描后你的微信就有dify帮你回信了。</p><p>我在试的时候没注意，某群的群主有一个“@所有人”的动作，这货居然也自动回答了。当时没发现，挺不好意思的。</p><p><mark>微信不支持第三方的插件，前面群里的回答估计有人投诉了，微信发来警告，所以使用这个方案的注意一下，微信有被禁的可能。请大家自己保护好自己。</mark></p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2025/02/05/dify-wechat/</id>
+    <link href="http://www.wanglianghui.cn/2025/02/05/dify-wechat/"/>
+    <published>2025-02-05T07:22:28.000Z</published>
+    <summary>
+      <![CDATA[<p>过年前后deepseek在全球火了一把，假期没事也折腾了一下dify，昨天用dify很快地配置了一个钉钉群机器人，所以今天起来觉得是不是也可以很快地配置一个微信的机器人。所以就找了资料。</p>]]>
+    </summary>
+    <title>在dify做微信的应答助手</title>
+    <updated>2025-02-05T09:26:22.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="研究生" scheme="http://www.wanglianghui.cn/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+    <category term="毕业演讲" scheme="http://www.wanglianghui.cn/tags/%E6%AF%95%E4%B8%9A%E6%BC%94%E8%AE%B2/"/>
+    <content>
+      <![CDATA[<p>又一年一批研究生要离开学校走上社会，在他们的谢师宴上要我讲讲。我就把自己认为重要的三个词——厚道、实力、积极——给他们说说。</p><span id="more"></span>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2024/05/22/speech4graduate/</id>
+    <link href="http://www.wanglianghui.cn/2024/05/22/speech4graduate/"/>
+    <published>2024-05-22T01:57:23.000Z</published>
+    <summary>
+      <![CDATA[<p>又一年一批研究生要离开学校走上社会，在他们的谢师宴上要我讲讲。我就把自己认为重要的三个词——厚道、实力、积极——给他们说说。</p>]]>
+    </summary>
+    <title>给研究生的三个词</title>
+    <updated>2025-02-05T07:49:00.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="浙江师范大学" scheme="http://www.wanglianghui.cn/tags/%E6%B5%99%E6%B1%9F%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6/"/>
+    <category term="校史" scheme="http://www.wanglianghui.cn/tags/%E6%A0%A1%E5%8F%B2/"/>
+    <content>
+      <![CDATA[<p>一大早醒来无意中翻到了学校校友网上龚剑锋老师考证的校史，顺便理了一下。这个几乎也是浙江教师教育的一个缩影，如果要写一个浙江教师教育史，这个脉络肯定需要参考的。根据龚老师的考证，浙江师范大学的历史线索如下：</p><blockquote><p>全浙师范学堂（1906）-浙江官立两级师范学堂（1908）-浙江省立两级师范学校（1912）-浙江省立第一师范学校（1913）-浙江省立第一中学（1923）-浙江省立高级中学（1929）-浙江省立杭州师范学校（1931）-浙江省立临时联合中学（1938，丽水）-浙江省立临时联合师范学校（1939，丽水）-浙江省立杭州师范学校（1945）-浙江省杭州师范学校（1951）-杭州师范专科学校（1956）-杭州师范学院（1958）-浙江师范学院（1962，1965年迁金华）-浙江师范大学（1985）。</p></blockquote><p>顺便也理了一下浙江高等教育史上的两个浙江师范学院与两个杭州师范学院：</p><blockquote><p>浙江师范学院（1952-1958），1958年并入杭州大学；</p><p>浙江师范学院（1962-1985），1985年升格为浙江师范大学。</p><p>杭州师范学院（1958-1962），1962年改名为浙江师范学院，后为浙江师范大学；</p><p>杭州师范学院（1978-2007），2007年升格为杭州师范大学。</p></blockquote><span id="more"></span><p>怕网站有问题，把校友网（<a href="https://xy.zjnu.edu.cn/xyh/zjnu_xyh/cnt/detail.jsp?id=722&ele=detail&_refluxos=a10">https://xy.zjnu.edu.cn/xyh/zjnu_xyh/cnt/detail.jsp?id=722&amp;ele=detail&amp;_refluxos=a10</a> ）的全文摘录如下：</p><blockquote><p>校史是学校精神的母体，更是学校成长的灵魂。挖掘校史资源是推进文化校园建设的重要手段，是加强爱校荣校教育的重要途径，更是一项“承上启下，继往开来，服务当代，有益后世”的重要文化工程。一直以来，浙江师范大学只将源头追溯至创建于1956年的杭州师范专科学校，并认为是新中国成立以来浙江省第一所白手起家的学校。然而，浙江师范大学人文学院历史系硕导龚剑锋先生历时数载，通过稽查考实，调查采访，认为浙江师范大学的前身可追溯到光绪三十二年（1906年）创建的全浙师范学堂，由此写就本文，以供探讨。</p><p>一、百年风雨兼程 名士各领风骚</p><p>晚清时局内忧外患，河山黯淡，甲午败后，举国尤为惊触。鼎新革故、救亡图存成为时代的主题，其中教育革新成为当时的潮流。光绪二十八年（1902年），清廷颁布《钦定学堂章程》，次年又在全国推行《奏定学堂章程》。光绪三十一年（1905年），清廷最终下诏废止延续一千多年的科举取士，定近代教育之格制。</p><p>依湾傍海之浙江，处于欧风美雨登陆的海岸潮头，吴越风骨浸润下的先知先觉者为教育之经国大业，以启蒙民智、铸造新民为志，摩顶放踵，孜孜而求，一引时代之风气。清廷教育章程甫下，人心思变。光绪三十二年（1906年），浙江巡抚张曾敭（同“扬”，校网原文乱码）奏请清廷创建以培养中学师资和小学师资为目的的全浙师范学堂。当年即获清政府正式批准建校，校址位于废科举前用于举人考试的浙江贡院。1907年4月邵章任首任监督（即校长），经亨颐任监学（教务长）。7月发布开校公告。10月喻长霖任第二任监督，开始招考学生，招收了优级师范生200名、初级师范生300名、体育专科生100名。1908年春，堪称大清一流的新校舍全部建成，建筑格局参照日本东京高等师范学校，校园面积约140亩。5月14日（农历四月十五日），学堂正式开学，成为当时浙江省规模最大的新式高等学堂和全省师范教育的中心，时由王廷扬任监督。因学堂由优级师范部（即大学）和初级师范部（即中专）组成，校名改为浙江官立两级师范学堂。1909年夏，沈钧儒任监督。</p><p>民国元年（1912年），应中华民国政府教育部将学堂改为学校的要求，更名为浙江省立两级师范学校。经亨颐任校长。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">**浙江官立两级师范学校校歌**</span><br><span class="line"></span><br><span class="line">功如忠肃，学似文成，自古明贤数浙人。</span><br><span class="line">山川钟毓，代有奇英，六百同堂步后尘。</span><br><span class="line">文章惊海内，科学究专门，新旧中西一贯行。</span><br><span class="line">今日为多士，他年铸国民，教育前途定有声。</span><br></pre></td></tr></table></figure><p>1913年，教育部要求各省停办大学性质的优级师范，浙江省立两级师范学校优级师范部普通科的部分师生并入北京高等师范学校（今北京师范大学），并更名为浙江省立第一师范学校。学校从大学变成了中专。经亨颐校长手书“恕诚慎勤”校训。校歌由夏丏（音miǎn，校网原文乱码）尊作词、李叔同作曲。1919年“一师”成为五四运动的中心之一。1921年7月马叙伦任校长。1922年7月何炳松任校长。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">**浙江省立第一师范学校校歌**</span><br><span class="line"></span><br><span class="line">人人人，代谢靡尽，先后觉新民。</span><br><span class="line">可能可能，陶冶精神，道德润心身。</span><br><span class="line">吾侪同学，负斯重任，相勉又相亲。</span><br><span class="line">五载光阴，学与俱进，磐固吾根本。</span><br><span class="line">叶蓁蓁，木欣欣，碧梧万枝新。</span><br><span class="line">之江西，西湖滨，桃李一堂春。</span><br></pre></td></tr></table></figure><p>1923年，根据教育部的指令，学校实行中学、师范合校制，浙江省立第一师范学校与浙江省立第一中学合校，两校合称浙江省立第一中学，设中学部和师范部。仍由何炳松任校长。</p><p>1927年试行大学区制，由第三中山大学（浙江大学前身）校长蒋梦麟兼任浙江省立第一中学校长。</p><p>1929年，浙江省立第一中学高中、初中分办，高中部分改称浙江省立高级中学，设普通科、商科、师范科。仍由蒋梦麟兼任校长。</p><p>1931年，浙江省议会通过方案，决定在杭州孔庙筹办浙江省立杭州师范学校，浙江省立高级中学师范科（即原一师）的师生并入。9月14日开学，设三年制普通师范科、三年制幼稚师范科（浙江师范大学杭州幼儿师范学院前身）、一年制县师师资科。以“以身作则，为民前锋”为校训。1935年位于南山路柳浪闻莺的堪称全国一流的新校舍（今中国美术学院校舍）建成。</p><p>1937年，抗日战争爆发，浙江省立杭州师范学校内迁建德、丽水等地。</p><p>1938年上半年浙江省教育厅将浙江省立杭州师范学校与浙江省立杭州高级中学等其他中学在丽水合并成立了浙江省立临时联合中学，分设初中、高中、师范部。</p><p>1939年7月，浙江省立临时联合中学三部分独立，师范部改称浙江省立临时联合师范学校，校址仍在丽水。</p><p>1945年抗战胜利后，学校迁回杭州，并恢复原校名――浙江省立杭州师范学校。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">**浙江省立杭州师范学校校歌**</span><br><span class="line"></span><br><span class="line">以身作则，为民前锋，共肩重任莫轻！</span><br><span class="line">事在人为，学无止境，革新教育求深造！</span><br><span class="line">知耻斯有勇，诚朴复耐劳，</span><br><span class="line">好作师表精神振起从今朝！</span><br><span class="line">愿我侪一心一德，相期毋负，同上光明道！</span><br></pre></td></tr></table></figure><p>1951年4月，浙江省教育厅将学校划归杭州市人民政府领导，将浙江省立杭州师范学校更名为浙江省杭州师范学校。</p><p>1953年9月，根据浙江省培养幼儿教师的迫切需求，将杭州师范学校的幼稚师范科划出，成立单独建制的浙江省杭州幼儿师范学校（2001年并入浙江师范大学）。</p><p>1956年，浙江省在杭州师范学校校园内（西湖柳浪闻莺南山路98号）重办高等师范。4月16日，浙江师范大学前身――杭州师范专科学校于此诞生。杭州师范专科学校面向华东专区招生。暑假期间，杭州师范学校搬迁到文二街新校舍。10月3日，杭州师范专科学校隆重举行开学典礼。</p><p>1957年2月，浙江省委决定将杭州师范专科学校搬迁到位于全浙师范学堂原址附近的体育场路浙江师范学院 （杭州大学前身）分部的校舍，即今浙江日报社和浙江大学御跸教工宿舍。中央美术学院华东分院（即今中国美术学院）从西湖孤山罗苑迁入南山路98号杭州师范学校原校园。</p><p>1958年10月，浙江省委将杭州师范专科学校升格为杭州师范学院，收归省管，招收本科生。</p><p>1958年，杭州市政府为弥补初中师资培养的空缺，将杭州师范学校戴帽为杭州师范专科学校，实行一个学校两块牌子。1959年，杭州师范学校和杭州师范专科学校又分别建制。1960年，杭州师范专科学校并入杭州师范学院。</p><p>1962年，杭州师范学院与浙江教育学院、浙江体育学院合并，更名为浙江师范学院。1965年，浙江师范学院从杭州搬迁至金华。1985年升格为浙江师范大学（2000年、2001年、2004年浙江财政学校、浙江幼儿师范学校、金华铁路司机学校相继并入）。</p><p>百年校史中，名师荟萃，名士辈出，如著名文学家鲁迅、朱自清、柔石、许寿裳、叶圣陶、刘大白、冯雪峰、曹聚仁、夏丏尊、俞平伯、潘漠华、魏金枝、汪静之，著名史学家何炳松、朱希祖、孙正容，著名政治家沈钧儒、马叙伦、陈望道、施存统、宣中华、俞秀松、汪寿华、梁柏台、许宝驹，著名音乐家李叔同、刘质平、吴梦非，著名美术家潘天寿、丰子恺、沈尹默、张宗祥、姜丹书、沈本千、孙多慈、郑仁山，著名教育家经亨颐、蒋梦麟、郑晓沧、杨贤江、钱家治、俞子夷，著名心理学家章颐年，著名体育专家舒鸿，著名数学家陈建功，著名生物学家江希明、陈兼善等等。</p><p>二、学脉相承如此 血脉相连易见</p><p>浙江师范大学与全浙师范学堂、浙江官立两级师范学堂、浙江第一师范学校、杭州师范学校等 （各阶段名称，其实同一学校）一脉相承，浙江师范大学实际继承了全浙师范学堂的学脉、法统，血脉关系显而易见。</p><p>（一）1958年由杭州师范学校戴帽而成的杭州师范专科学校于1960年并入浙江师范大学前身杭州师范学院。1958年4月，浙江省委批准杭州市于1956年办的高等师范院校――杭州师范专科学校改招本科生，并于当年10月正式升格为杭州师范学院（今浙江师范大学），收归省管。杭州市委为了弥补培养初中师资的空缺，决定另建杭州师范专科学校。新建的杭州师范专科学校由当时的杭州师范学校戴帽而成，校址在文二街杭州师范学校校园内。当年7月25日，杭州市委任命杭州教育局党委书记黄少希兼校长。9月14日举行开学典礼。设文史、数理两科，招收高中毕业生，学制2年。教职员工基本由杭州师范学校的教职员工充任。1959年，由杭州师范学校一个学校发展而成的杭州师范专科学校和杭州师范学校分开独立设置。1960年10月，浙江省委贯彻实施国家“调整、巩固、充实、提高”的方针，将高等学校性质的杭州师范专科学校并入杭州师范学院 （今浙江师范大学）。而中等学校性质的杭州师范学校后来发展成杭州师范大学。</p><p>（二）2000年由杭州师范学校幼稚师范科发展而成的浙江幼儿师范学校并入浙江师范大学。民国时的杭州师范学校主要由三年制普通师范科、三年制幼稚师范科构成。1953年9月，杭州市人民政府把杭州师范学校幼稚师范科划出，单独建立浙江省杭州幼儿师范学校。2000年4月，浙江省教育厅下发了 《关于浙江幼儿师范学校与浙江师范大学联合办学的通知》（省教委浙教师〔2000〕123号）。《通知》规定，浙江幼儿师范学校与浙江师范大学实行联合办学，成立了浙江师范大学杭州幼儿师范学院。2001年7月，浙江省教育厅、浙江省计委下发 《关于浙江师范大学杭州幼儿师范学院并入浙江师范大学的通知》（浙教师〔2001〕258号），杭州幼儿师范学院正式并入浙江师范大学。</p><p>（三）浙江师范大学前身杭州师范专科学校是在杭州师范学校校园内孕育诞生的。1956年4月16日，教育部下达浙江省教育厅关于创办杭州师范专科学校的文件，浙江省委和杭州市委积极建校。5月底，杭州师范专科学校筹备组正式成立，杭州市教育局局长黄少希兼任筹备组组长，由中央美术学院华东分院 （中国美术学院前身）党委副书记、原浙江师范学院（杭州大学前身）中学教师进修部主任王绍艮负责具体筹备工作。</p><p>杭州师范专科学校在杭州师范学校校园内（西湖柳浪闻莺南山路98号）诞生，10月3日举行隆重的开学典礼，学生招自华东地区。师资方面，从浙江教师进修学校（原浙江师范学院中学教师进修部）和浙江师范学院（杭州大学前身）等处抽调。1956年暑假，杭州师范学校迁往文二街新校舍。1957年，中央美术学院华东分院（今中国美术学院）下放浙江省办学，学校从西湖孤山罗苑迁入南山路98号杭州师范学校原校园。</p><p>1957年2月，浙江省委又决定把杭州师范专科学校搬迁到位于全浙师范学堂原址附近的体育馆路浙江师范学院 （杭州大学前身）分部的校舍，即今浙江日报社和浙江大学御跸教工宿舍。</p><p>浙江师范大学前身杭州师范专科学校是在杭州师范学校校园内孕育诞生的，深受“一师”人文精神的浸润濡染。</p><p>（四）1978年教育部批准浙江师范学院（今浙江师范大学）杭州分校为杭州师范学院（今杭州师范大学）。1977年，杭州市委决定在杭州师范学校基础上创办高等师范院校，成立了杭州师范学院筹建小组。1978年3月，国家教育部召开电话会议，指示各地要 “充分发挥现有高等学校的潜力，积极扩大招生人数，加快建设新的高等学校”。为此，浙江省教育局决定，浙江各市（地）的筹建中的师院、师专在国务院正式批准前，均作为浙江师范学院的分校，如浙江师范学院杭州分校 （杭州师范大学前身）、浙江师范学院宁波分校（宁波师范学院前身，已并入宁波大学）、浙江师范学院绍兴分校（绍兴文理学院前身）、浙江师范学院湖州分校（湖州师范学院前身）、浙江师范学院舟山分校 （浙江海洋大学前身之一）、浙江师范学院台州分校（台州学院前身）、浙江师范学院丽水分校（丽水学院前身）、浙江师范学院金华分校（1982年并入浙江师范大学前身浙江师范学院）等。1978年3月，浙江师范学院杭州分校招收了中文、数学、物理、化学四个专业的新生318名，学制3年。1978年4月4日，杭州市委决定建立中共浙江师范学院杭州分校领导小组。1978年7月12日，杭州市委建立中共浙江师范学院杭州分校委员会。10月，浙江师范学院杭州分校增设政史、外语、生物、体育四个专业，其中体育为两年制，其他均为三年制。1978年12月28日，国务院批准在杭州师范学校的基础上成立杭州师范学院。</p><p>在1978年3月到12月之间，筹建中的杭州师范学院的各项工作均是以浙江师范学院杭州分校的名义进行，从法理上说，筹建中的杭州师范学院是浙江师范学院（今浙江师范大学）在杭州的一个分校。2008年，于1978年12月正式创办的杭州师范大学将其校史源头定在1908年的浙江官立两级师范学堂。那么，浙江师范大学更有理由将校史追溯到1906年创办的全浙师范学堂（浙江官立两级师范学堂前身）。</p></blockquote>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2024/05/01/history-of-zjnu/</id>
+    <link href="http://www.wanglianghui.cn/2024/05/01/history-of-zjnu/"/>
+    <published>2024-05-01T02:49:57.000Z</published>
+    <summary>
+      <![CDATA[<p>一大早醒来无意中翻到了学校校友网上龚剑锋老师考证的校史，顺便理了一下。这个几乎也是浙江教师教育的一个缩影，如果要写一个浙江教师教育史，这个脉络肯定需要参考的。根据龚老师的考证，浙江师范大学的历史线索如下：</p>
+<blockquote>
+<p>全浙师范学堂（1906）-浙江官立两级师范学堂（1908）-浙江省立两级师范学校（1912）-浙江省立第一师范学校（1913）-浙江省立第一中学（1923）-浙江省立高级中学（1929）-浙江省立杭州师范学校（1931）-浙江省立临时联合中学（1938，丽水）-浙江省立临时联合师范学校（1939，丽水）-浙江省立杭州师范学校（1945）-浙江省杭州师范学校（1951）-杭州师范专科学校（1956）-杭州师范学院（1958）-浙江师范学院（1962，1965年迁金华）-浙江师范大学（1985）。</p>
+</blockquote>
+<p>顺便也理了一下浙江高等教育史上的两个浙江师范学院与两个杭州师范学院：</p>
+<blockquote>
+<p>浙江师范学院（1952-1958），1958年并入杭州大学；</p>
+<p>浙江师范学院（1962-1985），1985年升格为浙江师范大学。</p>
+<p>杭州师范学院（1958-1962），1962年改名为浙江师范学院，后为浙江师范大学；</p>
+<p>杭州师范学院（1978-2007），2007年升格为杭州师范大学。</p>
+</blockquote>]]>
+    </summary>
+    <title>校史研究</title>
+    <updated>2024-05-01T04:24:22.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="技术学习" scheme="http://www.wanglianghui.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    <category term="asp.net" scheme="http://www.wanglianghui.cn/tags/asp-net/"/>
+    <category term="自动代码生成" scheme="http://www.wanglianghui.cn/tags/%E8%87%AA%E5%8A%A8%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/"/>
+    <category term="低代码开发" scheme="http://www.wanglianghui.cn/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/"/>
+    <content>
+      <![CDATA[<h2 id="一、过程"><a href="#一、过程" class="headerlink" title="一、过程"></a>一、过程</h2><h3 id="1-编写模型类"><a href="#1-编写模型类" class="headerlink" title="1.编写模型类"></a>1.编写模型类</h3><h3 id="2-在DataContext中注册"><a href="#2-在DataContext中注册" class="headerlink" title="2.在DataContext中注册"></a>2.在DataContext中注册</h3><h3 id="3-数据迁移"><a href="#3-数据迁移" class="headerlink" title="3.数据迁移"></a>3.数据迁移</h3><h3 id="4-编写前端模板"><a href="#4-编写前端模板" class="headerlink" title="4.编写前端模板"></a>4.编写前端模板</h3><h3 id="5-制作多语言资源"><a href="#5-制作多语言资源" class="headerlink" title="5.制作多语言资源"></a>5.制作多语言资源</h3><h2 id="二、注意事项"><a href="#二、注意事项" class="headerlink" title="二、注意事项"></a>二、注意事项</h2><h3 id="1-数据迁移的时候，需要再DataAccess项目中安装Microsoft-EntityFrameworkCore-Design"><a href="#1-数据迁移的时候，需要再DataAccess项目中安装Microsoft-EntityFrameworkCore-Design" class="headerlink" title="1.数据迁移的时候，需要再DataAccess项目中安装Microsoft.EntityFrameworkCore.Design"></a>1.数据迁移的时候，需要再DataAccess项目中安装Microsoft.EntityFrameworkCore.Design</h3><h3 id="2-做好前端url规划"><a href="#2-做好前端url规划" class="headerlink" title="2.做好前端url规划"></a>2.做好前端url规划</h3>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2024/03/19/use-WalkingTec-Mvvm-framework-quick-develop/</id>
+    <link href="http://www.wanglianghui.cn/2024/03/19/use-WalkingTec-Mvvm-framework-quick-develop/"/>
+    <published>2024-03-19T01:13:28.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="一、过程"><a href="#一、过程" class="headerlink" title="一、过程"></a>一、过程</h2><h3 id="1-编写模型类"><a href="#1-编写模型类" class="headerlink" title="1.编]]>
+    </summary>
+    <title>使用WalkingTec.Mvvm框架快速开发</title>
+    <updated>2024-03-19T03:52:23.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="本科教育教学评估" scheme="http://www.wanglianghui.cn/tags/%E6%9C%AC%E7%A7%91%E6%95%99%E8%82%B2%E6%95%99%E5%AD%A6%E8%AF%84%E4%BC%B0/"/>
+    <category term="日常工作" scheme="http://www.wanglianghui.cn/tags/%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C/"/>
+    <content>
+      <![CDATA[<p>今天学校召开了迎接本科教育教学评估工作部署会，院长与书记去正阳楼的主会场参会，我与玉琴在17-112组织老师们在分会场参会。</p><span id="more"></span><p>应该说过来的老师们还是非常配合，除了部分实在有工作安排中途走的，大部分都坚持到了最后。我一开始还经常往后看看，但是大家对培训的内容确实不感兴趣，打瞌睡的蛮多，但是会场非常安静，大家相互聊天闹哄哄的景象完全没有。在这个过程中我不禁思考，教学副院长的使命与责任。</p><p>我想，教学副院长的理想就是消灭教学副院长。大学老师不需要外在的管理压力，根据个人的特长大家通过合作就能把学生培养好，这大概是我最乐于看到的景象。</p><p>那么什么情况下可以不用教学副院长了呢？我看可以看三点：1.没有外在的管理压力，学生们有获得感、成长感；2.任何时候去听一个老师的课，老师们不会感觉被冒犯或者有心理压力；2.建立了和谐的师生关系。</p><p>但是要达到这样的理想状态，在目前需要老师们共同努力：首先，老师们树立对教学工作的敬畏感与神圣感。大学作为一所学校，没有了教学工作是不可想象的，如果教学工作非常低质低效，那么这所学校也不会好到哪里，教学工作是大学安身立命的基点，否则我们办研究机构就可以；其次，老师们要养成反思教学、研究教学的习惯。对一般的老师我们要求反思，但是对教育学院的老师来说，更需要研究自己的教学，大家不必去书本、去文献找研究问题，首先从自己的教学入手来研究教学；再次，在一些特定的时间抓好教学。这几年新来了好多老师，入职前三年是一个青年老师最好的抓教学的时机，这三年如果没做好，以后也很难做好，这三年如果做好了，以后的教学就会比较轻松。在特定的时间，还有一层意思就是遇到学校要迎接评估这样的时机，学校这段时间肯定要抓教学，肯定有很多要求、很多活动也有很多机会研究教学，大家平时忙着做科研与社会服务，就用好这一个月的时间，狠狠地改进自己的教学，说不定大家的教学也就此上一个台阶了。</p><p>当然，上述是我的理想，我希望老师们共同努力，消灭教学副院长，这样大家也就不用受累于各种额外的管理任务。当然，从迎评工作的现实来看，我们目前要做好三个切实的事情：首先，大家趁这段时间关注一下自己课程的大纲、历年的试卷分析表，有没有根据要求来做，如果原来没做好的，希望这段时间修改一下；其次，12月份专家要进校，大家要好好备课，随时做好被听课的准备。学校也会组织督导，在这些日子里随时推门听课；最后，各位老师也要认真填好问卷，要有一种共同的荣誉感。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/11/01/accessment-start/</id>
+    <link href="http://www.wanglianghui.cn/2023/11/01/accessment-start/"/>
+    <published>2023-11-01T08:28:04.000Z</published>
+    <summary>
+      <![CDATA[<p>今天学校召开了迎接本科教育教学评估工作部署会，院长与书记去正阳楼的主会场参会，我与玉琴在17-112组织老师们在分会场参会。</p>]]>
+    </summary>
+    <title>教育部本科评估启动后</title>
+    <updated>2023-11-22T08:31:24.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="专家讲座" scheme="http://www.wanglianghui.cn/tags/%E4%B8%93%E5%AE%B6%E8%AE%B2%E5%BA%A7/"/>
+    <content>
+      <![CDATA[<p>前面已经有一篇关于窦桂梅讲座的记录了，但是后来由于交流的需要，6月8日又重新写了一篇，两篇有一致的地方，但是也有不同，所以两篇都把它放到这里。</p><span id="more"></span><blockquote><p>因为分管教学，所以也会经常思考小学教育专业存在的问题。当向军跟我说窦桂梅校长来金华是否要邀请的时候，我马上意识到这是个很好的教育契机。社会的实用主义氛围使报考小学教育有一种普遍求稳的心态，就业似乎成为了学习的全部，忘记了学习首先是完善自己的人生。特别在物质丰裕时代，当生存已经不再是首要话题的时候，物质的意义不是在于享乐，而是在于支持人做出更丰富的选择，为迈向更高的人生追求奠基。</p><p>窦校长似乎get到了我们的期待，把自己的讲座题目定为《做有职业尊严的教师》，我知道在现今这个时代，对教师来说这是一个很高的要求。我的心里也有点小期待，想看看全国著名的专家如何来解答这个问题。</p><p>刚好前一周出差遗留了比较多的工作需要完成，讲座开始的时候我刚好也要在另外的场地主持一项工作，所以晚了50分钟才开始听讲座，应该说很遗憾错失了前面的精彩，但是我认为这并不影响我对这场讲座的理解。总的来说，窦校长的讲座很高级，比我想象的高级。虽然在听讲座的过程中我也不时地被带入到故事中被感动，但是我也时刻提醒自己，我需要对这个讲座做清醒的认识，我需要评估这样的活动对我们小学教育同学的教育意义。</p><p>过去两天了，我现在能够写下这些文字应该说得益于我当时的思考，当然也因为时过境迁，我的有些感受可能不一定正确，也请大家自我甄别。</p><p>整个讲座我觉得可以这样来概括：用故事诠释了教育之道，用行动示范了专业素养。道可道非常道，教育之道实际上是说不清的，窦校长因此把马约翰足球赛与长满书的大树作为介质来解说她对教育的理解，特别是作为一个校长对教育的理解，这是一个校长的施政基础，也是一个老师的教学起点。一场足球赛以体育为载体锻炼了人的意志因而也是道德教育，这其中有丰富的情感体验因而也兼有美育。正因为有这样的理解，所以校长愿意排除万难让即将毕业的学生遂愿。长满书的大树以阅历丰富经历，这对孩子来说是最快的成长途径，因此如何做好阅读这篇文章也是素质教育的一条捷径，在这样的理解下，做终身阅读者、做好阅读推动者与指导者也顺理成章地成为了教师的重要角色。没有抽象地说教教育是什么，但是随着故事的讲述让人非常地信服教育就是这样。</p><p>同样，题为《做有职业尊严的教师》，我一开始就期望能够听到教师的专业素养是什么，因为一个能够获得职业尊严的教师肯定是一个具有高度专业素养的教师。正所谓名可名非常名，窦校长也没说什么是专业素养，但是她在讲座中讲自己的故事，与同学们交流，这个过程中所体现的个人素养我觉得就是教师的专业素养。我特别关注了她与同学们的语言互动，发现她特别善于捕捉教育时机，也许她时刻关注着学生们的反应并试图从教育的视角去理解去回应。这种时刻关心共情学生、时刻捕捉教育契机以及准确及时回应学生的行动正是教师专业素养的写照。</p><p>所以，窦校长通过这个讲座展现的实际上是为师之道，这是一种需要用心体会的东西。人在年轻的时候或者求学的时候往往都是在术的层面发力，有位研究生同学就说自己当年觉得表现挺好的一堂课被一位老师评价为表演。其实一个本科生上课能够让人看出他的表演从术的层面来说已经非常高级了，所以用不到妄自菲薄。但是也要知道，还有比术更高级的东西，值得通过不断修炼去获得。这样的一次讲座其实是给大家打开了一扇窗户，告诉大家，一个小学教师的上限可以有多高，大家需要在对教育的理解，与学生的共情以及语言艺术等多个方面发展自己。</p><p>当然每个人对讲座都有不同的感受，我的理解不一定对，肯定也不是所有人都会认同。对我来说如果能让青年学子冲破自我设限的稳定生活，探寻自身更多的发展可能，那这样的讲座就超值了。</p></blockquote>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/06/14/story-act/</id>
+    <link href="http://www.wanglianghui.cn/2023/06/14/story-act/"/>
+    <published>2023-06-14T14:06:31.000Z</published>
+    <summary>
+      <![CDATA[<p>前面已经有一篇关于窦桂梅讲座的记录了，但是后来由于交流的需要，6月8日又重新写了一篇，两篇有一致的地方，但是也有不同，所以两篇都把它放到这里。</p>]]>
+    </summary>
+    <title>用故事诠释教育之道，用行动示范专业素养</title>
+    <updated>2023-06-14T14:11:56.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="管理工作" scheme="http://www.wanglianghui.cn/categories/%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C/"/>
+    <category term="教学管理" scheme="http://www.wanglianghui.cn/tags/%E6%95%99%E5%AD%A6%E7%AE%A1%E7%90%86/"/>
+    <category term="教育意识" scheme="http://www.wanglianghui.cn/tags/%E6%95%99%E8%82%B2%E6%84%8F%E8%AF%86/"/>
+    <content>
+      <![CDATA[<p>这两天教务办在组织优秀实习小组的评选工作，早上开始前我过去看了下。17-112学生都是掐着时间过来的，一共有20个实习小组，但是只有8个小组过来申请答辩。</p><p>师范生实习可以说是他们开始走向真正教师的第一步，是非常重要的一个活动，但是因为大四没了评优评奖的压力，很多人就不重视，也不来申请优秀答辩。其实优秀实习小组的评选工作可以列入研习工作，汇报作为研习的一部分来做，汇报要面向所有的实习生，有兴趣的三年级师范生也可以过来观摩。所以这个评比可以是一个很有意义的大活动来开展。</p><span id="more"></span><p>联想到昨天窦桂梅的演讲，她在与学生的交流中时刻保持着对教育的敏感性，在与学生的互动中注意保护学生的学习动机、进行积极引导、凭着她对教育的理解，把学校中合理发生的事情都往教育中去引导。我们做教学管理的其实也要有这样的意识，因为大学里面除了任课老师，学工办的老师，教务办是与学生接触最多的部门，这里面有很多教育的时机需要教务办的同志们去捕捉，同时在设计一些专业活动的时候，要时刻考虑这样的活动是否能够改一下设计就能够对更多学生具有教育意义，要发掘活动中所拥有的教育意义。</p><p>此外，考虑到前几天缓考的事情，作为教育人的部门，我们一碰到有问题的学生，不能简单地处理学生就了事，还是要从帮助教育人的角度，做好学生的思想工作。一些教学的问题如果是学生的思想出现问题，那还是要考虑如何从根子上对学生进行帮助。</p><p>所以教学管理部门在日常处理工作的时候，首先要有教育的意识，不要把教学管理工作作为例行公事，而是要从如何教育人的角度来设计日常的管理工作；其次，要从能更广泛地教育学生的角度设计专业教学活动，心里时刻要有学生；再次，教学管理中教育人是首位的，即使学生犯错误了，还是要先尝试着去挽救一下学生，处罚学生不是目的，最终还是希望学生好，如果正面教育能够起效的尽量正面教育。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/06/06/instruction-manage-principal/</id>
+    <link href="http://www.wanglianghui.cn/2023/06/06/instruction-manage-principal/"/>
+    <published>2023-06-06T06:55:05.000Z</published>
+    <summary>
+      <![CDATA[<p>这两天教务办在组织优秀实习小组的评选工作，早上开始前我过去看了下。17-112学生都是掐着时间过来的，一共有20个实习小组，但是只有8个小组过来申请答辩。</p>
+<p>师范生实习可以说是他们开始走向真正教师的第一步，是非常重要的一个活动，但是因为大四没了评优评奖的压力，很多人就不重视，也不来申请优秀答辩。其实优秀实习小组的评选工作可以列入研习工作，汇报作为研习的一部分来做，汇报要面向所有的实习生，有兴趣的三年级师范生也可以过来观摩。所以这个评比可以是一个很有意义的大活动来开展。</p>]]>
+    </summary>
+    <title>教学管理活动的一些原则</title>
+    <updated>2023-06-06T07:22:48.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="特级教师" scheme="http://www.wanglianghui.cn/tags/%E7%89%B9%E7%BA%A7%E6%95%99%E5%B8%88/"/>
+    <category term="教师培养" scheme="http://www.wanglianghui.cn/tags/%E6%95%99%E5%B8%88%E5%9F%B9%E5%85%BB/"/>
+    <content>
+      <![CDATA[<p>上个月初俞向军跟我说六月份窦桂梅要来金华，是不是请她来给我们的小教学生讲讲。我觉得挺好，也向院长汇报了一下，最后促成了这次讲座。</p><p>碰巧上周一个星期都在新疆，也没做什么，不过向军前期都联系妥了，院长也亲自为这次讲座助力，下午两点半讲座如期开讲，17-112大报告厅座无虚席。反倒我因为要补一周的工作，下午讲座开始的时候，我在另一个17-112给实验室人员做安全培训，等培训结束，已经过去45分钟了，我赶紧去那边听听，毕竟窦校长名声在外，作为一次了解我也要去听听。</p><span id="more"></span><p>窦校长的演讲风格还是比较吸引人的，虽然前面精彩的45分钟错失了，但是后面的内容听下来还是很为窦校长点赞。我愿意用三句话来概括我对这个讲座的理解与欣赏。</p><p>首先，道可道非常道，以故事化教育之道更显精彩。整个讲座窦校长都是以故事的方式来讲述自己对教育的理解，讲述自己作为一个教师如何成长，如何从工作中获得认同获得尊严，没有任何说教，但是引得了同学们的共鸣，据说有同学甚至失声哭泣。说实在，第一次向军跟我讲窦校长的题目的时候我是很感兴趣的，因为我想窦校长掌舵全国有名的清华小学，应该有很多关于如何让教师获得职业尊严的思路与想法，我觉得这样的知识是我们小学教育同学所需要的，但是听了之后我发现这是一种更加高明的讲法，很多道理一讲就死，一讲就让人误解。所谓能够讲清楚的道理往往都已经不是道理本身了。以故事的感染力反倒能够对年轻学子起到更大的教育作用。</p><p>其次，名可名非常名，身体力行展现教育专业能力之魅力。做有职业尊严的教师其实质就是加强教师自身的专业能力。这种专业能力不是说去拿几个证书以表明自己的专业能力，而是要有一颗时刻为学生的虔敬心、一个时刻为教育的专业眼光以及快速准确的诱导能力。这样一种专业能力在讲座中没有定义，也许本来也无法定义，但是窦校长又时刻用自己的行动来诠释教师的专业性，在跟现场同学的交流中无时无刻不体现她对后辈的关爱与教育，无时不刻都在体现其高超的语言能力，这种超常的专业体现就是一个教师职业尊严的来源。</p><p>再次，我也很想对听讲座的同学讲讲，今天窦校长展现的实际上是教师之道，这是一种需要用心体会的东西。人在年轻的时候或者求学的时候往往都是在术的层面发力，有位研究生同学就说自己当年觉得表现挺好的一次课被一位老师评为表演。其实一个本科生其能够让人看出他的表演从术的层面来说已经非常高级了，所以用不到妄自菲薄。但是也要知道，还有比这种高级更高级的东西，值得通过不断修炼去获得。这样的一次讲座其实是给大家打开了一扇窗户，告诉大家，一个小学教师的上限可以有多高，大家需要在对教育的理解，与学生的共情以及语言艺术等多个方面发展自己。</p><p>最后，我还是想说一下，专业的力量是可怕的，做专业的教师不容易，但值得任何有志于教师的人去修炼，这是我们获得职业尊严的不二法门。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/06/05/dou-guimei/</id>
+    <link href="http://www.wanglianghui.cn/2023/06/05/dou-guimei/"/>
+    <published>2023-06-05T13:56:25.000Z</published>
+    <summary>
+      <![CDATA[<p>上个月初俞向军跟我说六月份窦桂梅要来金华，是不是请她来给我们的小教学生讲讲。我觉得挺好，也向院长汇报了一下，最后促成了这次讲座。</p>
+<p>碰巧上周一个星期都在新疆，也没做什么，不过向军前期都联系妥了，院长也亲自为这次讲座助力，下午两点半讲座如期开讲，17-112大报告厅座无虚席。反倒我因为要补一周的工作，下午讲座开始的时候，我在另一个17-112给实验室人员做安全培训，等培训结束，已经过去45分钟了，我赶紧去那边听听，毕竟窦校长名声在外，作为一次了解我也要去听听。</p>]]>
+    </summary>
+    <title>窦桂梅讲座</title>
+    <updated>2023-06-06T03:54:15.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="教学工作" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/"/>
+    <category term="STEM" scheme="http://www.wanglianghui.cn/tags/STEM/"/>
+    <category term="工程教育" scheme="http://www.wanglianghui.cn/tags/%E5%B7%A5%E7%A8%8B%E6%95%99%E8%82%B2/"/>
+    <content>
+      <![CDATA[<p>昨天汪汪跑来让我帮她辅导他们区里的工程与技术教育的经验总结，虽然很忙也答应下来了，所以今天晚上开展了一次线上的辅导。</p><span id="more"></span><p>本次辅导主要从经验总结文本的撰写规范，以及根据学校原有内容进行类别的选择，以及不同类别文本撰写中的区别三个方面展开。</p><p>首先，要总结好学校工程与技术教育的经验，从文本内容上我觉得要包含四个方面：</p><p>一是学校对工程与技术教育的理解。这个可以从培养大国工匠的时代需求出发，特别是高校的新工科建设如火如荼，那么基础教育如何回应这种时代需求，如何为高等教育奠定基础的角度讲讲工程技术教育的重要性；也可以从学校教育的主流是文化教育，工程技术教育偏于实践，重视身体参与的视角，讲讲它对学校教育丰富性的补充，身体参与可以从具身认知的视角讲讲对教育的重要性，而面向实践问题解决的做法则提供了对所学知识进行应用的场景，而这些都是有利于人的全面发展，更加完善现在的学校教育的角度来论述的。</p><p>二是要从学校实际的角度讲讲为什么要开展工程与技术教育。采三因为有原来的第三教育空间，因为青少年宫与一些景点开展的往往是偏于人文社科方面的教育，所以要开展工程与技术教育。茅以升与蒋筑英两个学校因为用科学家命名，所以会强调学校的科技特色。</p><p>三要描绘一下各自如何做的。这里就要区分不同类别的写法。譬如做整体设计与实施类的就要考虑工程技术教育如何撑起了学校的特色，如茅以升学校通过桥课程、一馆三园与项目化学习，从课程体系、教学环境以及教学方法三个方面实现了整个学校的科技教育特色。如果是做课程的，那就要从课程理念、课程体系与具体的课程规划来呈现。而做项目类别的，就要考虑精品项目的可展示型以及系列项目的逻辑贯通性。</p><p>最后，作为经验分享，也要展示一下教育成效，从而能够吸引更多的人关注整个做法。</p><p>从第一次提交的材料来看，大家对整体设计与实施的类别存在误解，都不敢报，更多的报了课程类。同时作为经验总结，大家往往把以往的文本凑一凑，很少去思考怎么写，所以整体的效果不好。相约周日再帮他们看看文本。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/03/16/sum-up-experience/</id>
+    <link href="http://www.wanglianghui.cn/2023/03/16/sum-up-experience/"/>
+    <published>2023-03-16T14:06:38.000Z</published>
+    <summary>
+      <![CDATA[<p>昨天汪汪跑来让我帮她辅导他们区里的工程与技术教育的经验总结，虽然很忙也答应下来了，所以今天晚上开展了一次线上的辅导。</p>]]>
+    </summary>
+    <title>总结工程与技术教育的经验</title>
+    <updated>2023-03-16T14:35:32.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="教学工作" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/"/>
+    <category term="学生考研" scheme="http://www.wanglianghui.cn/tags/%E5%AD%A6%E7%94%9F%E8%80%83%E7%A0%94/"/>
+    <category term="人才培养" scheme="http://www.wanglianghui.cn/tags/%E4%BA%BA%E6%89%8D%E5%9F%B9%E5%85%BB/"/>
+    <content>
+      <![CDATA[<p>本科人才培养的一个大的方向就是通过升学来体现的，考研工作因此成为一个重要的本科教学内容。教务处李慧军副处长非常重视这项工作，开学不久的今天就来调研这个工作，交流的过程中也形成了一些想法，特记录在这里。</p><span id="more"></span><p>根据今天的交流，要做好学生的考研工作，需要思考下面三对关系：</p><p>1.学术人与职业人的目标相结合。在当前高等教育人才培养上，考研既有通往学术人才的成分，也有通往职业人才的成分，这两种人才基本上对应着学术学位与专业学位。本身我们人才培养也有培养学生为高端学术人才的目标，也有培养学生为高端专业技术人才的目标，对教育学来说，学生以后可能成为教育学的学者，也可能成为地方上的名优特师。在当前的背景下，不管想成为哪种人才都需要通过考研来提升自己，从而为自己实现自己的目标奠定更好的平台。</p><p>2.学风与家风相结合。从办学学院来说，提升学生考研率本身是一个学风建设的过程，鼓励学生追求更高的学历目标。同时，在当前实际工作环境来看，家长的倾向性也非常重要。当前社会上实用主义的风气比较盛行，特别在浙江，某些地方父辈辛苦创业已经积累了第一桶金的时候，非常希望下一代过上平凡而富足的一生，因而并不希望子女有更高远的人生目标，而是希望他们安稳地过一生。所以，这个时候从家庭教育、社会风气的影响上，高校看看自己能够做什么。通过家长会、学院的一些宣传平台，通过潜移默化的方式引领家长们的价值观。</p><p>3.短期工作与长期工作相结合。当前在考研工作的组织来看，一些考研专家的培训会能够激励学生走考研之路，但是往往在现场热血沸腾，但是出来后又另一回事，或者说没有更好的跟进，导致长期效果不彰。倒是班主任如果学术倾向比较浓，对班上学生考研的意向具有比较明显的激励作用。历年来看，学术水平与学术意向比较浓的老师所带的班级，往往考研率比较高。所以可以考虑短期的考研培训与长期的班主任相结合，还有学院的宣传平台中学术性材料的增加，特别是学生的学术成果的宣传需要加强。</p><p>在我们学院考研率不高一直都认为是因为工作好找学生不愿意考，或者考研动机比较弱，但是更多的是我们学院学术风气不盛，就业取向的专业建设方向也是有关系的，接下去看看怎么平衡升学与就业两个事情。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/03/14/postgraduate-entrance-examination-survey/</id>
+    <link href="http://www.wanglianghui.cn/2023/03/14/postgraduate-entrance-examination-survey/"/>
+    <published>2023-03-14T02:28:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本科人才培养的一个大的方向就是通过升学来体现的，考研工作因此成为一个重要的本科教学内容。教务处李慧军副处长非常重视这项工作，开学不久的今天就来调研这个工作，交流的过程中也形成了一些想法，特记录在这里。</p>]]>
+    </summary>
+    <title>教务处考研调研</title>
+    <updated>2023-03-14T07:59:24.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="教学工作" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/"/>
+    <category term="荣誉学院" scheme="http://www.wanglianghui.cn/tags/%E8%8D%A3%E8%AA%89%E5%AD%A6%E9%99%A2/"/>
+    <category term="拔尖人才" scheme="http://www.wanglianghui.cn/tags/%E6%8B%94%E5%B0%96%E4%BA%BA%E6%89%8D/"/>
+    <content>
+      <![CDATA[<p>昨天下午参加初阳学院的教学工作委员会会议，早上参加非洲研究院关于区域国别的本科实验班方案讨论。两个学院在人才培养方面都有类似于荣誉学院的做法，初阳本身就是学校的荣誉学院，非院以区域国别本科人才培养为宗旨实际上也是指向了专业领域的高级人才培养之意。这让我想起来当前我国人才培养中拔尖人才培养的重任，今天暂时把一些想法记在这里。</p><span id="more"></span><p>荣誉学院的做法是通过严格的遴选方案选出优秀的学生，给其提供更多的学习资源与训练机会，使其成为更优秀的人。我校初阳在人才培养方面感觉目标不是很明确，到底是培养卓越教师还是卓越的专业人才，学校与学生个人都摇摆不定。如果是培养卓越教师，那么在师范生培养方面没有更高级的举措，如果培养卓越专业人才，但是因为带有师范属性，所以有教师教育类课程的负担，使其在专业卓越方面面临着更大的挑战。所以培养目标是我校初阳首先需要搞清楚的问题。</p><p>其次，这两次开会讨论的都是培养方案（初阳是考虑专业的增设），更多考虑的是给荣誉学生什么知识。但是很明显目前本科生其实属于打基础的阶段，荣誉学院的学生更多的是期望他们升学，所以学什么知识其实是次要的，重要的是培养他们的思维品质与学术视野，当然学生到了本科阶段，这两者其实已经有分化了，但是大学还是考虑通过教学方法的改革来训练一些特殊的思维能力。区域国别学培养面向非洲的人才，因为非洲区域的复杂性，本科阶段不可能培养适合所有地区的人才，因而首先考虑知识传授上强调通识性，学生思维上则考虑其文化适应性。</p><p>高校教学方面现在都在考虑通过荣誉学院性质的办学来培养拔尖人才培养，是否也可以考虑寻找一些特定途径，考虑通过逆袭的途径来培养拔尖人才，那么选人的标准是什么？</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/03/08/honor-college/</id>
+    <link href="http://www.wanglianghui.cn/2023/03/08/honor-college/"/>
+    <published>2023-03-08T12:44:05.000Z</published>
+    <summary>
+      <![CDATA[<p>昨天下午参加初阳学院的教学工作委员会会议，早上参加非洲研究院关于区域国别的本科实验班方案讨论。两个学院在人才培养方面都有类似于荣誉学院的做法，初阳本身就是学校的荣誉学院，非院以区域国别本科人才培养为宗旨实际上也是指向了专业领域的高级人才培养之意。这让我想起来当前我国人才培养中拔尖人才培养的重任，今天暂时把一些想法记在这里。</p>]]>
+    </summary>
+    <title>荣誉学院与拔尖人才培养</title>
+    <updated>2023-03-14T07:56:27.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="理论研究" scheme="http://www.wanglianghui.cn/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/"/>
+    <category term="技术哲学" scheme="http://www.wanglianghui.cn/tags/%E6%8A%80%E6%9C%AF%E5%93%B2%E5%AD%A6/"/>
+    <category term="人机协同" scheme="http://www.wanglianghui.cn/tags/%E4%BA%BA%E6%9C%BA%E5%8D%8F%E5%90%8C/"/>
+    <content>
+      <![CDATA[<p>人的神圣性来源于人对物的奴役，因而人与物看起来是一种敌对关系，这种敌对包括了人对物的操控以及物的反抗。看似被动与无生命的物如何对抗生机勃勃占据主动的人，这是一个困难的问题，或者我们根本就提了一个错误的问题，因为人与物根本就不是奴役与被奴役的关系。</p><p>罗伯托·埃斯波西托著，邰蓓译的《人与物：从身体的视点出发》似乎为我们重新思考人与物的关系提供了一个新的入口，这也与我最近在思考的人机协同有非常大的关系。趁着周末啃了这本短小精悍的小书。</p><span id="more"></span><p>广袤的宇宙中存在的东西，非人即物，非物即人，此外无他。人占有物，物属于人。对人来说，只有占有了物，物才算有意义的存在，不能占有的物在地位上低于已经占有的物品（goods）。在古罗马以及之后的很长时间里，人在法律上的地位往往取决于其占有的物的数量，这种权利的扩展使占有大量物的人甚至有权占有没有物或者较少物的人，在这个过程中，一些人因为占有物而成为人（奴隶主），而另一些人因为没有占有物而成为物（奴隶）。<strong>占有使人成为人。</strong></p><p>占有区分了人与物，但是思想的发展导致人也开始一分为二。人是精神性存在与肉体性存在的二合一，奥古斯丁用上帝之城与世俗之城分别来承载这两种人，这种区分实质上加强了人与物的分歧，肉体性存在与精神性存在的分歧复刻着物与人的分歧。康德在这条道路上走得更远，本体的人与现象的人的区分，促使后者服从于前者，前者役使后者。不管怎样区分，两者必然都会在具体的<strong>身体</strong>中趋于合一。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2023/02/18/personandthing/</id>
+    <link href="http://www.wanglianghui.cn/2023/02/18/personandthing/"/>
+    <published>2023-02-18T01:11:46.000Z</published>
+    <summary>
+      <![CDATA[<p>人的神圣性来源于人对物的奴役，因而人与物看起来是一种敌对关系，这种敌对包括了人对物的操控以及物的反抗。看似被动与无生命的物如何对抗生机勃勃占据主动的人，这是一个困难的问题，或者我们根本就提了一个错误的问题，因为人与物根本就不是奴役与被奴役的关系。</p>
+<p>罗伯托·埃斯波西托著，邰蓓译的《人与物：从身体的视点出发》似乎为我们重新思考人与物的关系提供了一个新的入口，这也与我最近在思考的人机协同有非常大的关系。趁着周末啃了这本短小精悍的小书。</p>]]>
+    </summary>
+    <title>人与物的纠缠</title>
+    <updated>2023-02-19T12:02:38.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="随便说说" scheme="http://www.wanglianghui.cn/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="年度总结" scheme="http://www.wanglianghui.cn/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+    <content>
+      <![CDATA[<p>2022不足一小时了。这一年时间非常慢，但好歹也实现了多年的夙愿。虽然也发生了一点意外，那我就把它当做好事，承担该承担的责任。人生这条路没办法回头那就坚毅前行吧。你好，2023！ ​​​</p><span id="more"></span><p>儿子最终上了一中，这个在他初一的时候是想不到的。</p><p>今年顺利评上了教授，多年的夙愿得偿，在大学教书也算无憾了。</p><p>组织上给了一个岗位，虽然知道会比较辛苦，但是这个也算是了了30岁时候想着找个公益组织服务社会的愿望。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2022/12/31/end-of-year2022/</id>
+    <link href="http://www.wanglianghui.cn/2022/12/31/end-of-year2022/"/>
+    <published>2022-12-31T02:29:49.000Z</published>
+    <summary>
+      <![CDATA[<p>2022不足一小时了。这一年时间非常慢，但好歹也实现了多年的夙愿。虽然也发生了一点意外，那我就把它当做好事，承担该承担的责任。人生这条路没办法回头那就坚毅前行吧。你好，2023！ ​​​</p>]]>
+    </summary>
+    <title>2022年度感言</title>
+    <updated>2023-03-08T14:19:57.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="理论研究" scheme="http://www.wanglianghui.cn/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/"/>
+    <category term="PBL" scheme="http://www.wanglianghui.cn/tags/PBL/"/>
+    <category term="项目化学习" scheme="http://www.wanglianghui.cn/tags/%E9%A1%B9%E7%9B%AE%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+    <content>
+      <![CDATA[<p>存在的问题：</p><p>1.目标表述不系统，没有体现目标之间的有机联系</p><blockquote><p>1.通过居家浏览新闻，和家人一起了解疫情情况，阅读疫情中感人的故事，与家人一起讨论人性的光辉。</p><p>2.学生进入网络课堂，通过学习优美的诗歌，丰富语言材料，感受诗歌不拘格式和韵律的特点，感悟并提高语言表达能力。</p><p>3.欣赏优秀的诗歌，以当下疫情为载体，在生活中寻找选材，学写诗歌。</p><p>4.通过朗读，感受诗歌的韵味，体会诗歌表达的情感，获得正确的情感态度和价值观。</p></blockquote><span id="more"></span><p>2.安排学习活动的时候适当提供学习指导</p><blockquote><p>2.欣赏元宵节目《你的样子》</p><p>“元宵晚会”，为做好防疫战疫工作，元宵节特别节目，取消了现场观众设置，，大家通过屏幕传递爱与希望，祝福和祈祷。诗朗诵《你的样子》由央视六位知名主持人白岩松、刚强、欧阳夏丹等共同演绎。每个在岗位上努力的人，你们的样子都会随着这场战役永远被记载，你们都是英雄！同样也推荐给了学生和家长们，感受诗词的魅力，在音乐和背景下更是让全国人民感动不已。</p></blockquote><p>欣赏什么，如何欣赏，最好要有指导</p><ol start="3"><li></li></ol>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2020/05/08/pbl-problem/</id>
+    <link href="http://www.wanglianghui.cn/2020/05/08/pbl-problem/"/>
+    <published>2020-05-08T08:25:09.000Z</published>
+    <summary>
+      <![CDATA[<p>存在的问题：</p>
+<p>1.目标表述不系统，没有体现目标之间的有机联系</p>
+<blockquote>
+<p>1.通过居家浏览新闻，和家人一起了解疫情情况，阅读疫情中感人的故事，与家人一起讨论人性的光辉。</p>
+<p>2.学生进入网络课堂，通过学习优美的诗歌，丰富语言材料，感受诗歌不拘格式和韵律的特点，感悟并提高语言表达能力。</p>
+<p>3.欣赏优秀的诗歌，以当下疫情为载体，在生活中寻找选材，学写诗歌。</p>
+<p>4.通过朗读，感受诗歌的韵味，体会诗歌表达的情感，获得正确的情感态度和价值观。</p>
+</blockquote>]]>
+    </summary>
+    <title>PBL实践中的问题</title>
+    <updated>2023-03-08T14:19:57.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="理论研究" scheme="http://www.wanglianghui.cn/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/"/>
+    <category term="实验室" scheme="http://www.wanglianghui.cn/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/"/>
+    <category term="历史" scheme="http://www.wanglianghui.cn/tags/%E5%8E%86%E5%8F%B2/"/>
+    <category term="科学" scheme="http://www.wanglianghui.cn/tags/%E7%A7%91%E5%AD%A6/"/>
+    <category term="现代性" scheme="http://www.wanglianghui.cn/tags/%E7%8E%B0%E4%BB%A3%E6%80%A7/"/>
+    <content>
+      <![CDATA[<p>学院专门开辟了教育学科研实验室让我负责分管建设，为了工作，我就开始研究实验室的往事。</p><p>实验室从某种意义上来说是现代性的一个典型案例，。</p>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2020/03/23/history-of-laboratory/</id>
+    <link href="http://www.wanglianghui.cn/2020/03/23/history-of-laboratory/"/>
+    <published>2020-03-23T08:10:40.000Z</published>
+    <summary>
+      <![CDATA[<p>学院专门开辟了教育学科研实验室让我负责分管建设，为了工作，我就开始研究实验室的往事。</p>
+<p>实验室从某种意义上来说是现代性的一个典型案例，。</p>]]>
+    </summary>
+    <title>实验室的历史</title>
+    <updated>2020-03-23T08:16:49.000Z</updated>
+  </entry>
+</feed>
