@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/26/svnmanager-installation/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/06/01/growing-up/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +181,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/04/26/svnmanager-installation/" class="post-title-link" itemprop="url">windows下svnmanager1.10的安装</a>
+            <a href="/2014/06/01/growing-up/" class="post-title-link" itemprop="url">成长</a>
         </h2>
 
         <div class="post-meta">
@@ -191,119 +191,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-04-26 16:05:26" itemprop="dateCreated datePublished" datetime="2014-04-26T16:05:26+08:00">2014-04-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2015-02-01 17:51:10" itemprop="dateModified" datetime="2015-02-01T17:51:10+08:00">2015-02-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/04/26/svnmanager-installation/" class="post-meta-item leancloud_visitors" data-flag-title="windows下svnmanager1.10的安装" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/04/26/svnmanager-installation/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/26/svnmanager-installation/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>924</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>以前都是在ubuntu下安装svnmanager，很多问题都没出现，这次新机器来了后安装了一次，发现问题还蛮多的。</p>
-<p>第一个问题就是创建svn库的问题，在页面上创建了，数据库里也有了，但是硬盘上就是没有相应的目录，svnmanager也不报错。看了看apache的错误日志有“’LANG’ 不是内部或外部命令，也不是可运行的程序或批处理文件”字样，一开始以为是我的配置问题，找了好久，包括命令行的路径什么的。是在没辙，只能去看程序，php没用过，但能看的大概，当然问题也找到了。在datamodule.php这个文件中，<code>$ret = exec(&quot;LANG=&quot;.$lang.&quot;;$svnadmin_cmd --config-dir $svn_config_dir create $a_dir&quot;);</code>，这句话非常可疑，因为这里刚好也是执行一个Lang开头的命令行，而且根据我对svnadmin创建svn库的了解，实际上用svnadmin create [目录名]就行了，把这句改成<code>$ret = exec(&quot;svnadmin create $a_dir&quot;);</code>，问题解决了。（LANG命令在linux系统中是设置当前默认的语言，windows下没用，所以在该文件中还存在另两个类似的命令也要改掉，只要把<code>LANG=&quot;.$lang.&quot;;</code>去掉就行了）</p>
-<p>第二个问题是删除svn库的时候，物理目录已经删除了，但是报错，然后数据库中还保存相应的信息，要进行第二次删除。其实问题跟第二次类似。<code>$ret = exec(&quot;move /y $arg_repo_path $arg_trash_path&quot;);</code>，这句话根据作者的理解如果执行正常的话是没有返回值的，但是不同的系统这个返回值是不一样的。所以只能把它后面的一个判断删除，问题也解决了。</p>
-<p>最后别忘了安装<a target="_blank" rel="noopener" href="http://pear.php.net/package/PEAR/download">pear</a>与<a target="_blank" rel="noopener" href="http://pear.php.net/package/VersionControl_SVN/download">VersionControl_SVN</a>，这个是操作subversion的关键，但是这里的安装，如果仅仅是给svnmanager用的话也不用弄得很复杂，只要把这两个下载来的包，解压到svnmanager的安装目录下就行了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/14/child-future-money/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/04/14/child-future-money/" class="post-title-link" itemprop="url">孩子、未来与钱</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-04-14 14:07:36" itemprop="dateCreated datePublished" datetime="2014-04-14T14:07:36+08:00">2014-04-14</time>
+              <time title="创建时间：2014-06-01 15:35:37" itemprop="dateCreated datePublished" datetime="2014-06-01T15:35:37+08:00">2014-06-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -323,7 +211,7 @@
             </span>
 
           
-            <span id="/2014/04/14/child-future-money/" class="post-meta-item leancloud_visitors" data-flag-title="孩子、未来与钱" title="阅读次数">
+            <span id="/2014/06/01/growing-up/" class="post-meta-item leancloud_visitors" data-flag-title="成长" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -338,8 +226,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/04/14/child-future-money/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/14/child-future-money/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/06/01/growing-up/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/06/01/growing-up/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -349,7 +237,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>324</span>
+              <span>395</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -368,12 +256,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>昨天睡前问了一下木木，你长大了想做什么样的人。木木说，我想做有钱人。觉得有点惊奇，因为我们这么小的时候对钱的概念是很模糊的，因为也很少有钱用，而木木平时表现出来对钱也并不是那么在乎。</p>
-<p>于是我接着问，你要钱干什么啊？有了钱我可以娶老婆，有孩子，还可以照顾他们。</p>
-<p>那你觉得女孩子会喜欢你什么才嫁给你呢？长得帅，有钱呗。</p>
-<p>那不是所有人都长得帅又有钱但是他们也有老婆、孩子啊。那是他对女孩子好吧。</p>
-<p>后面当然是作为父亲希望能够纠正小孩子的一些想法，像钱会自己掉下来吗？要学习什么之类的。但是思绪已经飘得很远了。</p>
-<p>金钱对人心的腐蚀感觉已经不可避免了，这个社会越来越变成金钱社会，金钱对人思想的禁锢也越来越厉害。小孩子从小对钱就这么敏感，不知道是适应的需要还是沉沦的结果。</p>
+          <p>又是一个儿童节，最近木木还是有些变化的。</p>
+<p>首先，回到家就会问一下我们要不要做点家务，或者我们临时叫他做点事情也很开心；</p>
+<p>其次，虽然一样地不喜欢做作业，但是写的字开始好看起来了；</p>
+<p>再次，不知道为什么喜欢听三国。我原来也没看过这小说，现在一般翻着这个半文不白的小说，一边讲给他听，居然睡前故事点名就要听三国，读完这三国我估计语文水平要上一台阶。</p>
+<p>昨天学院里面为庆祝六一搞了个活动，带他去的时候一开始他不是很高兴，因为要在一个空白的风筝上画东西，这美术一直不是他的特长，但是我给他介绍了那些写在小黑板上的游戏规则，他马上来劲了。一个早上在那里蹦蹦跳跳地跑来跑去参加各种游戏赚取游戏币，因为游戏币可以去买小礼品。赚了很多游戏币，碰到了同学熟人也很大方地分给别人使用。前些天他们学校里面搞跳蚤市场也是一样的，他带了40块钱去，结果大概自己才买了10块左右的东西，其他的要么是请客吃掉了，要么是帮别人买东西了。</p>
 
       
     </div>
@@ -393,7 +280,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/12/codefirst-migration/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/31/for-graduate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -407,7 +294,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/04/12/codefirst-migration/" class="post-title-link" itemprop="url">codefirst中的数据迁移</a>
+            <a href="/2014/05/31/for-graduate/" class="post-title-link" itemprop="url">毕业留言</a>
         </h2>
 
         <div class="post-meta">
@@ -416,28 +303,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2014-04-12 06:56:28" itemprop="dateCreated datePublished" datetime="2014-04-12T06:56:28+08:00">2014-04-12</time>
+              <time title="创建时间：2014-05-31 08:20:38 / 修改时间：08:29:30" itemprop="dateCreated datePublished" datetime="2014-05-31T08:20:38+08:00">2014-05-31</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-15 19:37:38" itemprop="dateModified" datetime="2014-04-15T19:37:38+08:00">2014-04-15</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2014/04/12/codefirst-migration/" class="post-meta-item leancloud_visitors" data-flag-title="codefirst中的数据迁移" title="阅读次数">
+            <span id="/2014/05/31/for-graduate/" class="post-meta-item leancloud_visitors" data-flag-title="毕业留言" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -452,8 +333,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/04/12/codefirst-migration/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/12/codefirst-migration/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/05/31/for-graduate/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/31/for-graduate/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -463,7 +344,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>400</span>
+              <span>116</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -482,19 +363,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>当我们使用codefirst的方式开发系统的时候，数据表是在代码第一次运行的时候生成的。但是有时候我们会在数据表已经生成了以后，对实体类进行修改。这也就意味着要有新的数据表来与之对应，所以在运行的时候会有异常弹出。大意是“entity framework监测到数据模型发生改变，需要进行codefirst migration”。</p>
-<p>codefirst migration的过程如下</p>
-<ol>
-<li><p>Enable-Migrations 启用迁移</p>
-</li>
-<li><p>Add-Migration 为挂起的Model变化添加迁移脚本</p>
-</li>
-<li><p>Update-Database 将挂起的迁移更新到数据库</p>
-</li>
-<li><p>Get-Migrations 获取已经应用的迁移</p>
-</li>
-</ol>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果你在visual studio中创建的是website，那么恭喜你，虽然能够用codefirst，但这个migration大概是用不了了，至少我没成功过。建议创建成webApplication，这个可以的。</p>
+          <p>昨天，一个毕业班的同学来跟我说，在收集老师们的临别留言，叫我也说几句。我想了下，写了如下句子：</p>
+<blockquote>
+<p>做一个方正的技术人，于人有益，于己无害。</p>
+</blockquote>
+<p>做一个好的技术人，心地纯洁，行为端正，做的事对别人有好处，又不用害怕自己的德行受损，何乐而不为呢？</p>
 
       
     </div>
@@ -514,7 +387,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/11/codefirst/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/22/dewey-on-technology/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -528,7 +401,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/04/11/codefirst/" class="post-title-link" itemprop="url">codefirst实践</a>
+            <a href="/2014/05/22/dewey-on-technology/" class="post-title-link" itemprop="url">杜威论技术</a>
         </h2>
 
         <div class="post-meta">
@@ -538,14 +411,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-04-11 22:20:41" itemprop="dateCreated datePublished" datetime="2014-04-11T22:20:41+08:00">2014-04-11</time>
+              <time title="创建时间：2014-05-22 19:46:17" itemprop="dateCreated datePublished" datetime="2014-05-22T19:46:17+08:00">2014-05-22</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-14 19:11:30" itemprop="dateModified" datetime="2014-04-14T19:11:30+08:00">2014-04-14</time>
+                <time title="修改时间：2017-03-06 21:26:46" itemprop="dateModified" datetime="2017-03-06T21:26:46+08:00">2017-03-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -553,12 +426,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
                 </span>
             </span>
 
           
-            <span id="/2014/04/11/codefirst/" class="post-meta-item leancloud_visitors" data-flag-title="codefirst实践" title="阅读次数">
+            <span id="/2014/05/22/dewey-on-technology/" class="post-meta-item leancloud_visitors" data-flag-title="杜威论技术" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -573,8 +446,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/04/11/codefirst/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/11/codefirst/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/05/22/dewey-on-technology/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/22/dewey-on-technology/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -584,7 +457,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>213</span>
+              <span>189</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -603,12 +476,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Codefirst使用的基本过程如下：</p>
-<p>1.安装entity framework</p>
-<p>2.建立实体类</p>
-<p>3.建立一个数据操作的上下文类，继承自Dbcontext</p>
-<p>4.设定好connectionString</p>
-<p>codefirst首先以约定的方式来解读实体类，如果解读不了就会求助于attribute。如它规定了每个类都要有键属性，默认这个键属性的名称为ID，或者类名+ID，如果找不到的话就找[Key]这个属性，如果还是没找到，就会抛出一个异常。</p>
+          <p>用功能来替代结构分析，这是他与众不同的地方。</p>
+<p>因为用功能论，所以目的与手段不是问题，讲这些东西只不过是事后的反思；</p>
+<p>因为用功能论，所以这世界只有有用与没用两种东西，有用的就是技术，不管它是不是物质化的手段，还不管它是不是外在于人</p>
+<p>杜威认为，技术就是对工具与技艺的探究，这里的探究是一种认知，是一种发现，是一种创造。</p>
+<p>技术的关键是主动的生产性技能，并且只能在其运用的情境中才能称其为技术。</p>
 
       
     </div>
@@ -628,7 +500,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/09/root-honor-3c/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/21/media-file-upload/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -642,7 +514,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/04/09/root-honor-3c/" class="post-title-link" itemprop="url">root荣耀3C</a>
+            <a href="/2014/05/21/media-file-upload/" class="post-title-link" itemprop="url">媒体文件上传</a>
         </h2>
 
         <div class="post-meta">
@@ -652,14 +524,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-04-09 20:01:43" itemprop="dateCreated datePublished" datetime="2014-04-09T20:01:43+08:00">2014-04-09</time>
+              <time title="创建时间：2014-05-21 10:28:01" itemprop="dateCreated datePublished" datetime="2014-05-21T10:28:01+08:00">2014-05-21</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2017-03-06 21:32:48" itemprop="dateModified" datetime="2017-03-06T21:32:48+08:00">2017-03-06</time>
+                <time title="修改时间：2017-03-06 21:37:22" itemprop="dateModified" datetime="2017-03-06T21:37:22+08:00">2017-03-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -667,12 +539,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">教学工作</span></a>
                 </span>
             </span>
 
           
-            <span id="/2014/04/09/root-honor-3c/" class="post-meta-item leancloud_visitors" data-flag-title="root荣耀3C" title="阅读次数">
+            <span id="/2014/05/21/media-file-upload/" class="post-meta-item leancloud_visitors" data-flag-title="媒体文件上传" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -687,8 +559,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/04/09/root-honor-3c/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/09/root-honor-3c/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/05/21/media-file-upload/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/21/media-file-upload/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -698,14 +570,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>226</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>4 分钟</span>
             </span>
 
         </div>
@@ -717,8 +589,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>大家都在买华为的荣耀3c，我也买了一个。现在各种手机、电脑的硬件更新太快，感觉一年一个手机是合适的，况且这3c性价比确实高，虽然比3x的畅玩版还比不上，但是那个5.5英寸的屏就让我没兴趣了，3c的5寸屏刚好。</p>
-<p>刚入手的3c，型号h3-t10，官方固件b118，这个版本基本上已经没有什么root工具可以root了，网上的各种经验都无效。尝试了各种root工具后，无意中发现了root大师（vRoot）可以搞定它，现在分享出来让喜欢root的也高兴一下吧。</p>
+          <p>同学们在开发asp.net作品的时候经常会用到要把一些文件上传到服务器上，但是这里的迷惑就是这些文件在服务器中是如何存在的？是在文件系统中还是在数据库？如果在文件系统中该如何提取？如果是在数据库中该如何存取？</p>
+<p>我的建议是如果是小文件，而且数量有限可以放到数据库中，如果文件很大，同时数量非常多（随着系统的使用越来越多）还是存到文件系统中，然后把访问路径存到数据库中。</p>
+<p>但是不管怎样，作为学习我们还是要学会这两种存取文件的方式。下面我们以用户头像文件为例来说明这两种方法。</p>
+<h2 id="1-存放到文件系统中"><a href="#1-存放到文件系统中" class="headerlink" title="1.存放到文件系统中"></a>1.存放到文件系统中</h2><p>这种方式比较简单，主要是把头像文件上传到特定的文件夹中，同时把它的url相对路径存到数据库中就好了。代码如下</p>
+<pre><code>    if (fuAvart.FileContent != null)
+    {
+        //文件存取路径，存放在avart目录下以用户名命名的目录下
+        string path = Server.MapPath(&quot;~/avart/&quot; + HttpContext.Current.User.Identity.Name) + &quot;\\&quot;;
+        //图片的url相对路径
+        string url = &quot;~/avart/&quot; + HttpContext.Current.User.Identity.Name + &quot;/&quot; + fuAvart.FileName;
+        //如果路径不存在要先创建
+        if (!Directory.Exists(path))
+            Directory.CreateDirectory(path);
+        //文件保存到相关路径下
+        fuAvart.SaveAs(path + fuAvart.FileName);
+        //把路径保存到数据库中
+        string sql = &quot;update users set avarturl=&#39;&quot; + url + &quot;&#39; where username=&#39;&quot; + HttpContext.Current.User.Identity.Name + &quot;&#39;&quot;;
+        DataBase.RunSQL(sql);
+        iAvart.ImageUrl = url;
+    }
+</code></pre>
+<p>这种方式的提取也很简单，就是直接把图片的url值赋值给image控件就行了。一句话<code>iAvart.ImageUrl = reader[&quot;avarturl&quot;].ToString();</code> </p>
+<p>本部分数据库字段avarturl的类型为nvarchar（256）。</p>
+<h2 id="2-存放到数据库中"><a href="#2-存放到数据库中" class="headerlink" title="2.存放到数据库中"></a>2.存放到数据库中</h2><p>把图片存放到数据库中需要有一个image类型的字段，<br>在上传过程中，把图片文件转化成文件流，并把它作为sql命令的参数来执行</p>
+<pre><code>    if (fuAvart.FileContent != null)
+    {
+        string sql = &quot;update users set avart=@avart where username=@username&quot;;
+        SqlParameter[] prams = new SqlParameter[]{
+            new SqlParameter(&quot;@avart&quot;,System.Data.SqlDbType.Image,fuAvart.FileBytes.Length),
+            new SqlParameter(&quot;@username&quot;,System.Data.SqlDbType.VarChar,50)
+        };
+        prams[0].Value = fuAvart.FileBytes;
+        prams[1].Value = HttpContext.Current.User.Identity.Name;
+        DataBase.RunSQL(sql, prams);
+        iAvart.ImageUrl = &quot;avart.aspx&quot;;
+    }
+</code></pre>
+<p>因为图片的显示需要一个新的页面，所以新创建一个文件avart.aspx，page_load中的代码如下：</p>
+<pre><code>    string sql = &quot;select * from users where username=&#39;&quot; + HttpContext.Current.User.Identity.Name + &quot;&#39;&quot;;
+    SqlDataReader reader = null;
+    DataBase.RunSQL(sql, out reader);
+    //设置页面缓冲输出
+    Response.Buffer = true;
+    //清除缓冲区中的所有内容
+    Response.Clear();
+    if (reader.Read() &amp;&amp; reader[&quot;avart&quot;] != DBNull.Value)
+    {
+        byte[] file = (byte[])reader[&quot;avart&quot;];
+        //把二进制字符串写入HTTP输出流
+        Response.OutputStream.Write(file,0,file.Length); 
+    }
+    reader.Close();
+    //向客户端发送所有缓冲的内容
+    Response.Flush();
+    ////将当前所有缓冲的输出发送到客户端,并停止该页的执行
+    Response.End();
+</code></pre>
+<p>需要显示头像的地方<code> iAvart.ImageUrl = &quot;avart.aspx&quot;;</code></p>
+<p>本部分数据库字段avart，类型image</p>
 
       
     </div>
@@ -738,7 +667,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/08/bootstrap/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/16/kant/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -752,7 +681,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/04/08/bootstrap/" class="post-title-link" itemprop="url">MVC那些事之———bootstrap</a>
+            <a href="/2014/05/16/kant/" class="post-title-link" itemprop="url">康德哲学读书笔记[持续更新]</a>
         </h2>
 
         <div class="post-meta">
@@ -762,14 +691,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-04-08 20:06:04" itemprop="dateCreated datePublished" datetime="2014-04-08T20:06:04+08:00">2014-04-08</time>
+              <time title="创建时间：2014-05-16 11:28:04" itemprop="dateCreated datePublished" datetime="2014-05-16T11:28:04+08:00">2014-05-16</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-11 21:25:48" itemprop="dateModified" datetime="2014-04-11T21:25:48+08:00">2014-04-11</time>
+                <time title="修改时间：2017-03-06 21:26:26" itemprop="dateModified" datetime="2017-03-06T21:26:26+08:00">2017-03-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -777,12 +706,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
+                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
                 </span>
             </span>
 
           
-            <span id="/2014/04/08/bootstrap/" class="post-meta-item leancloud_visitors" data-flag-title="MVC那些事之———bootstrap" title="阅读次数">
+            <span id="/2014/05/16/kant/" class="post-meta-item leancloud_visitors" data-flag-title="康德哲学读书笔记[持续更新]" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -797,8 +726,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/04/08/bootstrap/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/08/bootstrap/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/05/16/kant/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/16/kant/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -808,7 +737,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -827,44 +756,149 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>MVC5把bootstrap作为其中的一个组件，所以我们需要学习用它来做前台的开发。</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>首先从bootstrap官方网站上下载它的发布包并解压到网站的根目录，然后在需要使用bootstrap的页面上添加样式表与javascript，如下面的代码所示：</p>
-<pre><code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-	&lt;head&gt;
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-        &lt;div class=&quot;container-fluid&quot;&gt;
-       		&lt;h1&gt;Hello world!&lt;/h1&gt;
-    	&lt;/div&gt;
-    	&lt;script src=&quot;js/jquery-2.1.0.min.js&quot;&gt;&lt;/script&gt;
-		&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-	&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>样式表添加<code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot; /&gt;</code>，要放在head之间</p>
-<p>javascript添加</p>
-<pre><code>&lt;script src=&quot;js/jquery-2.1.0.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<p>最好放在页面内容后面，这里要注意的是bootstrap依赖于jquery，所以在引用bootstrap代码之前先添加jquery。</p>
-<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>container作为一个容器，它会设置一个合理的宽度，并把它包含的内容居中</p>
-<p>row作为一行，col-md-4表示占据一行12列中的4列，根据屏幕大小的不同col-md-n中的md可以使xs（超小屏幕）、sm（小屏幕）、lg（大屏幕），md表示中等大小的屏幕。所以下面的代码可以在一些布局系统中看到：</p>
-<pre><code>&lt;div class=&quot;container&quot;&gt;
-	&lt;div class=&quot;row&quot;&gt;
-		&lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;		
-		&lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;		
-		&lt;div class=&quot;col-md-4&quot;&gt;&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-<p>这里container是不能嵌套的，但是row这些都可以嵌套。</p>
-<p>关于列，我们还可以做一下偏移，如<code>&lt;div class=&quot;col-md-4 col-md-offset-4&quot;&gt;&lt;/div&gt;</code>表示一个四列的内容向右偏移4列。</p>
-<h2 id="css组件"><a href="#css组件" class="headerlink" title="css组件"></a>css组件</h2><h2 id="javascript插件"><a href="#javascript插件" class="headerlink" title="javascript插件"></a>javascript插件</h2><p>实际上下面两个参考地址上的教程已经很详细了，我也就不写这个内容，等以后用多了再来写心得。</p>
+          <h2 id="1-纯粹理性批判"><a href="#1-纯粹理性批判" class="headerlink" title="1.纯粹理性批判"></a>1.纯粹理性批判</h2><p>康德的纯粹理性批判基本上是为了回应休谟的彻底的怀疑论。休谟怀疑一切，甚至把科学的基础——因果性都给否认了，这就扰醒了康德“独断论的迷梦”。</p>
+<p>康德首先把亚里士多德以来“观念符合对象”的观点颠倒了，他认为首先是“对象符合观念”，所以“观念也符合对象”了。但是对象如何来符合观念呢，他说人有种先天的认识能力，有张认识之网去捕捉经验中的感觉、印象，这就是休谟所说的经验材料，然后把它组织成一个知识体系。</p>
+<p>那么这个知识体系的可靠性如何？因为休谟是否定的，康德则认为这个是可靠的。康德承认这个知识体系不是对客观实在对象的真实反映，康德也认为这个是不可能的，在这点上他接受休谟的观点。但是他认为我们这个知识体系是关于观念的，或者说认识的对象是观念的，所以知识体系的客观性与可靠性不在于它是不是反映了客观对象，而在于它跟我们建立起来的对象与对象的观念是不是符合。这个对象的观念是显现给我们的，因而是我们能够感觉到的，康德把它称作现象界。在现象界之外还存在一个我们不知道的世界——物自体世界。</p>
+<p>康德的认识之网实际上就是说“人为自然界立法”，这也是认识论上的“哥白尼革命”的由来，因为以前都是观念符合自然的，相当于人的认识逃离不了客观事物，但是现在是人的先天知识结构来建构关于对象的观念，于是对象要符合观念，不符合的一概进入不了知识体系。</p>
+<p>康德纯粹理性批判里面要解决的最终问题就是先天综合判断。</p>
+<p>所谓先天就是一件事情还没发生之前就已经存在着的，带有着某种必然性。</p>
+<p>所谓综合判断就是谓词不包含在主词里面的判断，与它相对的就是谓词已经包含在主词里面的分析判断，按康德的说法分析判断是不生产新知识的，它主要是解释知识，把原来蕴藏在主词里面的知识明显地说出来，而综合判断则是生产知识的，它往往带出新知识。但是一般的综合判断都是后天的，你说“天是蓝的”虽然他说出了一种新的知识，但是它讲的是一种特殊性，因而不具必然性。而一切分析判断倒是先天的，都是必然的。后天的综合判断与先天的分析判断之间的矛盾正式当时经验论与唯理论之间的矛盾。而康德就是想调和这两者。</p>
+<p>所以康德研究先天综合判断就是想找到一种知识它既是综合判断，又具有必然性。</p>
+<p>康德把因果性恢复了，他认为因果性是主观的，但是它具有普遍性，不是随意的。</p>
+<p>康德的认识三部曲：感性、知性、理性。</p>
+<p>感性：感受经验材料</p>
+<p>知性：用概念范畴等加工感性的东西，以期在一定范围内能够统一。</p>
+<p>理性：用先验的原理对知性进行加工，以获得一种超绝的普遍化。其结果就是整个经验世界的统一体，获得了整个世界的的绝对知识，也就是“自在之物”</p>
+<h2 id="3-判断力批判"><a href="#3-判断力批判" class="headerlink" title="3.判断力批判"></a>3.判断力批判</h2><p>判断力就是把特殊归结为普遍的能力。如果普遍的先知道然后来寻找特殊，这种判断力就叫做规定性的判断力，如果特殊的先知道以此来寻找普遍性的，这种判断力就叫做反思性的判断力。</p>
+<p>反思的判断力包括审美的判断力与目的论判断力</p>
+<p>反思的判断力有个先验的原则，那就是这世界上存在的大量偶然现象也是有规律的，世界的多样性是先验地统一的。但是这个先验的原则不是为自然界立法，而是为反思的判断力自己立法。所以这里世界的多样性统一并不是说有一个确实存在的目的，而是说世界的“合目的性”</p>
+<p>我们从一个审美对象身上我们完整地观照这个对象，而不从这个对象本身取出某种东西进行规定的判断，我们完整地把所有的感性的特质尽收眼底，全身心向它敞开，沉浸于其中，力图感受到某种主观中的普遍性的东西、人性化的东西。这就是反思的判断力。（P109）</p>
+<p>审美判断力是按照情感能力的先验原则来判定自然的合目的性的，目的论判断力则不是什么特殊能力，它的作用如同在《纯粹理性批判》中一样也是致力于理论认识，但针对着自然的某些特殊对象（如有机体），并且不是进行普遍规定而是对特殊原则进行反思，即不是纳入知性范畴（知性概念）而是按照自然的目的理念（理性概念）来评定。因此目的论判断力在起源上是出自审美判断力，但就其运用而言却属于哲学的理论部分，对它的批判就既不同于对知性的批判（《纯粹理性批判》），又不同于对审美判断力的批判，后者只属于判断主体及其认识能力的批判。但由于审美判断力批判在一切其他批判中的核心位置，所以它是“一切哲学的入门”①。（P38）</p>
+<p><strong>当判断力以其自然合目的性概念使自然规律过渡到自由的最终目的成为可能的时，它就在知性的先天构成性原则（认识能力）和理性的先天构成性原则（欲求能力）之间建立起一座桥梁。（P39）</strong></p>
+<p>反思的判断力自己给自己立法。</p>
+<p>最终目的：人的幸福，文化</p>
+<p>人的幸福：最终目的的被动的质料。</p>
+<p>文化：一个理性存在者一般地对于任意一种目的（因而在其自由中）都创造出他的适应性。但是这个分成两部分，一个是熟练技巧，另一个是科学与艺术。</p>
+<p>自然界的最终目的：创造本身。不需要任何其他目的作为条件的目的。</p>
+<p>因为自然界的一切都是有一个因果链条，所以其最终就会追溯到知性及其根据，但这个根据是超自然的。这个超自然的东西在现实中就是“作为本体的人”，所以人成为了一切目的的最终目的。在《实用人类学》的前言中第一句话就讲到了“人是他自己的目的”。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/15/category-of-aristotle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/05/15/category-of-aristotle/" class="post-title-link" itemprop="url">亚里士多德的范畴篇</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-05-15 11:35:03" itemprop="dateCreated datePublished" datetime="2014-05-15T11:35:03+08:00">2014-05-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2017-03-06 21:28:50" itemprop="dateModified" datetime="2017-03-06T21:28:50+08:00">2017-03-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/05/15/category-of-aristotle/" class="post-meta-item leancloud_visitors" data-flag-title="亚里士多德的范畴篇" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/05/15/category-of-aristotle/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/15/category-of-aristotle/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>627</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>亚里士多德的《范畴篇》被编到《亚里士多德全集》第一卷第一篇，很久以来都被看做是其创立的逻辑学的重要奠基，但是其实际上也有第一哲学的重要意义。这里仅作个读书笔记。</p>
+<p><strong>属加种差</strong>是亚里士多德提出的定义法，即为一个事物下定义的时候，首先找到与其最邻近的属概念，然后再加上此种与属概念的差异属性，把两者相加就是一个关于此种的定义。如与人最邻近的属概念是动物，而人与动物相比最显著的差异就是人能够思考，有理性，所以人就是理性的动物，这就是一个典型的属加种差的定义。</p>
+<p><strong>本体</strong>是既不述说一个主体，也不存在于一个主体中的事物。如个别的人，个别的马</p>
+<p><strong>第二本体</strong>是可以述说一个主体，但不存在于一个主体中的事物。如人、动物</p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/aehyok/p/3404867.html">http://www.cnblogs.com/aehyok/p/3404867.html</a></p>
-<p><a target="_blank" rel="noopener" href="http://v3.bootcss.com/getting-started/">http://v3.bootcss.com/getting-started/</a></p>
+<p>注意： 在后来的《形而上学》中发生了变化，即第一本体和第二本体的位置互换。这是由于在《形而上学》中，亚里士多德侧重于对存在进行结构分析，侧重于确定本体的另外两个标准，此性（this）和离存性（discrete）。根据这些特点分析，形式作为个别事物的内在构成要素，是使个别事物成为确定的“这一个”的决定方面，因此，形式上升为第一本体。</p>
 </blockquote>
+<p>形而上学原则的意义不在于区分个别事物与种属，而在于区分本体与属性，把属性存在从存在的规定中排除出去，保留种属与个别事物一道作为本体。</p>
+<p>根据逻辑原则，<strong>只有个别事物才是本体</strong>，种属都不是。因为个别事物是最后的主体，它不述说任何事物。</p>
+<p><strong>本体</strong>是存在中一切其他性质的主体或基础，其逻辑特征为可以充当一切宾词的主词，相对于现象而言，它是存在中的稳定方面。</p>
 
       
     </div>
@@ -883,7 +917,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -951,20 +985,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">157</span>
+          <span class="site-state-item-count">169</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">208</span>
+        <span class="site-state-item-count">213</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1008,12 +1042,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">114k</span>
+    <span title="站点总字数">179k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:09</span>
+    <span title="站点阅读时长">4:58</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
