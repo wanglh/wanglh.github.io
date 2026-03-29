@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.wanglianghui.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南 原文标题: Building AI for kids: A developer’s guide to age-appropriate safety architecture来源: eSchoolNews | 发布时间: 2026-03-26原文链接: 点击阅读原文    Share on X (Opens in new window)X  S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南">
+<meta property="og:url" content="http://www.wanglianghui.cn/2026/03/26/%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="之间居">
+<meta property="og:description" content="为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南 原文标题: Building AI for kids: A developer’s guide to age-appropriate safety architecture来源: eSchoolNews | 发布时间: 2026-03-26原文链接: 点击阅读原文    Share on X (Opens in new window)X  S">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-29T00:45:19.888Z">
+<meta property="article:author" content="Levi Wang">
+<meta property="article:tag" content="AI教育">
+<meta property="article:tag" content="教育科技">
+<meta property="article:tag" content="智能教育">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.wanglianghui.cn/2026/03/26/%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+  <title>为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南 | 之间居</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="之间居" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">之间居</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">之间的github之旅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言簿</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2026/03/26/%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2026-03-26 00:00:00" itemprop="dateCreated datePublished" datetime="2026-03-26T00:00:00+08:00">2026-03-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2026-03-29 08:45:19" itemprop="dateModified" datetime="2026-03-29T08:45:19+08:00">2026-03-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/" itemprop="url" rel="index"><span itemprop="name">教育科技</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/AI%E6%95%99%E8%82%B2/" itemprop="url" rel="index"><span itemprop="name">AI教育</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2026/03/26/%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97/" class="post-meta-item leancloud_visitors" data-flag-title="为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2026/03/26/%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2026/03/26/%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>14 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南"><a href="#为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南" class="headerlink" title="为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南"></a>为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南</h1><blockquote>
+<p><strong>原文标题</strong>: Building AI for kids: A developer’s guide to age-appropriate safety architecture<br><strong>来源</strong>: eSchoolNews | <strong>发布时间</strong>: 2026-03-26<br><strong>原文链接</strong>: <a target="_blank" rel="noopener" href="https://www.eschoolnews.com/digital-learning/2026/03/26/building-ai-for-kids-a-developers-guide-to-age-appropriate-safety-architecture/">点击阅读原文</a></p>
+</blockquote>
+<hr>
+<ul>
+<li><p>Share on X (Opens in new window)X</p>
+</li>
+<li><p>Share on Facebook (Opens in new window)Facebook</p>
+</li>
+<li><p>Share on LinkedIn (Opens in new window)LinkedIn</p>
+</li>
+<li><p>Email a link to a friend (Opens in new window)Email</p>
+</li>
+<li><p>Print (Opens in new window)Print</p>
+</li>
+<li></li>
+</ul>
+<p>Key points:</p>
+<ul>
+<li><p>Anxiety isn’t about AI itself–it’s about carelessness</p>
+</li>
+<li><p>New research challenges fears about AI in the classroom</p>
+</li>
+<li><p>The digital divide redux: Why AI is the new broadband</p>
+</li>
+<li><p>For more news on AI safety, visit eSN’sDigital Learninghub</p>
+</li>
+</ul>
+<p>When I shipped Gramms AI to the App Store, I ran straight into a question that every developer building for kids will eventually face: What does “age-appropriate” actually mean in practice? And how do you build systems that enforce it reliably?</p>
+<p>Gramms is a bedtime story app. It generates personalized tales narrated in a grandparent’s cloned voice. Sounds simple enough. But the safety architecture behind it was anything but.</p>
+<p>This is a practitioner’s account of the decisions behind Gramms, written to be useful to anyone building AI-powered products for children ages 3–10. None of this is legal advice, but all of it is hard-won.</p>
+<ol>
+<li>Age bands: Not all children are the same audience</li>
+</ol>
+<p>The most important design decision you’ll make is abandoning the idea of a single “kid-safe” content level. A story that works for a 9-year-old (mild conflict, narrative tension, multi-step moral reasoning) may genuinely frighten a 3-year-old. And a 9-year-old will check out in about 30 seconds if the content feels like it was made for a 4-year-old.</p>
+<p>Gramms uses three developmental age bands, each with its own prompt engineering layer:</p>
+<ul>
+<li><p>Ages 3–5: Simple vocabulary, 200–400 word stories, single-protagonist narratives, repetitive structure, no conflict that requires resolution. Themes like friendship, animals, magical helpers. Language complexity targets a kindergarten Lexile range.</p>
+</li>
+<li><p>Ages 6–8: Richer vocabulary, light challenge and resolution, two- to three-character dynamics, mild suspense that resolves happily. Stories run 400–600 words. Introduces simple cause-and-effect morality.</p>
+</li>
+<li><p>Ages 9–10: Near-chapter-book structure, multi-step plots, humor that requires inference, protagonist agency and consequence. Stories can reach 600–800 words. Begins to introduce ambiguous situations with nuanced resolution.</p>
+</li>
+</ul>
+<p>These bands are encoded directly into the system prompt sent to the language model. The child’s age isn’t just metadata. It’s a hard constraint that shapes every element of generation: word choice, sentence structure, thematic scope, and narrative stakes.</p>
+<ol start="2">
+<li>Parental consent architecture for COPPA compliance</li>
+</ol>
+<p>COPPA (the Children’s Online Privacy Protection Act) requires verifiable parental consent before collecting personal information from children under 13. In an AI app, “personal information” is broadly interpreted. A child’s name, age, and interests all qualify.</p>
+<p>Apple reinforces this with its own App Store Review Guidelines (Section 5.1.4), which require explicit disclosure of which third-party AI services process user data. Gramms surfaces this at the point of parental consent. Before any profile is saved, the parent sees a screen naming OpenAI and Cartesia as our AI vendors, explaining what data each receives, and requiring active acknowledgment. This isn’t a terms-of-service checkbox. It’s a blocking action gate.</p>
+<p>Two practical notes for developers building something similar:</p>
+<p>First, design consent as a parent-first flow. The child’s profile creation should be gated behind an account that an adult controls. Not a frictionless onboarding flow that a seven-year-old could complete alone.</p>
+<p>Second, store consent timestamps and vendor lists server-side. If your AI vendor changes (we migrated our text-to-speech provider mid-development), you need an audit trail and a mechanism to re-surface consent disclosures to existing users.</p>
+<ol start="3">
+<li>Automated content moderation: Defense-in-depth</li>
+</ol>
+<p>Prompt engineering reduces risk, but doesn’t eliminate it. Language models are probabilistic systems. A carefully constructed prompt can still produce output that slips through. For a children’s product, “mostly safe” is not an acceptable quality bar.</p>
+<p>Gramms implements a two-pass system. The first pass is prompt-level: the system prompt for each age band explicitly prohibits violence, fear-inducing antagonists, romantic content, and real-world geographic or political references. The second pass is post-generation moderation. Before a story is delivered to the parent or child, the full text is evaluated by a content moderation API against a children’s content policy.</p>
+<p>When a story fails moderation, the user sees a simple “generating a new story” message. No error state, no explanation. The regeneration is silent. A parent should never encounter a moment where the app exposes them to content that required filtering.</p>
+<p>One pattern worth calling out: moderating the narration script separately from the story text matters. The narration script (which adds dramatic pacing cues and emotional directions for the voice synthesis) can introduce tonal elements not present in the raw story. If your pipeline separates generation from narration formatting like ours does, apply moderation to both outputs independently.</p>
+<ol start="4">
+<li>Apple App Store review: Lessons for AI child data apps</li>
+</ol>
+<p>Apple’s review process for apps in the Kids category is meaningfully stricter than for general apps, and AI features invite extra scrutiny.</p>
+<p>Name every AI vendor explicitly.Apple will ask. Your privacy policy, your App Store description, and your in-app disclosures should all reference the specific companies whose APIs process user data. Not just the category of technology. “We use AI” is insufficient. “We use OpenAI’s GPT-4o-mini for story generation and Cartesia Sonic for voice synthesis” is what reviewers need to see.</p>
+<p>Keep child data out of training.Confirm (in writing to reviewers if asked) that your AI provider contracts include data processing agreements that prohibit using child-associated data for model training. Both major providers offer this. You may need to select the appropriate API tier.</p>
+<p>Separate child profiles from adult accounts at the data layer.The parent’s account owns the child profiles. Child data should never be independently addressable. It should only be accessible in the context of an authenticated parent session. This architecture is both a COPPA best practice and a common App Review inquiry.</p>
+<p>Test with real children before submission.Not because App Review requires it, but because age-appropriateness is easier to calibrate empirically than theoretically. A 4-year-old’s reaction to a story you thought was gentle is a better signal than any content audit rubric.</p>
+<h3 id="The-bigger-picture"><a href="#The-bigger-picture" class="headerlink" title="The bigger picture"></a>The bigger picture</h3><p>Building AI products for children isn’t harder than building them for adults. It’s differently hard. The technical constraints are manageable. The design empathy required is substantial. Every age-band decision, every consent flow, and every moderation threshold represents a judgment about what’s appropriate for a specific child at a specific developmental stage.</p>
+<p>Here’s the good news, though: Families are ready for well-built AI children’s products. The anxiety isn’t about AI itself. It’s about carelessness. Demonstrating that you’ve thought carefully about safety architecture, named your vendors, built real moderation, and designed consent for parents rather than for frictionless sign-ups is how you earn that trust.</p>
+<h3 id="Sign-up-for-our-K-12-newsletter"><a href="#Sign-up-for-our-K-12-newsletter" class="headerlink" title="Sign up for our K-12 newsletter"></a>Sign up for our K-12 newsletter</h3><p>Δ</p>
+<ul>
+<li><p>Author</p>
+</li>
+<li><p>Recent Posts</p>
+</li>
+</ul>
+<p>Robin Singhvi is the solo founder of Gramms AI (gramms.ai), an iOS app that generates personalized bedtime stories narrated in a grandparent’s cloned voice. Gramms is available on the Apple App Store. He can be reached at <a href="mailto:&#114;&#x6f;&#98;&#x69;&#110;&#64;&#103;&#x72;&#x61;&#x6d;&#109;&#115;&#x2e;&#x61;&#105;">robin@gramms.ai</a>.</p>
+<ul>
+<li><p>Building AI for kids: A developer’s guide to age-appropriate safety architecture- March 26, 2026</p>
+</li>
+<li><p>Why digital resilience is critical for U.S. K-12 schools- March 23, 2026</p>
+</li>
+<li><p>Boosting student engagement on World Math Day- March 20, 2026</p>
+</li>
+<li><p>Share on X (Opens in new window)X</p>
+</li>
+<li><p>Share on Facebook (Opens in new window)Facebook</p>
+</li>
+<li><p>Share on LinkedIn (Opens in new window)LinkedIn</p>
+</li>
+<li><p>Email a link to a friend (Opens in new window)Email</p>
+</li>
+<li><p>Print (Opens in new window)Print</p>
+</li>
+<li></li>
+</ul>
+<p>Want to share a great resource? Let us know <a href="mailto:&#97;&#116;&#x73;&#x75;&#x62;&#109;&#x69;&#115;&#x73;&#105;&#111;&#x6e;&#115;&#x40;&#101;&#115;&#x63;&#104;&#111;&#111;&#108;&#x6d;&#x65;&#100;&#105;&#x61;&#46;&#99;&#111;&#x6d;">atsubmissions@eschoolmedia.com</a>.</p>
+<hr>
+<p><em>本报道由 AI 助手自动抓取、翻译并发布。</em></p>
+
+    </div>
+
+    
+    
+    <div class="post-widgets">
+    <div
+      class="social-share"
+      
+        data-sites="weibo,wechat,qzone,facebook,twitter"
+      
+      
+        data-wechat-qrcode-title="请打开微信扫一扫"
+      
+      
+    >
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%99%BA%E8%83%BD%E6%95%99%E8%82%B2/" rel="tag"># 智能教育</a>
+              <a href="/tags/AI%E6%95%99%E8%82%B2/" rel="tag"># AI教育</a>
+              <a href="/tags/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/" rel="tag"># 教育科技</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/03/25/%E5%9C%A8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%96%E7%95%8C%E4%B8%AD%E5%88%9B%E9%80%A0%E6%95%99%E8%82%B2%E4%BB%B7%E5%80%BC/" rel="prev" title="在人工智能世界中创造教育价值">
+      <i class="fa fa-chevron-left"></i> 在人工智能世界中创造教育价值
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2026/03/27/%E5%A4%A7%E5%AD%A6%E9%87%87%E7%94%A8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E9%80%9F%E5%BA%A6%E8%B6%85%E8%BF%87%E4%BA%86%E5%AE%83%E4%BB%AC%E7%9A%84%E7%AE%A1%E7%90%86%E9%80%9F%E5%BA%A6/" rel="next" title="大学采用人工智能的速度超过了它们的管理速度">
+      大学采用人工智能的速度超过了它们的管理速度 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E5%84%BF%E7%AB%A5%E6%9E%84%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%9A%E9%80%82%E5%90%88%E5%84%BF%E7%AB%A5%E5%B9%B4%E9%BE%84%E7%9A%84%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E6%8C%87%E5%8D%97"><span class="nav-number">1.</span> <span class="nav-text">为儿童构建人工智能：适合儿童年龄的安全架构开发人员指南</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-bigger-picture"><span class="nav-number">1.1.</span> <span class="nav-text">The bigger picture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sign-up-for-our-K-12-newsletter"><span class="nav-number">1.2.</span> <span class="nav-text">Sign up for our K-12 newsletter</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Levi Wang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Levi Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">275</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">213</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zjnuwlh@gmail.com" title="E-Mail → mailto:zjnuwlh@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/tiediy" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;tiediy" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Levi Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">1m</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">28:04</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI',
+      appKey     : 'xLCpMzWwwFK4K3UOboZVg1aK',
+      placeholder: "来吧，说几句",
+      avatar     : 'hide',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : 'https://enfcvfdt.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

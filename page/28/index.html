@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/26/remote-access-ubuntu/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2017/04/19/hao-ke-tang/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +181,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/26/remote-access-ubuntu/" class="post-title-link" itemprop="url">ubuntu的远程桌面</a>
+            <a href="/2017/04/19/hao-ke-tang/" class="post-title-link" itemprop="url">第二届好课堂筹备</a>
         </h2>
 
         <div class="post-meta">
@@ -190,28 +190,22 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2012-08-26 11:14:00" itemprop="dateCreated datePublished" datetime="2012-08-26T11:14:00+08:00">2012-08-26</time>
+              <time title="创建时间：2017-04-19 21:46:29 / 修改时间：21:52:36" itemprop="dateCreated datePublished" datetime="2017-04-19T21:46:29+08:00">2017-04-19</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:43:00" itemprop="dateModified" datetime="2014-04-01T13:43:00+08:00">2014-04-01</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/26/remote-access-ubuntu/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu的远程桌面" title="阅读次数">
+            <span id="/2017/04/19/hao-ke-tang/" class="post-meta-item leancloud_visitors" data-flag-title="第二届好课堂筹备" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -226,8 +220,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/26/remote-access-ubuntu/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/26/remote-access-ubuntu/" itemprop="commentCount"></span>
+    <a title="valine" href="/2017/04/19/hao-ke-tang/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/19/hao-ke-tang/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -237,7 +231,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>742</span>
+              <span>121</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,14 +250,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>ubuntu的自带的远程桌面挺好用，唯一的缺点就是需要在服务器先登录一次才能用，有时候这个有点苛求。所以一直在找一种能够自动登录的远程桌面。先后试过了xrdp，vnc4server，xrdp倒是挺好，能够用windows的远程桌面连接，但是有些键盘操作有点问题。vnc4server跟系统自带的远程桌面类似，都需要本地登录后才能用（据说可以ssh登录后启动，但是我试了一下vnc4server服务器在ssh下启动不了，启动了后进去发现也只有桌面，而且也嫌它麻烦）。这样就转向了x11vnc。</p>
-<p><strong>安装</strong><br>	sudo apt-get install vino vinagre x11vnc<br><strong>设置vnc密码</strong><br>	sudo x11vnc -storepasswd<br>这样就在当前用户的目录下的.vnc目录中创建了一个passwd的文件用来存放vnc密码。  </p>
-<p>网上说要给x11vnc设一个单一的密码，其实这个没必要，用vnc的密码就行了，如果要设就执行如下语句<br>	sudo x11vnc -storepasswd in &#x2F;etc&#x2F;x11vnc.pass<br>这里还有个文件权限问题</p>
-<p>配置x11vnc为跟随系统自动启动需要新建一个文件&#x2F;etc&#x2F;init&#x2F;x11vnc.conf，在里面写上如下文本：<br>	start on login-session-start  </p>
-<pre><code>script  
-	x11vnc -display :0 -auth /var/run/lightdm/root/:0 -forever -bg -o /var/log/x11vnc.log -rfbauth /home/zjnuwlh/.vnc/passwd -rfbport 5900  
-end script  
-</code></pre>
+          <p>第二届好课堂下周就要开幕，近日来筹备工作如火如荼。整体都在围绕这个工作，从宣传到后勤以及比赛的具体组织，太多的琐碎工作要落实。也只有在这样庞大的会务工作之中，会让人感觉渺小。生命如蝼蚁，每个人都是一个螺丝钉。不过人生在世，经历就是存在的标志。</p>
 
       
     </div>
@@ -283,7 +270,7 @@ end script
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/25/ruby-installation/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2017/04/10/a-tired-day/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -297,7 +284,7 @@ end script
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/25/ruby-installation/" class="post-title-link" itemprop="url">ubuntu下RoR环境的安装</a>
+            <a href="/2017/04/10/a-tired-day/" class="post-title-link" itemprop="url">疲惫的一天</a>
         </h2>
 
         <div class="post-meta">
@@ -306,28 +293,22 @@ end script
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2012-08-25 08:31:00" itemprop="dateCreated datePublished" datetime="2012-08-25T08:31:00+08:00">2012-08-25</time>
+              <time title="创建时间：2017-04-10 22:56:25 / 修改时间：23:07:30" itemprop="dateCreated datePublished" datetime="2017-04-10T22:56:25+08:00">2017-04-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:40:06" itemprop="dateModified" datetime="2014-04-01T13:40:06+08:00">2014-04-01</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/25/ruby-installation/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu下RoR环境的安装" title="阅读次数">
+            <span id="/2017/04/10/a-tired-day/" class="post-meta-item leancloud_visitors" data-flag-title="疲惫的一天" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -342,8 +323,8 @@ end script
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/25/ruby-installation/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/25/ruby-installation/" itemprop="commentCount"></span>
+    <a title="valine" href="/2017/04/10/a-tired-day/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/10/a-tired-day/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -353,14 +334,14 @@ end script
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>168</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -372,22 +353,7 @@ end script
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>ubuntu下安装ROR推荐用[RVM][1]，<br>安装rvm<br>    curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable</p>
-<p>单独安装ruby<br>    sudo curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable –ruby</p>
-<p>安装Rails<br>	sudo curl -L <a target="_blank" rel="noopener" href="https://get.rvm.io/">https://get.rvm.io</a> | sudo bash -s stable –rails<br>可惜这样安装好的rails似乎没用，最后还是执行<br>	sudo apt-get install rails</p>
-<p>[安装ImageMagick][2]<br>下载ImageMagick源代码并解压<br>	.&#x2F;configure<br>	make<br>	sudo make install<br>	sudo ldconfig &#x2F;usr&#x2F;local&#x2F;lib</p>
-<p>安装bundler<br>	sudo gem install bundler  </p>
-<p>修改redmine下的配置文件  </p>
-<p>到redmine目录下执行<br>	sudo bundle install –without development test<br>其他的参阅[redmine安装][3]</p>
-<p>安装passenger<br>	sudo gem install passenger<br>	sudo passenger-install-apache2-module<br>其他配置什么的根据安装过程的提示来写</p>
-<p>安装svnmanager<br>配置config.php<br>添加数据库<br>用admin&#x2F;admin登录后马上创建管理员账号，创建的时候最后一个密码就填写admin。<br>下面安装php对svn的支持，否则不能在svnmanager中设置用户对库的权限<br>	sudo apt-get install php5 php5-mysql php5-sqlite php-pear<br>	sudo pear install -a VersionControl_SVN-0.4.0 </p>
-<p>注意svnmanager要写内容的两个文件（access与password）的权限要修改。</p>
-<p><strong>参考</strong><br>[1]: <a target="_blank" rel="noopener" href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a> “rvm安装”  </p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://rvm.io/rvm/install/">https://rvm.io/rvm/install/</a><br>[2]: <a target="_blank" rel="noopener" href="http://www.imagemagick.org/script/install-source.php#unix">http://www.imagemagick.org/script/install-source.php#unix</a>  </li>
-<li><a target="_blank" rel="noopener" href="http://www.imagemagick.org/script/install-source.php#unix">http://www.imagemagick.org/script/install-source.php#unix</a><br>[3]: <a target="_blank" rel="noopener" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a> “redmine安装”  </li>
-<li><a target="_blank" rel="noopener" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
-</ol>
+          <p>今天早上起来就开始分解好课堂的工作，想着如何落实好课堂我们负责的若干事情，基本上已经把马上可以做的事情做掉了，接下去就是接待的事情了。以为可以轻松一下的时候，接到学生的电话，范钰琴上体育课晕倒了，还抽搐，过去风雨操场，救护车也马上到了，然后把她送到广福医院。一直弄到一点多，然后回来上课。下雨天没带伞，淋雨回家，吃了饭，研究院开会。累！</p>
 
       
     </div>
@@ -407,7 +373,7 @@ end script
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/23/ubuntu-installation/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2017/04/09/travel-with-students-in-spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -421,7 +387,7 @@ end script
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/23/ubuntu-installation/" class="post-title-link" itemprop="url">ubuntu安装</a>
+            <a href="/2017/04/09/travel-with-students-in-spring/" class="post-title-link" itemprop="url">跟学生一起去春游</a>
         </h2>
 
         <div class="post-meta">
@@ -430,28 +396,22 @@ end script
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2012-08-23 14:59:00" itemprop="dateCreated datePublished" datetime="2012-08-23T14:59:00+08:00">2012-08-23</time>
+              <time title="创建时间：2017-04-09 22:52:16 / 修改时间：23:52:36" itemprop="dateCreated datePublished" datetime="2017-04-09T22:52:16+08:00">2017-04-09</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:39:26" itemprop="dateModified" datetime="2014-04-01T13:39:26+08:00">2014-04-01</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">教学工作</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/23/ubuntu-installation/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu安装" title="阅读次数">
+            <span id="/2017/04/09/travel-with-students-in-spring/" class="post-meta-item leancloud_visitors" data-flag-title="跟学生一起去春游" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -466,8 +426,8 @@ end script
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/23/ubuntu-installation/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/23/ubuntu-installation/" itemprop="commentCount"></span>
+    <a title="valine" href="/2017/04/09/travel-with-students-in-spring/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/04/09/travel-with-students-in-spring/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -477,7 +437,7 @@ end script
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>684</span>
+              <span>719</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -496,12 +456,15 @@ end script
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在04、05年开始接触ubuntu，后来安装ubuntu用来发布moodle+redmine+svn，效果挺好的。在淘汰下来的笔记本上也安装ubuntu发现也挺好，总之ubuntu一切都好，但是一直下不了决心把工作笔记本也安装成ubuntu。<br>暑假就要结束，准备下学期的教学工作，这两天又想把一些教学网站部署到ubuntu上，上一次ubuntu服务器由于出去读书没有打理，后来有次无意中误操作导致数据丢了，这次决定重新开始。<br>曾经用过多种方式安装ubuntu，用u盘来安装还是最省事的，这次还是用u盘来安装。<br>首先用ultraiso制作启动u盘;<br>其次，用u盘启动后点击桌面的安装图标就可以进入安装过程了，这里面除了跟硬盘设置相关的地方注意一点，其他的都很简单，在我的机器里面安装应该不到半个小时。</p>
-<p>奇怪的是每次安装好了重启以后，安装ubuntu的分区不见了，这个在安装好的时候是正常的，一重启就丢了。当然这个是分区表出问题了，退回到windows下用一些工具修改了，但是一安装照样出问题。来回反复了n次。最后断定问题在于机器带的增霸卡上</p>
-<p>解决方法：<br>在cmos中禁用增霸卡（performance 中的hdd protection）<br>用u盘的winpe进去后，用“分区表医生”重建硬盘分区，这样就把增霸卡写在硬盘上的内容去掉了，再次登录就不再有增霸卡的信息出来了。</p>
-<p>总算成功安装。</p>
-<p><strong>总结</strong><br>现在安装ubuntu越来越简单了，随着机器配置越来越高，速度也越来越快了。但是安装ubuntu要关注分区表，分区表有点问题在windows下似乎不是问题，但是在ubuntu中则不一样了，据说是零容忍。</p>
-
+          <p>工作以来曾经当过三个班的班主任。第一次当班主任，自己还在努力为站稳讲台努力，两年班主任期间，一个新手老师开过7门不同的课，所以匆忙间就过去了。第二次当班主任，因为忙于系里工作，跟学生在一起的机会也不多，2009年他们毕业的时候觉得还是有点遗憾的。今年开学以来每天事情都满满的，学生跟我约春游的时候，刚好这天没安排就把日程定了一下来，于是就有了这次春游。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/04/09/travel-with-students-in-spring/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -520,7 +483,7 @@ end script
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/20/domain-setting/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2017/03/11/%E2%80%9Csmart-reserach%E2%80%9D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -534,7 +497,7 @@ end script
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/20/domain-setting/" class="post-title-link" itemprop="url">github pages的独立域名</a>
+            <a href="/2017/03/11/%E2%80%9Csmart-reserach%E2%80%9D/" class="post-title-link" itemprop="url">“smart-reserach”</a>
         </h2>
 
         <div class="post-meta">
@@ -543,28 +506,22 @@ end script
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2012-08-20 21:13:00" itemprop="dateCreated datePublished" datetime="2012-08-20T21:13:00+08:00">2012-08-20</time>
+              <time title="创建时间：2017-03-11 14:49:37 / 修改时间：14:49:36" itemprop="dateCreated datePublished" datetime="2017-03-11T14:49:37+08:00">2017-03-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:41:12" itemprop="dateModified" datetime="2014-04-01T13:41:12+08:00">2014-04-01</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/20/domain-setting/" class="post-meta-item leancloud_visitors" data-flag-title="github pages的独立域名" title="阅读次数">
+            <span id="/2017/03/11/%E2%80%9Csmart-reserach%E2%80%9D/" class="post-meta-item leancloud_visitors" data-flag-title="“smart-reserach”" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -579,8 +536,8 @@ end script
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/20/domain-setting/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/20/domain-setting/" itemprop="commentCount"></span>
+    <a title="valine" href="/2017/03/11/%E2%80%9Csmart-reserach%E2%80%9D/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/03/11/%E2%80%9Csmart-reserach%E2%80%9D/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -590,7 +547,7 @@ end script
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>204</span>
+              <span>0</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -609,8 +566,7 @@ end script
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>为github pages上发布的博客设置自己的独立域名说来也简单，但是有些问题还是要记一下。<br>首先，在根目录下创建CNNAME文件，注意文件名要全部大写，否则没用；<br>其次，在域名控制器中添加a记录，对应的ip地址为github上的二级域名（如wanglh.github.com）对应的ip，可以用ping来获得；<br>再次，添加一个转向，把<a target="_blank" rel="noopener" href="http://www.wanglh.cn设置转向到wanglh.github.com./">www.wanglh.cn设置转向到wanglh.github.com。</a>  </p>
-
+          
       
     </div>
 
@@ -629,7 +585,7 @@ end script
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/17/subversion-apache/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2017/03/08/%E2%80%9Capple-distinguished-educator%E2%80%9D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -643,7 +599,7 @@ end script
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/17/subversion-apache/" class="post-title-link" itemprop="url">subversion在apache上发布的一些问题</a>
+            <a href="/2017/03/08/%E2%80%9Capple-distinguished-educator%E2%80%9D/" class="post-title-link" itemprop="url">“apple-distinguished-educator”</a>
         </h2>
 
         <div class="post-meta">
@@ -653,27 +609,20 @@ end script
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2012-08-17 08:49:00" itemprop="dateCreated datePublished" datetime="2012-08-17T08:49:00+08:00">2012-08-17</time>
+              <time title="创建时间：2017-03-08 19:06:50" itemprop="dateCreated datePublished" datetime="2017-03-08T19:06:50+08:00">2017-03-08</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:41:40" itemprop="dateModified" datetime="2014-04-01T13:41:40+08:00">2014-04-01</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/17/subversion-apache/" class="post-meta-item leancloud_visitors" data-flag-title="subversion在apache上发布的一些问题" title="阅读次数">
+            <span id="/2017/03/08/%E2%80%9Capple-distinguished-educator%E2%80%9D/" class="post-meta-item leancloud_visitors" data-flag-title="“apple-distinguished-educator”" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -688,8 +637,8 @@ end script
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/17/subversion-apache/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/17/subversion-apache/" itemprop="commentCount"></span>
+    <a title="valine" href="/2017/03/08/%E2%80%9Capple-distinguished-educator%E2%80%9D/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/03/08/%E2%80%9Capple-distinguished-educator%E2%80%9D/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -699,7 +648,7 @@ end script
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>409</span>
+              <span>0</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -718,12 +667,7 @@ end script
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>apache从原来的2.2.x换成了2.4.x，结果发现原来配置好的subversion用不了了。网上有说，subversion1.7.5与apache2.4.2不兼容，但我的是subversion1.7.3。刚好看到subversion1.7.6出来了，而且里面似乎有专门针对apache2.4.x的编译。下载了还是不行。后来就使用dependency walker，查看mod_dav_svn.so的依赖，看到有什么dll缺找到了就放到apache的module目录，结果看起来是没完没了的事情，最后，在dependency walker提示还缺一个dll文件的时候，忍不住试着去修改apache的配置文件，结果发现subversion居然好了。<br>由此可见，这个问题的解决有两个方面的要求：    </p>
-<ol>
-<li>要选择合适的版本  </li>
-<li>用dependency walker找到mod_dav_svn.so的依赖文件把它放到同一个目录中</li>
-</ol>
-
+          
       
     </div>
 
@@ -742,7 +686,7 @@ end script
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/14/try-octopress/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2017/03/06/prologue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -756,7 +700,7 @@ end script
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/14/try-octopress/" class="post-title-link" itemprop="url">试用octopress</a>
+            <a href="/2017/03/06/prologue/" class="post-title-link" itemprop="url">序言</a>
         </h2>
 
         <div class="post-meta">
@@ -766,14 +710,14 @@ end script
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2012-08-14 16:39:00" itemprop="dateCreated datePublished" datetime="2012-08-14T16:39:00+08:00">2012-08-14</time>
+              <time title="创建时间：2017-03-06 21:18:06" itemprop="dateCreated datePublished" datetime="2017-03-06T21:18:06+08:00">2017-03-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:42:32" itemprop="dateModified" datetime="2014-04-01T13:42:32+08:00">2014-04-01</time>
+                <time title="修改时间：2017-04-05 08:51:58" itemprop="dateModified" datetime="2017-04-05T08:51:58+08:00">2017-04-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -781,12 +725,12 @@ end script
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/14/try-octopress/" class="post-meta-item leancloud_visitors" data-flag-title="试用octopress" title="阅读次数">
+            <span id="/2017/03/06/prologue/" class="post-meta-item leancloud_visitors" data-flag-title="序言" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -801,8 +745,8 @@ end script
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/14/try-octopress/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/14/try-octopress/" itemprop="commentCount"></span>
+    <a title="valine" href="/2017/03/06/prologue/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2017/03/06/prologue/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -812,7 +756,7 @@ end script
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>537</span>
+              <span>857</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -831,17 +775,15 @@ end script
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前提：已经安装好了ruby</p>
-<p>下载octopress：<br>git clone git:&#x2F;&#x2F;github.com&#x2F;imathis&#x2F;octopress.git octopress</p>
-<p>安装依赖：<br>gem install bundler<br>bundle install</p>
-<p>安装Octopress：<br>rake install</p>
-<p>修改文件_config.yml ，主要是头上的一些博客参数，同时把该文件的编码改成utf的格式</p>
-<p>在使用octopress发布博客前，还需要进行配置，先执行：<br>set LANG&#x3D;zh_CN.UTF-8<br>set LC_ALL&#x3D;zh_CN.UTF-8</p>
-<p>再执行：<br>rake setup_github_pages</p>
-<p>这里碰到了一点问题，就是出现“hellip不是合法的内部命令或批处理”，查看rakefile，只要把里面的“&amp;hellip”字符删掉，网上查了一下大概这个符号是用来表达省略号的</p>
-<p>一切设置好了以后就可以</p>
-<p>rake new_post[“文章标题”]（这里如果出错的话，还是要set LANG&#x3D;zh_CN.UTF-8；set LC_ALL&#x3D;zh_CN.UTF-8先）<br>rake generate<br>rake deploy</p>
-
+          <p>一眨眼第二届两岸智慧好课堂就要开张了，前期的筹备工作也在紧张地开展。2016作为一种人生经历也是弥足珍贵，经历了很多，遇到了很多，虽然很难说收获了很多，但是也会有些东西留在记忆中，两岸智慧好课堂就是其中的一份。这个活动从开始筹办，到浙江省智慧教育联盟的成立，中间还是做了很多工作，像“智慧教育浙里行”微信公众号的申请等。再有就是两次比赛都奉献了序言，虽然后后期也会有人再做修改，但是拿起很久不用的笔，为自己办的事情写点文字还是有点意思的。现在把这个初稿奉献在这里。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2017/03/06/prologue/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -859,7 +801,7 @@ end script
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/27/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/">27</a><span class="page-number current">28</span><a class="page-number" href="/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/46/">46</a><a class="extend next" rel="next" href="/page/29/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -927,7 +869,7 @@ end script
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">169</span>
+          <span class="site-state-item-count">275</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -984,12 +926,12 @@ end script
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">179k</span>
+    <span title="站点总字数">1m</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:58</span>
+    <span title="站点阅读时长">28:04</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
