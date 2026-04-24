@@ -10,12 +10,12 @@
   <rights>All rights reserved 2026, Levi Wang</rights>
   <subtitle>之间的github之旅</subtitle>
   <title>之间居</title>
-  <updated>2026-04-24T23:04:38.057Z</updated>
+  <updated>2026-04-24T23:12:25.198Z</updated>
   <entry>
     <author>
       <name>Levi Wang</name>
     </author>
-    <category term="实践探索,家庭生活,技术学习,教学工作,理论研究,随便说说" scheme="http://www.wanglianghui.cn/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2-%E5%AE%B6%E5%BA%AD%E7%94%9F%E6%B4%BB-%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0-%E6%95%99%E5%AD%A6%E5%B7%A5%E4%BD%9C-%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6-%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/"/>
+    <category term="实践探索" scheme="http://www.wanglianghui.cn/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/"/>
     <category term="asp.net" scheme="http://www.wanglianghui.cn/tags/asp-net/"/>
     <category term="自动问答" scheme="http://www.wanglianghui.cn/tags/%E8%87%AA%E5%8A%A8%E9%97%AE%E7%AD%94/"/>
     <content>
@@ -28,7 +28,7 @@
       <![CDATA[<p>近段时间hermes agent声名鹊起，大家都强调它对比openclaw的优点，所以就把它也安装起来。刚好qwen3.5也出来了，效果不错，就想着不用买token，用本地的ollama。qwen3.5、gemma4其实都不错，输出效果都可以了，但是发现同样的问题openclaw能够干活，hermes则输出一堆怎么做的提示，却不会具体去执行，就像一个夸夸其谈的人。一开始没发现，因为普通对话没问题，但是后来发现他不落地就去查hermes的设置，似乎也没有对应的设置，知道是因为没有调用tools所致，一开始怀疑是大模型所致，因为以前的deepseek-r1就出现过类似问题，但是openclaw能够调用那就不是大模型的问题了。所以好几天都觉得是hermes的问题，当然也一直找不到为什么，hermes删除了安装几遍都是老样子，所以也没去管了。</p>]]>
     </summary>
     <title>hermes agent看起来什么都会，就是不会执行</title>
-    <updated>2026-04-24T23:04:38.057Z</updated>
+    <updated>2026-04-24T23:12:25.198Z</updated>
   </entry>
   <entry>
     <author>
