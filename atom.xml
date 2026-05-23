@@ -10,7 +10,31 @@
   <rights>All rights reserved 2026, Levi Wang</rights>
   <subtitle>之间的github之旅</subtitle>
   <title>之间居</title>
-  <updated>2026-05-18T00:42:47.023Z</updated>
+  <updated>2026-05-23T11:42:08.038Z</updated>
+  <entry>
+    <author>
+      <name>Levi Wang</name>
+    </author>
+    <category term="教育科技" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/"/>
+    <category term="AI教育" scheme="http://www.wanglianghui.cn/categories/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/AI%E6%95%99%E8%82%B2/"/>
+    <category term="智能教育" scheme="http://www.wanglianghui.cn/tags/%E6%99%BA%E8%83%BD%E6%95%99%E8%82%B2/"/>
+    <category term="AI教育" scheme="http://www.wanglianghui.cn/tags/AI%E6%95%99%E8%82%B2/"/>
+    <category term="教育科技" scheme="http://www.wanglianghui.cn/tags/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/"/>
+    <category term="周报" scheme="http://www.wanglianghui.cn/tags/%E5%91%A8%E6%8A%A5/"/>
+    <category term="大模型" scheme="http://www.wanglianghui.cn/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    <category term="世界数字教育大会" scheme="http://www.wanglianghui.cn/tags/%E4%B8%96%E7%95%8C%E6%95%B0%E5%AD%97%E6%95%99%E8%82%B2%E5%A4%A7%E4%BC%9A/"/>
+    <content>
+      <![CDATA[<h1 id="这周，AI教育不再只是PPT里的未来"><a href="#这周，AI教育不再只是PPT里的未来" class="headerlink" title="这周，AI教育不再只是PPT里的未来"></a>这周，AI教育不再只是PPT里的未来</h1><blockquote><p>如果你还没感觉到，那我告诉你：教育正在经历自印刷术以来最大的底层重构——而这周的每一件事，都在为这句话加注脚。</p></blockquote><p>这周写这篇文章的时候，我翻了一下自己的笔记，发现从5月11号世界数字教育大会开幕到今天，短短两周里关于「智能教育」的消息密度，几乎是去年的总和。政策、产品、国际合作、资本信号，四个维度同时发力，而且不再是「画饼阶段」——很多事已经有了明确的落地时间表和责任人。</p><p>这不是那种「风口来了大家快跑」的虚火，更像是一场静悄悄的基建。谁在修路、谁在造桥、谁在定交规，这周基本都亮了牌。</p><hr><h2 id="一、杭州大会落幕，教育AI有了「交通规则」"><a href="#一、杭州大会落幕，教育AI有了「交通规则」" class="headerlink" title="一、杭州大会落幕，教育AI有了「交通规则」"></a>一、杭州大会落幕，教育AI有了「交通规则」</h2><p>5月11日到13日，2026世界数字教育大会在杭州开完了。说它是今年教育科技领域最重要的会，一点都不夸张。</p><p>八项成果密集发布。我个人觉得分量最重的，是《人工智能教育伦理：参考框架》和《人工智能教育杭州倡议》。前者第一次系统性地划了三条线：什么场景禁止用AI、什么场景有限使用、什么场景鼓励使用。这在过去是空白，大家都摸着石头过河，学校用也不是、不用也不是。现在终于有了一份「操作手册」，虽然不是法律，但方向感有了。</p><p>后者更值得琢磨——杭州倡议呼吁各国把AI教育的底座建立在「人的全面发展」上，而不是把人变成数据点。这话听起来有点抽象，但结合另一份成果《全球数字教育发展指数(2026)》去看，就很有意思了：今年的指数首次把「超越AI的思维能力培养」纳入了评估维度。翻译成大白话就是——我们不光要考核学生「会不会用AI」，还要看他们「能不能在AI之上独立思考」。</p><p>这件事的潜台词很深。当全球都开始担忧AI让学生变懒变笨的时候，中国至少在指标体系上，抢先表达了一个态度：AI是工具，人是目的。</p><p>（参考：光明网、新华社、教育部官网报道）</p><hr><h2 id="二、Anthropic联手盖茨基金会，2亿美元投向「AI教育基建」"><a href="#二、Anthropic联手盖茨基金会，2亿美元投向「AI教育基建」" class="headerlink" title="二、Anthropic联手盖茨基金会，2亿美元投向「AI教育基建」"></a>二、Anthropic联手盖茨基金会，2亿美元投向「AI教育基建」</h2><p>5月14日，Claude的母公司Anthropic和比尔及梅琳达·盖茨基金会宣布了一项为期四年、总额2亿美元的合作。核心目标就一个：给全球搭一套AI教育的「公共基础设施」。</p><p>这件事的重点不在钱——2亿美元在科技圈不算天文数字——而在于它的思路。</p><p>合作的三大板块分别是：标准化评估体系（怎么判断一个教育AI到底好不好用）、多语言数据集（解决非洲、南亚几十种语言AI几乎「听不懂」的问题）、通用知识图谱（覆盖K12全学科的结构化底盘）。全部免费开放，不做专有系统锁定。</p><p>这跟国内「国家智慧教育平台」的升级思路其实很像——先修好公共底座，再让上层应用百花齐放。区别在于，国内是政府主导，这次是顶尖AI公司+全球最大公益基金会的组合。而且明确瞄准的是中低收入国家：美国做K12个性化学习，撒哈拉以南非洲和印度做基础读写算术。</p><p>我读这条消息的时候在想：AI教育最大的公平性问题——「好工具只给有钱人用」——终于有人拿真金白银来回应了。不是慈善秀，而是把这当成一个需要「产品化」解决的技术问题。</p><p>（参考：网经社、Anthropic官方公告）</p><hr><h2 id="三、教师资格证要考AI了，这不是「加一门课」那么简单"><a href="#三、教师资格证要考AI了，这不是「加一门课」那么简单" class="headerlink" title="三、教师资格证要考AI了，这不是「加一门课」那么简单"></a>三、教师资格证要考AI了，这不是「加一门课」那么简单</h2><p>5月6日五部门联合印发的《「人工智能+教育」行动计划》，这周持续发酵。其中最被讨论的一条：<strong>将人工智能纳入教师资格考试和认证内容</strong>。</p><p>这条政策的冲击力在于它不是一个「建议」，而是一个硬门槛。未来的老师想拿证，不光要会讲课，还要会驾驭AI工具、能做「人机协同」的教学设计。师范院校的课程体系已经在动了——北师大开了「人工智能教育应用」课，华中师大面向师范生推AI课程系列，华南师大甚至开了「教育人工智能」微专业。</p><p>但也有冷静的声音。北京师范大学桑国元教授说得挺实在：「评价的目的一定是指向素养提升，而非应试。」如果最后变成老师背一堆AI概念术语去考试，考完还是不会用，那就本末倒置了。</p><p>我觉得这件事真正的看点在于时间差。老师群体对AI的接受度分化很严重——一线城市的年轻老师已经在用AI批作文、出试卷、设计教案了；但更多地区的老师可能连账号都没注册。现在用「考证」这个杠杆去推，短期会痛，但长期看，这可能是弥合城乡教育差距最有效的方式之一。好老师永远是稀缺的，但如果每个老师都有一个「AI助教」，那优质教育的供给弹性会大很多。</p><p>（参考：中国教育报、中国青年网、教育部官网）</p><hr><h2 id="四、好未来利润涨了527-，教育公司终于「跑通」了AI？"><a href="#四、好未来利润涨了527-，教育公司终于「跑通」了AI？" class="headerlink" title="四、好未来利润涨了527%，教育公司终于「跑通」了AI？"></a>四、好未来利润涨了527%，教育公司终于「跑通」了AI？</h2><p>好未来5月初发布了2026财年年报：全年净收入30.09亿美元，同比增长33.7%，净利润5.31亿美元，同比涨了527%。差不多同时，他们推出了国内首个面向教育垂直场景的AI智能体产品「九章龙虾」。</p><p>「九章龙虾」这个产品值得单独说一下。它不是一个给学生刷题的App，而是给老师用的——自动批改作业、智能生成课件、学情精准诊断，把这些老师日常最花时间的脏活累活，用智能体一条龙包了。而且是桌面端产品，不是网页工具，这意味着它可以直接嵌入老师现有的工作流，不需要切来切去。</p><p>我的看法是：好未来这波财报的象征意义大于数字本身。过去几年教育行业经历剧变，很多人觉得学科培训这条赛道已经被「打残」了。但现在好未来用数据证明了一件事：当一家教育公司把AI真正嵌入核心业务流程时，它就不再是「卖课」的机构，而是一家教育科技公司——它的产品是效率工具，是智能系统，是教研能力。这个转型如果彻底跑通，整个行业的天花板会被重新定义。</p><p>（参考：经济观察网、腾讯新闻、好未来官方信息）</p><hr><h2 id="五、大模型扎堆「教育垂直赛道」，从中医药到旅游管理"><a href="#五、大模型扎堆「教育垂直赛道」，从中医药到旅游管理" class="headerlink" title="五、大模型扎堆「教育垂直赛道」，从中医药到旅游管理"></a>五、大模型扎堆「教育垂直赛道」，从中医药到旅游管理</h2><p>这周最让我意外的，不是某个大厂推出了新模型，而是一批「小而专」的教育垂直大模型集中亮相——而且每一个都扎得非常深。</p><p>东北师范大学和智谱联合发布的「师道」大模型，用GLM-5做基座，融入了260所学校百万课时的教学视频和2.3亿条数据，专门帮师范生和在职教师做教学分析、教案设计、教研改进。不是通用大模型加个教育提示词，而是从底层知识图谱开始就按教育逻辑来建。</p><p>北京中医药大学的「薪火中国药」，参数规模700亿，拿了国内首个中医药垂类大模型的生成式AI备案。山东旅游职业学院的「白泽」，喂了120亿Token的旅游专业数据，覆盖507门专业课。济宁医学院的MentalEdu，是国内第一个精神医学教育大模型。</p><p>这批模型的共同特点：不追求通用，不卷参数，而是死磕一个学科的知识深度和教学场景的适配性。</p><p>我读这些案例的时候有一个很具体的感受：教育科技的下半场，可能不是「一家通吃」的剧本。就像真实世界里语文老师和化学老师教法完全不同，AI要真正帮到教学，最后一定是「一科一模」甚至「一校一模」。这个趋势对创业公司是好事——大厂做不了这么细的活，机会在垂直深水区。</p><p>（参考：新华网、光明网、北京中医药大学官网）</p><hr><h2 id="六、新东方做了个「育儿模拟器」，教育巨头的想象力边界在哪"><a href="#六、新东方做了个「育儿模拟器」，教育巨头的想象力边界在哪" class="headerlink" title="六、新东方做了个「育儿模拟器」，教育巨头的想象力边界在哪"></a>六、新东方做了个「育儿模拟器」，教育巨头的想象力边界在哪</h2><p>新东方5月7日悄无声息地上线了一款App叫「谷积」——一个AI育儿模拟器，面向3到18岁孩子的家长。用户可以在里面模拟孩子成长过程中的各种决策场景，提前感受不同养育方式的长期影响。</p><p>这个产品让我觉得有意思的点在于：新东方没有做一个「帮孩子学习的AI」，而是做了一个「帮家长决策的AI」。它切入的不是教学场景，而是家庭养育场景。这说明头部的教育公司在想一件事：AI教育不一定非要在教室和作业本里发生，「家长」本身就是教育链条上最需要被服务的一环。</p><p>当然，产品刚上线，效果有待观察。但这个方向是对的——中国的家长可能是全世界最焦虑的教育群体，如果AI能帮他们把焦虑转化成可执行的养育方案，这个需求体量不会比学科辅导小。</p><p>（参考：腾讯新闻、新东方官方信息）</p><hr><h2 id="本周的整体感受"><a href="#本周的整体感受" class="headerlink" title="本周的整体感受"></a>本周的整体感受</h2><p>写完这周的笔记，我最大的感受是八个字：<strong>修路的人比开车的人先到了。</strong></p><p>过去两年我们讨论AI教育，大多数时候是在聊「某款产品很有意思」「某个功能很惊艳」。但这周发生的所有事——大会定规矩、基金会修基建、政策拉门槛、大厂验证商业模式、高校扎进垂直深水区——全部发生在「基础设施」层面。</p><p>这个信号很清楚：AI教育的第一阶段（探索期）已经结束了。接下来比的不再是「谁先做了」，而是「谁做对了」——对的方向有伦理框架约束、对的场景有公共基础设施支撑、对的人有制度门槛筛选。</p><p>至于作为普通人的我们——老师、家长、学生——可能最需要做的不是焦虑「会不会被替代」，而是认真想一个问题：在一个人手一个AI助教的未来，我真正不可替代的价值是什么。这个问题没有标准答案，但这周之后，它有了更紧迫的提问理由。</p><hr><h2 id="素材来源清单"><a href="#素材来源清单" class="headerlink" title="素材来源清单"></a>素材来源清单</h2><table><thead><tr><th>序号</th><th>事件</th><th>来源</th><th>链接</th></tr></thead><tbody><tr><td>1</td><td>2026世界数字教育大会八大成果发布</td><td>光明网 &#x2F; 新华社</td><td><a href="https://edu.gmw.cn/2026-05/18/content_38771220.htm">光明网报道</a> &#x2F; <a href="https://www.news.cn/20260513/2082064794f746e7805efd614be8a9c3/c.html">新华社报道</a></td></tr><tr><td>2</td><td>《人工智能教育伦理：参考框架》发布</td><td>腾讯新闻&#x2F;教育部</td><td><a href="https://new.qq.com/rain/a/20260512A0941200">详细报道</a></td></tr><tr><td>3</td><td>Anthropic与盖茨基金会2亿美元合作</td><td>网经社 &#x2F; Anthropic官方</td><td><a href="https://www.100ec.cn/detail--6659374.html">网经社报道</a> &#x2F; <a href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic公告</a></td></tr><tr><td>4</td><td>五部门印发《「人工智能+教育」行动计划》+ AI纳入教资考试</td><td>中国教育报 &#x2F; 教育部</td><td><a href="https://txs.youth.cn/xw/202605/t20260509_16650018.htm">中国教育报</a> &#x2F; <a href="https://www.moe.gov.cn/fbh/live/2026/77927/mtbd/202604/t20260413_1433413.html">教育部</a></td></tr><tr><td>5</td><td>好未来2026财年净利润增长527%，推出九章龙虾智能体</td><td>经济观察网 &#x2F; 腾讯新闻</td><td><a href="https://www.eeo.com.cn/2026/0508/867475.shtml">经济观察网</a> &#x2F; <a href="https://news.qq.com/rain/a/20260509A077LL00">腾讯新闻</a></td></tr><tr><td>6</td><td>东北师范大学「师道」大模型发布</td><td>新华网</td><td><a href="https://www.jl.news.cn/20260515/e68c6707fa86433fb5c9b028bb934aea/c.html">新华网报道</a></td></tr><tr><td>7</td><td>教育垂类大模型密集发布（白泽&#x2F;薪火中国药&#x2F;MentalEdu）</td><td>光明网 &#x2F; 各高校官网</td><td><a href="https://new.qq.com/rain/a/20260514A04F3C00">白泽入选报告</a> &#x2F; <a href="https://zhongyao.bucm.edu.cn/yyxw/fb4b320d30c34e358de28a637c9f6f2c.htm">薪火中国药</a></td></tr><tr><td>8</td><td>新东方上线「谷积」育儿模拟器</td><td>腾讯新闻</td><td><a href="https://news.qq.com/rain/a/20260509A077LL00">i黑马报道</a></td></tr><tr><td>9</td><td>全球AI教育服务平台上线，科大讯飞为核心技术方</td><td>科大讯飞官网</td><td><a href="https://edu.iflytek.com/about-us/news/company-news/2749">科大讯飞报道</a></td></tr></tbody></table>]]>
+    </content>
+    <id>http://www.wanglianghui.cn/2026/05/23/ai-%E6%95%99%E8%82%B2%E5%91%A8%E6%8A%A5-%E4%BF%AE%E8%B7%AF%E7%9A%84%E4%BA%BA%E6%AF%94%E5%BC%80%E8%BD%A6%E7%9A%84%E4%BA%BA%E5%85%88%E5%88%B0%E4%BA%86/</id>
+    <link href="http://www.wanglianghui.cn/2026/05/23/ai-%E6%95%99%E8%82%B2%E5%91%A8%E6%8A%A5-%E4%BF%AE%E8%B7%AF%E7%9A%84%E4%BA%BA%E6%AF%94%E5%BC%80%E8%BD%A6%E7%9A%84%E4%BA%BA%E5%85%88%E5%88%B0%E4%BA%86/"/>
+    <published>2026-05-22T16:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="这周，AI教育不再只是PPT里的未来"><a href="#这周，AI教育不再只是PPT里的未来" class="headerlink" title="这周，AI教育不再只是PPT里的未来"></a>这周，AI教育不再只是PPT里的未来</h1><blockquo]]>
+    </summary>
+    <title>AI教育周报：修路的人比开车的人先到了</title>
+    <updated>2026-05-23T11:42:08.038Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Levi Wang</name>
@@ -458,25 +482,5 @@
     </summary>
     <title>校史研究</title>
     <updated>2024-05-01T04:24:22.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Levi Wang</name>
-    </author>
-    <category term="技术学习" scheme="http://www.wanglianghui.cn/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    <category term="asp.net" scheme="http://www.wanglianghui.cn/tags/asp-net/"/>
-    <category term="自动代码生成" scheme="http://www.wanglianghui.cn/tags/%E8%87%AA%E5%8A%A8%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/"/>
-    <category term="低代码开发" scheme="http://www.wanglianghui.cn/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91/"/>
-    <content>
-      <![CDATA[<h2 id="一、过程"><a href="#一、过程" class="headerlink" title="一、过程"></a>一、过程</h2><h3 id="1-编写模型类"><a href="#1-编写模型类" class="headerlink" title="1.编写模型类"></a>1.编写模型类</h3><h3 id="2-在DataContext中注册"><a href="#2-在DataContext中注册" class="headerlink" title="2.在DataContext中注册"></a>2.在DataContext中注册</h3><h3 id="3-数据迁移"><a href="#3-数据迁移" class="headerlink" title="3.数据迁移"></a>3.数据迁移</h3><h3 id="4-编写前端模板"><a href="#4-编写前端模板" class="headerlink" title="4.编写前端模板"></a>4.编写前端模板</h3><h3 id="5-制作多语言资源"><a href="#5-制作多语言资源" class="headerlink" title="5.制作多语言资源"></a>5.制作多语言资源</h3><h2 id="二、注意事项"><a href="#二、注意事项" class="headerlink" title="二、注意事项"></a>二、注意事项</h2><h3 id="1-数据迁移的时候，需要再DataAccess项目中安装Microsoft-EntityFrameworkCore-Design"><a href="#1-数据迁移的时候，需要再DataAccess项目中安装Microsoft-EntityFrameworkCore-Design" class="headerlink" title="1.数据迁移的时候，需要再DataAccess项目中安装Microsoft.EntityFrameworkCore.Design"></a>1.数据迁移的时候，需要再DataAccess项目中安装Microsoft.EntityFrameworkCore.Design</h3><h3 id="2-做好前端url规划"><a href="#2-做好前端url规划" class="headerlink" title="2.做好前端url规划"></a>2.做好前端url规划</h3>]]>
-    </content>
-    <id>http://www.wanglianghui.cn/2024/03/19/use-WalkingTec-Mvvm-framework-quick-develop/</id>
-    <link href="http://www.wanglianghui.cn/2024/03/19/use-WalkingTec-Mvvm-framework-quick-develop/"/>
-    <published>2024-03-19T01:13:28.000Z</published>
-    <summary>
-      <![CDATA[<h2 id="一、过程"><a href="#一、过程" class="headerlink" title="一、过程"></a>一、过程</h2><h3 id="1-编写模型类"><a href="#1-编写模型类" class="headerlink" title="1.编]]>
-    </summary>
-    <title>使用WalkingTec.Mvvm框架快速开发</title>
-    <updated>2024-03-19T03:52:23.000Z</updated>
   </entry>
 </feed>
