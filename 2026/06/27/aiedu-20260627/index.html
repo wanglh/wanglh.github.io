@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 8.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.wanglianghui.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="引子这周有个数据让我反复看了三遍：微软的最新报告说，92%的学生和学校管理者已经在校园里用过AI了，但77%的学生从来没有接受过任何AI相关的正式培训。 这个数字对比太刺眼了——它意味着我们正在经历人类教育史上最奇特的阶段：一项技术已经渗透进教学场景的每一个角落，但绝大多数使用者是在”裸奔”。就像当年智能手机进校园时，我们花了好几年才建立起基本的数字素养教育体系。AI来得更快，我们的准备却更慢。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="当AI从&quot;教学工具&quot;变成&quot;学习伙伴&quot;，我们准备好了吗？">
+<meta property="og:url" content="http://www.wanglianghui.cn/2026/06/27/aiedu-20260627/index.html">
+<meta property="og:site_name" content="之间居">
+<meta property="og:description" content="引子这周有个数据让我反复看了三遍：微软的最新报告说，92%的学生和学校管理者已经在校园里用过AI了，但77%的学生从来没有接受过任何AI相关的正式培训。 这个数字对比太刺眼了——它意味着我们正在经历人类教育史上最奇特的阶段：一项技术已经渗透进教学场景的每一个角落，但绝大多数使用者是在”裸奔”。就像当年智能手机进校园时，我们花了好几年才建立起基本的数字素养教育体系。AI来得更快，我们的准备却更慢。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-27T10:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-27T11:01:40.747Z">
+<meta property="article:author" content="Levi Wang">
+<meta property="article:tag" content="AI教育">
+<meta property="article:tag" content="EdTech">
+<meta property="article:tag" content="教育政策">
+<meta property="article:tag" content="教育科技">
+<meta property="article:tag" content="智能教育">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.wanglianghui.cn/2026/06/27/aiedu-20260627/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+  <title>当AI从"教学工具"变成"学习伙伴"，我们准备好了吗？ | 之间居</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="之间居" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">之间居</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">之间的github之旅</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-guestbook">
+
+    <a href="/guestbook/" rel="section"><i class="fa fa-book fa-fw"></i>留言簿</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2026/06/27/aiedu-20260627/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          当AI从"教学工具"变成"学习伙伴"，我们准备好了吗？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-06-27 18:00:00 / 修改时间：19:01:40" itemprop="dateCreated datePublished" datetime="2026-06-27T18:00:00+08:00">2026-06-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%99%BA%E8%83%BD%E6%95%99%E8%82%B2%E5%91%A8%E6%8A%A5/" itemprop="url" rel="index"><span itemprop="name">智能教育周报</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2026/06/27/aiedu-20260627/" class="post-meta-item leancloud_visitors" data-flag-title="当AI从"教学工具"变成"学习伙伴"，我们准备好了吗？" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2026/06/27/aiedu-20260627/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2026/06/27/aiedu-20260627/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="引子"><a href="#引子" class="headerlink" title="引子"></a>引子</h2><p>这周有个数据让我反复看了三遍：微软的最新报告说，92%的学生和学校管理者已经在校园里用过AI了，但77%的学生从来没有接受过任何AI相关的正式培训。</p>
+<p>这个数字对比太刺眼了——它意味着我们正在经历人类教育史上最奇特的阶段：一项技术已经渗透进教学场景的每一个角落，但绝大多数使用者是在”裸奔”。就像当年智能手机进校园时，我们花了好几年才建立起基本的数字素养教育体系。AI来得更快，我们的准备却更慢。</p>
+<p>这周的几件大事，恰好从不同侧面回答了同一个问题：当AI从边缘实验变成课堂标配，我们的政策、产品、课堂和家长，到底在往哪个方向走？</p>
+<h2 id="一、国家信号：八部门首次把”大模型进课堂”写进消费政策"><a href="#一、国家信号：八部门首次把”大模型进课堂”写进消费政策" class="headerlink" title="一、国家信号：八部门首次把”大模型进课堂”写进消费政策"></a>一、国家信号：八部门首次把”大模型进课堂”写进消费政策</h2><p>6月18日，商务部等八部门联合印发了《关于加快”人工智能+消费”发展的实施意见》。文件一共17条举措，教育部是联署单位之一。</p>
+<p>在教育部分，有两句话让我觉得特别值得划重点。第一句是”开展生成式人工智能教育专用大模型建设项目，推动大模型从课堂走向应用”。第二句是”推动研发人工智能辅助学习助手、教师智能助手等人工智能教育终端产品，创新智能学伴、智能教师等人机协同教育教学新模式”。</p>
+<p>先说这件事的定位。这是国内第一次在”促消费”口径的国家级文件里，把AI教育写成了明确的产品化路线图。过去我们谈AI教育，更多是”试点””探索””鼓励”。这次的表述变了：建设教育专用大模型，是一个有预算、有时间表、要出产品的动作。</p>
+<p>再说里面的信号。文件提到的”智能学伴”概念，其实非常接近过去两年各大教育科技公司已经在做的事——中国移动这周刚升级的”移动伴学”就是一个典型。政策端的明确表态，等于给了这些产品一个”国家队认证”的身份，从商业化探索阶段，正式进入公共服务供给阶段。</p>
+<p>一个值得注意的细节：文件把教育放在”扩大人工智能+服务消费”板块，和居家养老、文化旅游并列。这说明决策层不认为AI教育只是学校的事，而是把它看成每个家庭都会遇到的真实消费场景。过去教育科技行业最头疼的问题就是”谁来买单”——B端学校预算有限，C端家长付费意愿参差不齐。国家层面将AI教育纳入消费升级框架，意味着未来的付费模型可能会有更大的想象空间。</p>
+<h2 id="二、微软报告：我们都在用AI，但我们不会用"><a href="#二、微软报告：我们都在用AI，但我们不会用" class="headerlink" title="二、微软报告：我们都在用AI，但我们不会用"></a>二、微软报告：我们都在用AI，但我们不会用</h2><p>6月24日，微软发布了第三版年度《人工智能教育应用报告》，这是全球范围内覆盖面最广的教育AI使用调查之一。除了前面提到的92%使用率和77%培训缺失，还有几个数据值得拎出来：</p>
+<ul>
+<li>58%的教育管理者说，学校已经启动或扩大了AI落地应用；</li>
+<li>87%的教育从业者和79%的学生认为”合规使用AI的能力”对未来发展至关重要；</li>
+<li>学术诚信是41%的学生和42%的教育工作者最担心的课堂AI问题。</li>
+</ul>
+<p>这组数据其实暗示了一个很有意思的错位。教育系统对AI的态度，正在从”要不要用”过渡到”怎么规范地用”，但培训体系完全没跟上。53%的教育工作者从未接受过AI培训——这意味着超过一半的老师是在凭直觉和学生一起摸索。</p>
+<p>微软同步推出的几款免费AI教学工具和培训认证项目，可以看作是对这种”错位”的回应。工具层面，教案生成、学习动态追踪这些功能都不算新鲜。比较务实的是，这些工具全部接入微软365教育生态，且Copilot笔记本等功能不额外收费。学生面对的AI助学功能被整合进了同一个账号体系里，不需要再单独下载一个什么”AI学习App”。这种”隐身”的AI，可能比任何独立的教育AI产品都更有渗透力。</p>
+<p>我个人的感受是，微软这份报告最值得关注的不是”用的人多了”——这个趋势谁都能猜到。真正重要的点是”培训缺口”正在变成一个全球性的结构性问题。不管中国还是美国，课堂里的AI已经跑在前面了，教师的AI素养还在后面追。</p>
+<h2 id="三、香港博览会：AI-教育进入”全场景”阶段"><a href="#三、香港博览会：AI-教育进入”全场景”阶段" class="headerlink" title="三、香港博览会：AI+教育进入”全场景”阶段"></a>三、香港博览会：AI+教育进入”全场景”阶段</h2><p>6月25日到27日，香港”学与教博览2026”在会展中心举办。今年规模是历届最大——超过600个展位，300多位国际专家，还首次增设了”家长高峰会”。</p>
+<p>整个博览会最核心的关键词，我觉得是”全场景”。过去教育科技展更多卖的是单点产品：一个App、一个平台、一块智能黑板。今年的玩法明显变了。科大讯飞在博览会上展示的是一整套”AI+教育”解决方案——从课堂记录、作业批改、口语陪练到校务管理，覆盖了一个学校运转的几乎所有场景。连粤语AI人物都做出来了，说明技术落地已经不是实验室Demo水平，而是真的在往真实课堂里跑。</p>
+<p>另一个值得注意的信号是家长角色的正式登场。博览会首设”家长高峰会”，讨论AI时代家庭教育、学童心灵健康，这个动作本身就说明一件事：教育科技已经从”学校和科技公司之间的事”，变成了”牵动整个社会”的议题。香港教育城行政总监林峰说了一句很实在的话——“家长参与度及人工智能素养认知，直接影响本港素质教育未来发展方向”。换句话说，AI教育不是学校关起门来就能搞好的，家长不懂，孩子在家照样乱用。</p>
+<p>博览会同期，香港教育局刚发布了《中小学数字教育发展蓝图》，提出”AI for all schools”和”AI for all students”。政策、展会、产品、家长围绕同一件事同步推进，这种密集度在亚洲其他城市并不多见。</p>
+<h2 id="四、课堂现场：从”看AI”到”用AI”"><a href="#四、课堂现场：从”看AI”到”用AI”" class="headerlink" title="四、课堂现场：从”看AI”到”用AI”"></a>四、课堂现场：从”看AI”到”用AI”</h2><p>政策文件写得再漂亮，展会声势再大，最终都要回到一个最小的单位：一堂课。</p>
+<p>这周有三个课堂案例让我觉得AI教育确实在往深里走了。</p>
+<p>第一个是重庆两江新区行远小学。六年级学生上体育课，AI能逐帧回放立定跳远动作，分析腾空高度、起跳角度，语音实时指导。更重要的是，每个学生拥有自己的”数字体育档案”。这个场景打动我的不是技术本身——运动分析在体育科技里早就成熟了——而是AI从一个”全局工具”变成了”个人工具”。它不再只是帮老师管理班级，而是开始关注每一个具体的学生。</p>
+<p>第二个是上海行知中学。一群高中生自己动手”手搓”出了AI教学助手，近一个月访问量逼近48万次，后台监控和管理工具也都出自学生之手。校长沈伟有一句话：”教育不能只看升学率，否则国家将缺乏核心竞争力。”这所学校的学生不仅是在学AI，他们已经在参与建设校园的AI基础设施。这和以往”老师用AI课件上课”的模式完全不在一个维度上。</p>
+<p>第三个是广东省怀集县实验小学。一所县城小学，引入AI平台的学情分析与个性化资源推送后，课后个性化学习任务完成率从58%跳到了93%。这个数字比任何政策解读都更有说服力。它说明AI对教育公平的贡献，不是”把北京老师的课录下来放给山区孩子看”——那种模式我们已经试了十几年，效果有限。真正的价值在于：每个孩子都能获得适合自己目前水平的学习内容，这件事以前几乎只能靠一对一辅导实现。</p>
+<p>江苏也在同步推进。6月25日的”行智开物”AIGC教育试点项目交流推进会上，南京师范大学溧阳实验小学宣布今年9月将在四至六年级全面普及AIGC素养课程。这不是课后兴趣班，是正式课表里的内容。雨花台区首批布局5所特色试点学校，打造”一校一品”——每所学校根据自己的特色方向（编程、艺术创作、科学探究等）制定不同的AI教育落地路径。</p>
+<h2 id="五、中国移动伴学：AI教育产品的”家庭定位”"><a href="#五、中国移动伴学：AI教育产品的”家庭定位”" class="headerlink" title="五、中国移动伴学：AI教育产品的”家庭定位”"></a>五、中国移动伴学：AI教育产品的”家庭定位”</h2><p>6月26日，中国移动杭州研发中心发布了全新升级的”移动伴学”AI教育产品，覆盖学前启蒙到初中全学段。</p>
+<p>这个产品值得关注的点不在技术有多惊艳，而在它的定位思路。移动伴学强调”软硬一体、多端协同”——既可以在智能桌面上用，也可以在手机、平板、电视上同步。它没有把自己定义成”学习机”或”网课平台”，而是叫”AI灵犀老师”。</p>
+<p>从产品设计来看，几个细节有意思。学前启蒙部分整合了大量优质内容（贝乐虎儿歌等），但关键不是”内容多”，而是通过AI把内容变成了互动——AI绘本伴读、趣味单词闯关、知识问答。学科学习部分覆盖了”学、练、测、评”全流程，基于知识图谱做个性化路径推荐。</p>
+<p>一位杭州家长的反馈很朴实：”以前需要我盯着做作业，现在她自己就能跟着AI灵犀老师一步步学，我只需要在手机上看看学习报告就行。”</p>
+<p>这句话背后藏着一个很多教育科技产品忽略的事实：家长要的不是”更好的教学效果”，而是”更少的焦虑”。一个能让孩子自主学习、家长远程查看的AI伴学产品，恰好踩中了这个家庭教育的核心痛点。</p>
+<h2 id="本周的整体启发"><a href="#本周的整体启发" class="headerlink" title="本周的整体启发"></a>本周的整体启发</h2><p>回看这一周，我最大的感受是：AI教育正在从一个”技术问题”变成一个”社会问题”。</p>
+<p>技术问题有标准答案——算法够不够准、识别率够不够高、响应速度够不够快。社会问题没有标准答案——老师怎么适应人机协同的课堂？家长在AI时代的教育角色是什么？那些家里买不起智能设备的孩子怎么办？AI批改的作文能不能替代老师的红笔？</p>
+<p>八部门的文件给了方向，微软的报告给了数据，香港的博览会给了场景，一线的课堂给了真实的反馈。但把这些拼在一起，你会发现一条清晰的裂缝：政策和产品在加速跑，教师培训和家庭教育还在后面走。</p>
+<p>一个数据支撑这个判断：超过一半的教育工作者从未接受过AI培训。如果这个问题不解决，我们现在谈的所有”AI赋能教育”，最终都会变成”AI替代教师的焦虑”——而这两种叙事的结果完全不同。</p>
+<p>下周的ISTELive 2026（国际教育技术协会年度大会）将在奥兰多举办，届时会有更多全球教育科技的前沿动态。期待看到更多关于”培训教师”而不是”培训AI”的讨论。</p>
+<h2 id="素材来源清单"><a href="#素材来源清单" class="headerlink" title="素材来源清单"></a>素材来源清单</h2><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>标题</th>
+<th>来源</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>商务部等8部门关于加快”人工智能+消费”发展的实施意见</td>
+<td>中国政府网&#x2F;新华网</td>
+<td>2026-06-18</td>
+<td><a target="_blank" rel="noopener" href="https://www.gov.cn/zhengce/zhengceku/202606/content_7072672.htm">链接</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td>央视报道八部门发文：推动大模型从课堂走向应用</td>
+<td>多知网&#x2F;新浪财经</td>
+<td>2026-06-19</td>
+<td><a target="_blank" rel="noopener" href="https://t.cj.sina.com.cn/articles/view/3203211782/beed2206020022fdk">链接</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td>微软发布教育领域最新人工智能报告</td>
+<td>新浪网</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://finance.sina.cn/2026-06-24/detail-iniepkrn1425944.d.html">链接</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td>香港”学与教博览2026”开幕 推动教育数字化转型</td>
+<td>人民网&#x2F;腾讯网</td>
+<td>2026-06-26</td>
+<td><a target="_blank" rel="noopener" href="https://new.qq.com/rain/a/20260626A0460Y00">链接</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>AI与创科推动教学转型：eLAFP展区引领数码教育新趋势</td>
+<td>香港新闻网</td>
+<td>2026-06-26</td>
+<td><a target="_blank" rel="noopener" href="https://www.hkcna.hk/docDetail.jsp?channel=4372&id=101355261">链接</a></td>
+</tr>
+<tr>
+<td>6</td>
+<td>从课堂、评改到教研 科大讯飞全场景AI进入香港校园</td>
+<td>香港商报网</td>
+<td>2026-06-26</td>
+<td><a target="_blank" rel="noopener" href="https://www.hkcd.com.hk/hkcdweb/content/2026/06/26/content_8761837.html">链接</a></td>
+</tr>
+<tr>
+<td>7</td>
+<td>智赋教育启新程，多方聚力构建AIGC育人新生态</td>
+<td>腾讯新闻</td>
+<td>2026-06-26</td>
+<td><a target="_blank" rel="noopener" href="https://news.qq.com/rain/a/20260626A07L6400">链接</a></td>
+</tr>
+<tr>
+<td>8</td>
+<td>“AI+教育”，如何”加”出未来</td>
+<td>重庆日报&#x2F;中国教育信息化网</td>
+<td>2026-06-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.ictdedu.cn/news/gddt/xxhdt/n20260622_89665.shtml">链接</a></td>
+</tr>
+<tr>
+<td>9</td>
+<td>千里外的算力”空投”中学课堂，上海这群高中生开始”手搓”AI了</td>
+<td>上观新闻&#x2F;腾讯新闻</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://news.qq.com/rain/a/20260624A0AZ7200">链接</a></td>
+</tr>
+<tr>
+<td>10</td>
+<td>中国移动全新升级AI教育产品，以”智能伴学”助力家庭自主学习场景升级</td>
+<td>消费日报网</td>
+<td>2026-06-26</td>
+<td><a target="_blank" rel="noopener" href="https://www.xfrb.com.cn/article/zx/10275560567442.html">链接</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>让技术赋能教育均衡（现场评论）</td>
+<td>人民网</td>
+<td>2026-06-22</td>
+<td><a target="_blank" rel="noopener" href="https://hb.people.com.cn/BIG5/n2/2026/0622/c192237-41616842.html">链接</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>教育部官网报道华南理工大学深入推动”人工智能+教育”行动</td>
+<td>华南理工大学</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://news.scut.edu.cn/2026/0624/c41a60245/page.htm">链接</a></td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>本文基于公开报道整理，观点仅代表个人思考。</em></p>
+
+    </div>
+
+    
+    
+    <div class="post-widgets">
+    <div
+      class="social-share"
+      
+        data-sites="weibo,wechat,qzone,facebook,twitter"
+      
+      
+        data-wechat-qrcode-title="请打开微信扫一扫"
+      
+      
+    >
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%99%BA%E8%83%BD%E6%95%99%E8%82%B2/" rel="tag"># 智能教育</a>
+              <a href="/tags/AI%E6%95%99%E8%82%B2/" rel="tag"># AI教育</a>
+              <a href="/tags/%E6%95%99%E8%82%B2%E7%A7%91%E6%8A%80/" rel="tag"># 教育科技</a>
+              <a href="/tags/EdTech/" rel="tag"># EdTech</a>
+              <a href="/tags/%E6%95%99%E8%82%B2%E6%94%BF%E7%AD%96/" rel="tag"># 教育政策</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2026/06/19/ai-education-weekly/" rel="prev" title="AI教育新闻周报 2026-06-12～2026-06-19">
+      <i class="fa fa-chevron-left"></i> AI教育新闻周报 2026-06-12～2026-06-19
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E5%AD%90"><span class="nav-number">1.</span> <span class="nav-text">引子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%9B%BD%E5%AE%B6%E4%BF%A1%E5%8F%B7%EF%BC%9A%E5%85%AB%E9%83%A8%E9%97%A8%E9%A6%96%E6%AC%A1%E6%8A%8A%E2%80%9D%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%AF%BE%E5%A0%82%E2%80%9D%E5%86%99%E8%BF%9B%E6%B6%88%E8%B4%B9%E6%94%BF%E7%AD%96"><span class="nav-number">2.</span> <span class="nav-text">一、国家信号：八部门首次把”大模型进课堂”写进消费政策</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%BE%AE%E8%BD%AF%E6%8A%A5%E5%91%8A%EF%BC%9A%E6%88%91%E4%BB%AC%E9%83%BD%E5%9C%A8%E7%94%A8AI%EF%BC%8C%E4%BD%86%E6%88%91%E4%BB%AC%E4%B8%8D%E4%BC%9A%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">二、微软报告：我们都在用AI，但我们不会用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%A6%99%E6%B8%AF%E5%8D%9A%E8%A7%88%E4%BC%9A%EF%BC%9AAI-%E6%95%99%E8%82%B2%E8%BF%9B%E5%85%A5%E2%80%9D%E5%85%A8%E5%9C%BA%E6%99%AF%E2%80%9D%E9%98%B6%E6%AE%B5"><span class="nav-number">4.</span> <span class="nav-text">三、香港博览会：AI+教育进入”全场景”阶段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%AF%BE%E5%A0%82%E7%8E%B0%E5%9C%BA%EF%BC%9A%E4%BB%8E%E2%80%9D%E7%9C%8BAI%E2%80%9D%E5%88%B0%E2%80%9D%E7%94%A8AI%E2%80%9D"><span class="nav-number">5.</span> <span class="nav-text">四、课堂现场：从”看AI”到”用AI”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E4%BC%B4%E5%AD%A6%EF%BC%9AAI%E6%95%99%E8%82%B2%E4%BA%A7%E5%93%81%E7%9A%84%E2%80%9D%E5%AE%B6%E5%BA%AD%E5%AE%9A%E4%BD%8D%E2%80%9D"><span class="nav-number">6.</span> <span class="nav-text">五、中国移动伴学：AI教育产品的”家庭定位”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%91%A8%E7%9A%84%E6%95%B4%E4%BD%93%E5%90%AF%E5%8F%91"><span class="nav-number">7.</span> <span class="nav-text">本周的整体启发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A0%E6%9D%90%E6%9D%A5%E6%BA%90%E6%B8%85%E5%8D%95"><span class="nav-number">8.</span> <span class="nav-text">素材来源清单</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Levi Wang"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Levi Wang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">182</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">217</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:zjnuwlh@gmail.com" title="E-Mail → mailto:zjnuwlh@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/tiediy" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;tiediy" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Levi Wang</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">233k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">6:28</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI',
+      appKey     : 'xLCpMzWwwFK4K3UOboZVg1aK',
+      placeholder: "来吧，说几句",
+      avatar     : 'hide',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : 'https://enfcvfdt.api.lncldglobal.com'
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
