@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/23/ubuntu-installation/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/11/15/lu-xun/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,7 +181,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/23/ubuntu-installation/" class="post-title-link" itemprop="url">ubuntu安装</a>
+            <a href="/2012/11/15/lu-xun/" class="post-title-link" itemprop="url">鲁迅</a>
         </h2>
 
         <div class="post-meta">
@@ -191,14 +191,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2012-08-23 14:59:00" itemprop="dateCreated datePublished" datetime="2012-08-23T14:59:00+08:00">2012-08-23</time>
+              <time title="创建时间：2012-11-15 19:15:00" itemprop="dateCreated datePublished" datetime="2012-11-15T19:15:00+08:00">2012-11-15</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:39:26" itemprop="dateModified" datetime="2014-04-01T13:39:26+08:00">2014-04-01</time>
+                <time title="修改时间：2014-04-01 13:36:20" itemprop="dateModified" datetime="2014-04-01T13:36:20+08:00">2014-04-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,12 +206,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2012/08/23/ubuntu-installation/" class="post-meta-item leancloud_visitors" data-flag-title="ubuntu安装" title="阅读次数">
+            <span id="/2012/11/15/lu-xun/" class="post-meta-item leancloud_visitors" data-flag-title="鲁迅" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -226,8 +226,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/23/ubuntu-installation/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/23/ubuntu-installation/" itemprop="commentCount"></span>
+    <a title="valine" href="/2012/11/15/lu-xun/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/11/15/lu-xun/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -237,7 +237,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>684</span>
+              <span>541</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,232 +256,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在04、05年开始接触ubuntu，后来安装ubuntu用来发布moodle+redmine+svn，效果挺好的。在淘汰下来的笔记本上也安装ubuntu发现也挺好，总之ubuntu一切都好，但是一直下不了决心把工作笔记本也安装成ubuntu。<br>暑假就要结束，准备下学期的教学工作，这两天又想把一些教学网站部署到ubuntu上，上一次ubuntu服务器由于出去读书没有打理，后来有次无意中误操作导致数据丢了，这次决定重新开始。<br>曾经用过多种方式安装ubuntu，用u盘来安装还是最省事的，这次还是用u盘来安装。<br>首先用ultraiso制作启动u盘;<br>其次，用u盘启动后点击桌面的安装图标就可以进入安装过程了，这里面除了跟硬盘设置相关的地方注意一点，其他的都很简单，在我的机器里面安装应该不到半个小时。</p>
-<p>奇怪的是每次安装好了重启以后，安装ubuntu的分区不见了，这个在安装好的时候是正常的，一重启就丢了。当然这个是分区表出问题了，退回到windows下用一些工具修改了，但是一安装照样出问题。来回反复了n次。最后断定问题在于机器带的增霸卡上</p>
-<p>解决方法：<br>在cmos中禁用增霸卡（performance 中的hdd protection）<br>用u盘的winpe进去后，用“分区表医生”重建硬盘分区，这样就把增霸卡写在硬盘上的内容去掉了，再次登录就不再有增霸卡的信息出来了。</p>
-<p>总算成功安装。</p>
-<p><strong>总结</strong><br>现在安装ubuntu越来越简单了，随着机器配置越来越高，速度也越来越快了。但是安装ubuntu要关注分区表，分区表有点问题在windows下似乎不是问题，但是在ubuntu中则不一样了，据说是零容忍。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/20/domain-setting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2012/08/20/domain-setting/" class="post-title-link" itemprop="url">github pages的独立域名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2012-08-20 21:13:00" itemprop="dateCreated datePublished" datetime="2012-08-20T21:13:00+08:00">2012-08-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:41:12" itemprop="dateModified" datetime="2014-04-01T13:41:12+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2012/08/20/domain-setting/" class="post-meta-item leancloud_visitors" data-flag-title="github pages的独立域名" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2012/08/20/domain-setting/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/20/domain-setting/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>204</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>为github pages上发布的博客设置自己的独立域名说来也简单，但是有些问题还是要记一下。<br>首先，在根目录下创建CNNAME文件，注意文件名要全部大写，否则没用；<br>其次，在域名控制器中添加a记录，对应的ip地址为github上的二级域名（如wanglh.github.com）对应的ip，可以用ping来获得；<br>再次，添加一个转向，把<a target="_blank" rel="noopener" href="http://www.wanglh.cn设置转向到wanglh.github.com./">www.wanglh.cn设置转向到wanglh.github.com。</a>  </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/17/subversion-apache/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2012/08/17/subversion-apache/" class="post-title-link" itemprop="url">subversion在apache上发布的一些问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2012-08-17 08:49:00" itemprop="dateCreated datePublished" datetime="2012-08-17T08:49:00+08:00">2012-08-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:41:40" itemprop="dateModified" datetime="2014-04-01T13:41:40+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2012/08/17/subversion-apache/" class="post-meta-item leancloud_visitors" data-flag-title="subversion在apache上发布的一些问题" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2012/08/17/subversion-apache/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/17/subversion-apache/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>409</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>apache从原来的2.2.x换成了2.4.x，结果发现原来配置好的subversion用不了了。网上有说，subversion1.7.5与apache2.4.2不兼容，但我的是subversion1.7.3。刚好看到subversion1.7.6出来了，而且里面似乎有专门针对apache2.4.x的编译。下载了还是不行。后来就使用dependency walker，查看mod_dav_svn.so的依赖，看到有什么dll缺找到了就放到apache的module目录，结果看起来是没完没了的事情，最后，在dependency walker提示还缺一个dll文件的时候，忍不住试着去修改apache的配置文件，结果发现subversion居然好了。<br>由此可见，这个问题的解决有两个方面的要求：    </p>
+          <p>作为在中国读书的人，鲁迅的作品接触得其实蛮多的，但是理解了吗？我觉得我差不多已经忘记了。如果不是今天看到黎鸣在天则所的演讲的<a target="_blank" rel="noopener" href="http://library.crtvu.edu.cn/sfw/ReadNews.asp?NewsID=3612">《怎样使中国人变得聪明起来》</a>:  </p>
+<blockquote>
+<p>在颠覆中华民族历史方面鲁迅是第一个人，我就要继承鲁迅先生的路，鲁迅先生在他的《狂人日记》里对中华民族的历史作了结论，这个结论太精辟了，就两个字—吃人，吃人不好理解，连骨头、连肉一块吃吗？不对。鲁迅先生在他的其他杂文作品里边已经非常清楚地解释了什么叫做吃人，吃人就是把人应有的智慧给吃了。什么叫文明？文明就是智慧的进步，没有智慧的进步就没有文明，一个始终在智慧的意义上丝毫不能前进的民族绝对是一个愚蠢的民族，他就是被吃了，一代一代的被吃了。鲁迅先生在他的书里面还说到中华民族是一个消灭天才的民族，这是鲁迅先生的原话，中华民族不是不能冒出天才，而是每冒出几个天才就把他灭了。中华民族充满了阿Q，从上到下，从政府官员到普通老百姓都是标准的阿Q，正是在这一点上我来解释鲁迅先生的吃人两个字，吃人就把每一代人应有的智慧的进步吃了，没有了这种进步，中华民族的文明在今天就显然被贬低，被别人瞧不起，正是因为这样，我要写这本书。</p>
+</blockquote>
 <ol>
-<li>要选择合适的版本  </li>
-<li>用dependency walker找到mod_dav_svn.so的依赖文件把它放到同一个目录中</li>
+<li><a target="_blank" rel="noopener" href="http://library.crtvu.edu.cn/sfw/ReadNews.asp?NewsID=3612">http://library.crtvu.edu.cn/sfw/ReadNews.asp?NewsID=3612</a></li>
 </ol>
 
       
@@ -502,7 +282,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/14/try-octopress/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/10/28/a-week/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -516,7 +296,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/14/try-octopress/" class="post-title-link" itemprop="url">试用octopress</a>
+            <a href="/2012/10/28/a-week/" class="post-title-link" itemprop="url">又一周</a>
         </h2>
 
         <div class="post-meta">
@@ -525,28 +305,13 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2012-08-14 16:39:00" itemprop="dateCreated datePublished" datetime="2012-08-14T16:39:00+08:00">2012-08-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:42:32" itemprop="dateModified" datetime="2014-04-01T13:42:32+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
-                </span>
+              <time title="创建时间：2012-10-28 19:38:00 / 修改时间：05:46:56" itemprop="dateCreated datePublished" datetime="2012-10-28T19:38:00+08:00">2012-10-28</time>
             </span>
 
           
-            <span id="/2012/08/14/try-octopress/" class="post-meta-item leancloud_visitors" data-flag-title="试用octopress" title="阅读次数">
+            <span id="/2012/10/28/a-week/" class="post-meta-item leancloud_visitors" data-flag-title="又一周" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -561,8 +326,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/14/try-octopress/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/14/try-octopress/" itemprop="commentCount"></span>
+    <a title="valine" href="/2012/10/28/a-week/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/10/28/a-week/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -572,7 +337,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>537</span>
+              <span>301</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -591,16 +356,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前提：已经安装好了ruby</p>
-<p>下载octopress：<br>git clone git:&#x2F;&#x2F;github.com&#x2F;imathis&#x2F;octopress.git octopress</p>
-<p>安装依赖：<br>gem install bundler<br>bundle install</p>
-<p>安装Octopress：<br>rake install</p>
-<p>修改文件_config.yml ，主要是头上的一些博客参数，同时把该文件的编码改成utf的格式</p>
-<p>在使用octopress发布博客前，还需要进行配置，先执行：<br>set LANG&#x3D;zh_CN.UTF-8<br>set LC_ALL&#x3D;zh_CN.UTF-8</p>
-<p>再执行：<br>rake setup_github_pages</p>
-<p>这里碰到了一点问题，就是出现“hellip不是合法的内部命令或批处理”，查看rakefile，只要把里面的“&amp;hellip”字符删掉，网上查了一下大概这个符号是用来表达省略号的</p>
-<p>一切设置好了以后就可以</p>
-<p>rake new_post[“文章标题”]（这里如果出错的话，还是要set LANG&#x3D;zh_CN.UTF-8；set LC_ALL&#x3D;zh_CN.UTF-8先）<br>rake generate<br>rake deploy</p>
+          <p>又过去了一周，非常没状态，当然也有打击。<br>上周从教学信息员那里得到反馈，同学认为在我的课程里压力太大了，原因是这个学期对一些验证性实验的成绩打分跟做实验的快慢挂钩了，这样大家就压力太大了。实际上我的课程压力大还有一个他们没说出来的，那就是我不定时的会在课前做一些小测试，看看他们对前面的知识的掌握程度，这个才是对他们压力大的东西吧。实验课的成绩我实际上没怎么区分。那好吧，算我失败了，我也用不着这么辛苦去考虑怎么教了，现在的学生实际上比我们想得到的还要实际。<br>昨天刚想闭关一段时间，结果不小心喝酒出状况了，这一整天没好过。晕起来的时候真想找块石头来撞撞。医生说了，以后不要喝酒了。<br>明天开始要找个地方清净一下</p>
 
       
     </div>
@@ -620,7 +376,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/08/14/tai-wan/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/10/16/motocycles-disappearing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -634,7 +390,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2012/08/14/tai-wan/" class="post-title-link" itemprop="url">台湾行</a>
+            <a href="/2012/10/16/motocycles-disappearing/" class="post-title-link" itemprop="url">我的摩托车正在消失</a>
         </h2>
 
         <div class="post-meta">
@@ -643,28 +399,13 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2012-08-14 09:39:00" itemprop="dateCreated datePublished" datetime="2012-08-14T09:39:00+08:00">2012-08-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:43:54" itemprop="dateModified" datetime="2014-04-01T13:43:54+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
-                </span>
+              <time title="创建时间：2012-10-16 19:42:00 / 修改时间：06:06:58" itemprop="dateCreated datePublished" datetime="2012-10-16T19:42:00+08:00">2012-10-16</time>
             </span>
 
           
-            <span id="/2012/08/14/tai-wan/" class="post-meta-item leancloud_visitors" data-flag-title="台湾行" title="阅读次数">
+            <span id="/2012/10/16/motocycles-disappearing/" class="post-meta-item leancloud_visitors" data-flag-title="我的摩托车正在消失" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -679,8 +420,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2012/08/14/tai-wan/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2012/08/14/tai-wan/" itemprop="commentCount"></span>
+    <a title="valine" href="/2012/10/16/motocycles-disappearing/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/10/16/motocycles-disappearing/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -690,14 +431,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>472</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -709,18 +450,295 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>带着一种对台湾的神秘感去了趟台湾，8天的行程绕台湾岛转了一圈。白天景点，晚上一般先去逛逛当地的商店，回来后看电视上的节目，一般是奥运节目或者当地的新闻与时评类节目，如果看电视剧，看到的都是怀旧类的。8天行程除了由于台风没去成阿里山，其他的该去的都去了，整个行程还是蛮轻松的，团里甚至有人觉得可以压缩到4天左右，当然考虑到台湾的面积可能也差不多，不过我还是喜欢这么轻松地走。</p>
-<p>第一天下飞机还早就去了野柳风景区，可惜风雨实在太大了，大家看了一下只能撤，接着去九份，那个高山上蛮小的、但也有点味道的老街，那里还有个求婚的圣地。风雨越来越大，回来我们住进了台北的福荣大酒店，晚上就看各地的新闻，担心台风影响我们的行程。</p>
-<p>第二天由于台风的影响，一些景点去不了，就去了101，诚品书局，中午吃了牛肉面，诚品书局下面的豆花不错。一路上看到洪水没过的地方，有些地方只露出了路灯，杆子不见了，一些地方只看到了树顶，才知道浩浩荡荡的洪水涌到了大街上。之后去苗栗住宿了，这一个晚上大家都没出去，因为还有风雨。</p>
-<p>第三天早上先去中台禅寺，午饭后去日月潭，中台禅寺倒是金碧辉煌，日月潭却没有想象的那么好，因为实在看不出哪里是日潭，哪里是月潭，这里有个卖茶叶蛋的据说中央台都报道过，所以大家都吃了两个，10台币一个，上一次吃茶叶蛋大概10多年前了吧。这里有宋美龄香烟买，可惜警示标志太过触目，最终没买。午餐在一个原住民文化村中用餐，末了还有牛樟菌、沉香等土特产的展示，想想泰国的蛇药，最终也没买。之后去嘉义住宿了，这个晚上很多人出去了。</p>
-<p>第四天接到通知说阿里山上不去了，因为前一天晚间10点左右那里的道路塌方了。所以改成去台南了，但是据说还是要路过阿里山脚下的茶叶店，大家去买高山茶。说实话，没福建的铁观音好喝，当然价格也比不上。下午在台南看了亿载金城与郑成功的皇城，然后驱车去高雄，高雄的六合夜市游客真多，真的是摩肩接踵，导游把我们带到夜市我们就自由活动了，去边上的三多商圈逛逛，然后再来夜市吃夜宵，中间还乘坐了高雄的捷运。搞笑的是导游还煞有介事地像我们介绍一些他认为好的夜宵摊，当然是悄悄地暗示，不过最后我们发现所有他指点过的地方都有马英九的签名照片。10点多点回酒店乘捷运，发现一个车厢就我们几个人，怪不得都说高雄的捷运是亏本的。六合夜市的捷运站是美丽岛站，离我们住的中正大酒店2站，高雄的这家酒店是这次行程中最差的一个了。</p>
-<p>第五天先游览大狗英国领事馆，据说高雄本地原住民称他们住的地方为“taka”，在闽南语中就是打狗的意思，所以高雄港原来被叫做打狗港，后来日本人统治期间变成了高雄。中山大学就在领事馆边上，没进去，不过应该蛮漂亮的，校园就在海边，海水也挺干净的。中饭前去了珠宝店，饭后去了猫鼻头，体味了一下惊涛拍岸的雄壮。晚上住垦丁，据说海角7号就在这里拍的。垦丁的本地人应该还是比较保守吧，晚上逛的时候感觉到的。</p>
-<p>第六天去台东，参观珊瑚博物馆，然后去花莲，这段路蛮长的，中间看了一部台湾版的阿凡达——《赛德克·巴莱》，山路崎岖后面的人有吐了。沿途经过了水往上流，大家水平比较高都马上猜出了原因，接着的北回归线牌大家都不要下去了，最后来到了太鲁阁国家风景区，风景没什么留下印象，但是司机大哥的车技见识了一下，在一天路宽只比我们的车宽不了多少的地方，司机大哥利索地掉头，我们坐在后面的几乎看到车要掉下悬崖了，司机大哥还是那么淡定，加油门踩刹车，该怎么还是怎么。晚上住花莲，这个酒店是这次行程最好的了，花莲是个旅游开发的比较好的地方。</p>
-<p>第七天早上先去花岗石加工中心，这里主要是卖玉石的，然后乘火车去宜兰，感受了一下台湾的火车，蛮不错的。宜兰下车就直接去台北，所以大家有点纳闷，为什么不直接火车到台北呢，不过没人问。这次台北看了下士林官邸，台北故宫，还走了些手信店与免税店，饭后去西门町，所谓西门町都是些小孩子在那里，年纪大点的游客都没进去。晚上回到第一天的福荣酒店就住。</p>
-<p>第八天由于台风影响我们的航班取消了，但是还是把我们带到了机场，然后就在那里等所有可能的飞机，中间也有点小插曲，最后6点半的飞机总算把我们送回大陆，宁波下的飞机，宁波中青旅的车把我们送回金华，到的时候已经半夜了。</p>
-<p>说实在，风景是没有留下什么深刻的印象，不过台湾人，至少我们接触的服务行业的确实非常礼貌，非常有修养。台湾禁烟也很成功，可惜大陆游客抹黑了。有时候我想如果在每个地方写上一条“公共场所吸烟等于随地大小便”，看看抽烟的人会不会少点。</p>
-<p>台湾机场的东西很便宜，对比国内的机场我觉得太好了，导游说这是斗争的结果。实际上看台湾的那些电视节目也有这种感觉，实际上也算一种鞭策吧。文明人应该知道知错就改。</p>
-<p>下次如果去台湾最好自由行吧，据说台湾的民宿又便宜又好。这次去台湾实际上对台湾还是没有消除我的神秘感，因为还是远离他们大多数人的生活的。</p>
+          <p>很奇怪的一种念头<br>大概2006年那时候大家觉得买汽车还有点远，于是很多人买了摩托车，在那股风中我也买了一辆。但是实际上6年多过去了，我的车才刚刚过了1w公里，平均下来每年1500公里。特别是最近两年在杭州读书，一年开不了多少公里，所以放在那里的车就开始出毛病了，如电瓶坏了，后来化油器也脏了，总之各种不灵。<br>这个学期在金华的时间多了，所以有时候会拿这两摩托车折腾，上星期就骑着去实验室，去的时候非常好，等我过了几个钟头从实验室出来的时候发现发动不起来了，也很常见的。我干脆就扔在那里，自己走回来了。<br>中间各种忙，至少一个星期没去东它了，昨天晚上路过它的时候去看了一下，发现钥匙孔没了，有人撬了它，但是也没开走，估计也是开不走吧。我反正也不想骑了，还是扔在那里。今天专门去看了一下，前轮没气了，前面的线被拆了下来了，边上有一个东西也被撬掉，总之已经破坏得很厉害了。我怀疑是不是昨天又有人来折腾过它了<br>车有没有被偷我实际上已经不感兴趣了，偷走了也无所谓，就是出事情不要来找我，所以想办法把车牌什么去拆掉吧，如果有可能车辆报废也可以，本身这就是鸡肋     </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/10/07/mountain-hiking/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2012/10/07/mountain-hiking/" class="post-title-link" itemprop="url">爬山</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2012-10-07 21:25:00 / 修改时间：07:39:58" itemprop="dateCreated datePublished" datetime="2012-10-07T21:25:00+08:00">2012-10-07</time>
+            </span>
+
+          
+            <span id="/2012/10/07/mountain-hiking/" class="post-meta-item leancloud_visitors" data-flag-title="爬山" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2012/10/07/mountain-hiking/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/10/07/mountain-hiking/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>407</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天木木刚回来就跟我说，爸爸下午去爬山吧，好久没去爬山了。<br>上次爬山大概有一年了吧，想想自己也不能整天趴在书桌前就同意了，结果吃完中饭他就要出去，虽然感觉有点乏，想想还是跟他一起出去了。<br>爬山的人比预想的少，所以我就说今天人不多啊。结果木木马上就接下去，我早就知道了，今天天气热，女孩子爱漂亮都不喜欢在这样的天气里出来的。旁边的女生听见了笑起来了。<br>小家伙爬山倒是快了，不过嘴巴一直没闲着，要么问这问那，要么不时哇哇地发出感叹，我在想真是年轻精神好啊。我就不紧不慢地走着，然后顺便回答一下他的问题。<br>一开始它是对那些有水流过造成的石阶感兴趣，后来没有了他就对供人休息的石凳感兴趣，后来我手贱，弄了个橡子给他做陀螺，结果他马上感兴趣了，记得上次我也给他做过一个，没这么感兴趣。想想最近电视里面的那个陀螺影响他了吧，结果一路上去看到栎树就要摘橡子。本来一个小时的预算，最后回来看看足足花了2个小时，基本上都花在摘橡子上了。  </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/10/04/holiday/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2012/10/04/holiday/" class="post-title-link" itemprop="url">假期过半</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2012-10-04 22:04:00 / 修改时间：08:56:24" itemprop="dateCreated datePublished" datetime="2012-10-04T22:04:00+08:00">2012-10-04</time>
+            </span>
+
+          
+            <span id="/2012/10/04/holiday/" class="post-meta-item leancloud_visitors" data-flag-title="假期过半" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2012/10/04/holiday/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/10/04/holiday/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>185</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>假期过半，又要投入工作中了。盘点一下这几天，第一天休息，第二天做了点准备工作，基本上休息状态。第三天去温州喝喜酒，然后去父母家，这一天日行千里有余。第四天上午休息，下午陪老婆拜访了一个同学，原来也还熟的，在凤凰山乐园里完了一下午，比较放松，大人小孩感觉都比较高兴，晚上还喝了点酒，司机就让老婆当了。第五天上午驱车回家，下午休息，晚上聚会。接下去几天行程都取消了，收收心。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2012/10/01/national-day/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2012/10/01/national-day/" class="post-title-link" itemprop="url">国庆节</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2012-10-01 11:17:00" itemprop="dateCreated datePublished" datetime="2012-10-01T11:17:00+08:00">2012-10-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2012-09-30 21:24:44" itemprop="dateModified" datetime="2012-09-30T21:24:44+08:00">2012-09-30</time>
+              </span>
+
+          
+            <span id="/2012/10/01/national-day/" class="post-meta-item leancloud_visitors" data-flag-title="国庆节" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2012/10/01/national-day/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2012/10/01/national-day/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>127</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今年的国庆节很堵，主要是高速。<br>昨晚又晚睡了，但是睡得很舒坦。<br>明天去温州喝喜酒，王朝大酒店，也算故地重游了。<br>家里两面小国旗，小木木前天去猜灯谜带回来的。<br>天气真好，城里的道路真空。<br>虽然电脑里的老歌却怎么也找不回当年的感觉，但是我不走远，希望能够留住心里的坚持</p>
 
       
     </div>
@@ -739,7 +757,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/31/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span>
+    <a class="extend prev" rel="prev" href="/page/31/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/33/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -807,7 +825,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">191</span>
+          <span class="site-state-item-count">208</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -864,12 +882,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">266k</span>
+    <span title="站点总字数">388k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:23</span>
+    <span title="站点阅读时长">10:47</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>

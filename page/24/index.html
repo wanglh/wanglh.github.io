@@ -167,7 +167,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/27/about-mvc/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/06/teacher-entertainment/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -181,232 +181,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/03/27/about-mvc/" class="post-title-link" itemprop="url">关于mvc的一些事情</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-03-27 14:51:00" itemprop="dateCreated datePublished" datetime="2014-03-27T14:51:00+08:00">2014-03-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:12:12" itemprop="dateModified" datetime="2014-04-01T13:12:12+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/03/27/about-mvc/" class="post-meta-item leancloud_visitors" data-flag-title="关于mvc的一些事情" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/27/about-mvc/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/27/about-mvc/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>881</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>MVC推出来的时候，是我上次准备离开开发的时候，当时觉得是个新鲜的东西，但是也就没学习动力了。<br>现在要讲课，心想总要教点与时俱进的东西，因为MVC已经发展到5了，能够这么发展的东西不管如何总有其存在的道理。尽管我现在懂的东西，对付一两门课也绰绰有余。</p>
-<p>先来看看什么是MVC。MVC是一种软件架构模式，它把软件系统分为三个部分：模型（Model），视图（View）和控制器（Controller）。模型（Model） 用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。视图（View） 能够实现数据有目的的显示。在视图中一般没有程序上的逻辑。为了实现视图上的刷新功能，视图需要访问它监视的数据模型（Model），因此应该事先在被它监视的数据那里注册。控制器（Controller）起到不同层面间的组织作用，用于控制应用程序的流程。它处理事件并作出响应。“事件”包括用户的行为和数据模型上的改变。</p>
-<p>总之，MVC的初衷就是为了解耦，让程序中的执行逻辑与显示逻辑分开，对网站来说这样的好处是显而易见的，首先页面设计与功能开发可以相互独立，这就方便了网站的开发与维护；其次，页面与功能的独立，有利于对功能的测试，这为前两年热门的测试驱动的开发提供了方便。此外，MVC也让程序员能够对网页的执行有充分的掌控，相比web form的页面生命周期，MVC让程序员觉得可以无拘无束地控制网页的执行。</p>
-<p>当然，与web form相比，MVC开发的效率会降低，这一方面是MVC会涉及到多个文件的编写，如果没有养成良好的编程习惯，会比较痛苦，另一方面MVC程序的重用率也没有web form高。因为从编程模型来看，web form面向对象的方式可以做更多的封装，而MVC的重用只能通过修改以前的代码了。</p>
-<p>所以总的来说，MVC与web form没有谁更好的说法，只能说谁最适合。MVC是比较适合做一些比较轻量的应用，复杂度不高，这样MVC是比较有优势的。web form从某种意义上是它的补充，这可以从MVC5出来后，vs2013中MVC、web form与web api混合着用可见一斑。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/18/overturn-of-technology/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/18/overturn-of-technology/" class="post-title-link" itemprop="url">逆袭的技术</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2014-03-18 11:19:00" itemprop="dateCreated datePublished" datetime="2014-03-18T11:19:00+08:00">2014-03-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:54:02" itemprop="dateModified" datetime="2014-04-01T13:54:02+08:00">2014-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2014/03/18/overturn-of-technology/" class="post-meta-item leancloud_visitors" data-flag-title="逆袭的技术" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2014/03/18/overturn-of-technology/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/18/overturn-of-technology/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>684</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在文字诞生之后的若干个世纪，由于书写技术的落后，口语文化一度得以复兴。在欧洲，罗马帝国衰亡以后，日耳曼部落相互攻伐，建立彼此的王国，并且政权时常更替，这种混乱多变的政治局面，使原先罗马人在欧洲建立的基于书面文化的政权形式难以为继，取而代之的是更古老的基于日耳曼部落口语传统的政权形式。这样的一种政治变迁产生了一个戏剧性的效果，由于读书写字的外部动力失去，一般人的文化水平戏剧性地降低，学术活动停滞不前，史学家称这个时期为黑暗时代。</p>
-<p>但是从后世来看，黑暗时代名不副实。中世纪除了书本学习刷退了以外，在机械与农业等方面得到了大步前进。中世纪的冶金术得到了改良，农业中发明了重型犁。普通人民的生活水平稳步提高。即使在文化方面，也有加洛林王朝的短暂复兴。</p>
-<p>从另外的角度考虑，中世纪的黑暗也是对文字技术的某种修正。我们知道文字的诞生对人类产生了积极的意义，这种积极意义即使在今天也不可否认。文字作为人类思维外化的工具实际上也存在抑制人的想象力，同时其对理性抽象能力的依赖，实际上造成了心物两分，对严密逻辑的执着追求与对经验技术的鄙视实际上抑制了近代科学的发展。而中世纪政局不稳、经济萧条的局面，导致了文本学习的凋敝与实用技艺的兴起，从而使西方学术走向了兼收并蓄之路。他们在希腊、罗马技术的基础上引入了伊斯兰世界与中国的技术，从而产生了重大的技术突破，在这样的背景下，当西欧人在回归希腊学问时，不再将实用技艺与学术活动分隔开来。这样希腊的严密逻辑、阿拉伯人的数学成就、中世纪的机械工程最终诞生了伽利略、托里彻利等科学巨匠。</p>
-<p>因此，可以这么说，没有这个黑暗的中世纪，就没有欧美的先进科学。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/14/grandfather/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Levi Wang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="之间居">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2014/03/14/grandfather/" class="post-title-link" itemprop="url">外祖父</a>
+            <a href="/2014/05/06/teacher-entertainment/" class="post-title-link" itemprop="url">娱乐教师与教师的娱乐</a>
         </h2>
 
         <div class="post-meta">
@@ -417,11 +192,20 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2014-03-14 17:05:00 / 修改时间：17:06:32" itemprop="dateCreated datePublished" datetime="2014-03-14T17:05:00+08:00">2014-03-14</time>
+              <time title="创建时间：2014-05-06 16:06:55 / 修改时间：16:18:04" itemprop="dateCreated datePublished" datetime="2014-05-06T16:06:55+08:00">2014-05-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
+                </span>
             </span>
 
           
-            <span id="/2014/03/14/grandfather/" class="post-meta-item leancloud_visitors" data-flag-title="外祖父" title="阅读次数">
+            <span id="/2014/05/06/teacher-entertainment/" class="post-meta-item leancloud_visitors" data-flag-title="娱乐教师与教师的娱乐" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -436,8 +220,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/03/14/grandfather/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/14/grandfather/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/05/06/teacher-entertainment/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/06/teacher-entertainment/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -447,7 +231,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>891</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -466,7 +250,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p><em>本文来自网络，希望教师能够过得好点。</em></p>
+<p>一个教师去世后，和上帝喝茶。</p>
+<p>上帝问：“教师职业，很轻松，你还没有到退休年龄，怎么就死了？”</p>
+<p>教师好像遇到了知音，激动地说：“我亲爱的上帝，你知道教师有N种死法吗？”</p>
+<p>“说来听听。”</p>
+<blockquote>
+<p>绩效工资骗死你；别人奖金吓死你；两基验收累死你；</p>
+<p>各种捐款捐死你；职称评定等死你；政治任务压死你；</p>
+<p>调皮学生气死你；野蛮家长打死你；房子车子想死你；</p>
+<p>造假资料抄死你；竞聘上岗玩死你；检查教案赶死你； </p>
+<p>教育改革累死你；假期培训忙死你；不涨工资穷死你；</p>
+<p>调动工作卡死你；光辉职业哄死你；一生操劳病死你。</p>
+</blockquote>
+<p>上帝认为他太能说了，改变不了职业习惯，每天会这样絮絮叨叨的，会打扰天堂的幽静，于是就把他打入了地狱。 </p>
+<p>刚过了一个星期，阎王就满头大汗找上门来说：“上帝呀，赶紧把他弄走吧”。 </p>
+<p>上帝问：“怎么回事？”</p>
+<p>阎王说：“地狱的小鬼们都被他激活了，天天写教案，填表格，搞教研，交论文，谈教育创新，科教兴冥，他还要我去做学科建设，名师工程，班主任培训，学生导师，兼职辅导员，绩效考核，师德建设，青年教师导师，家长学校校长，让所有人满意。” </p>
+<p>上帝大怒：“让他上天堂，看我怎么收拾他”。</p>
+<p>一个月后，阎王遇见上帝，问：“亲爱的上帝，那个喋喋不休的老师被您收拾得怎么样了？ ”</p>
+<p>上帝停住脚步，回答说：“你这样同我说话，犯了三个错误，第一，你应该先导入，回顾上次我们的谈话概要，再开始今天的谈话！第二，这个世界根本就没有上帝，只有学生才是上帝！第三，我没有时间和你闲扯蛋，我还有一节公开课、两个课题、一份中考模拟卷没完成呢。最后，我再警告你，和我谈话的时候，必须有教案！ ”</p>
+<p>阎王目瞪口呆之时，上帝的秘书弱弱地提醒说：“刚才还漏了一点，还要开发选修课程。” </p>
+<p>最后上帝对阎王说：把我这篇关于教师职业论文传达给每一个小鬼：</p>
+<blockquote>
+<p>《教师是个好行业》</p>
+<p>虽然下班晚，但是上班早啊！</p>
+<p>虽然不起眼，但是责任大啊！ </p>
+<p>虽然奖金少，但是扣得多啊！</p>
+<p>虽然人员少，但是任务多啊！</p>
+<p>虽然福利薄，但是制度厚啊！</p>
+<p>找工作就应该找这样的：</p>
+<p>赚着屈指可数的工资，做着关系民族兴亡的事情！</p>
+<p>拿着卖白菜的钱， 操着卖白粉的心！</p>
+<p>工作是高端大气上档次， 工资是低调奢华有内涵！</p>
+</blockquote>
+
       
     </div>
 
@@ -485,7 +303,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/03/14/intention-of-technology/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/05/05/cheer-brother/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -499,7 +317,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/03/14/intention-of-technology/" class="post-title-link" itemprop="url">技术的意向</a>
+            <a href="/2014/05/05/cheer-brother/" class="post-title-link" itemprop="url">兄弟，加油！</a>
         </h2>
 
         <div class="post-meta">
@@ -509,14 +327,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-03-14 16:37:00" itemprop="dateCreated datePublished" datetime="2014-03-14T16:37:00+08:00">2014-03-14</time>
+              <time title="创建时间：2014-05-05 21:14:08" itemprop="dateCreated datePublished" datetime="2014-05-05T21:14:08+08:00">2014-05-05</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:22:48" itemprop="dateModified" datetime="2014-04-01T13:22:48+08:00">2014-04-01</time>
+                <time title="修改时间：2015-02-01 17:51:40" itemprop="dateModified" datetime="2015-02-01T17:51:40+08:00">2015-02-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -524,12 +342,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%90%86%E8%AE%BA%E7%A0%94%E7%A9%B6/" itemprop="url" rel="index"><span itemprop="name">理论研究</span></a>
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
                 </span>
             </span>
 
           
-            <span id="/2014/03/14/intention-of-technology/" class="post-meta-item leancloud_visitors" data-flag-title="技术的意向" title="阅读次数">
+            <span id="/2014/05/05/cheer-brother/" class="post-meta-item leancloud_visitors" data-flag-title="兄弟，加油！" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -544,8 +362,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/03/14/intention-of-technology/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/03/14/intention-of-technology/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/05/05/cheer-brother/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/05/05/cheer-brother/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -555,7 +373,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>214</span>
+              <span>80</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -574,16 +392,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>狐狸在葡萄树下，看着那一串串成熟的葡萄说，那是酸的</p>
-<p>人类拿了把梯子摘了颗葡萄尝了尝说，你骗人</p>
-<p>小蛇好不容易来到了北极，冻僵之前骂了句，这操蛋的冷</p>
-<p>一对小情侣来到了南极，看着一片冰雪美景说，我们结婚吧</p>
-<p>以前的人说，月亮很冷的，不过里面住着个美女</p>
-<p>老美派了个I’m strong的型男上去，一个鸟不拉屎的地方嘛</p>
-<p>以前的人一到夏天就幸福地吃起了西红柿</p>
-<p>现在的人一边吃着西红柿，一边迷茫地说现在是什么季节啊</p>
-<p>技术没什么了不起</p>
-<p>它只不过改变了我们的想法而已</p>
+          <p>今天是兄弟到新岗位的第一天，给他打了个电话问问第一天的情况。虽然从来没做过，但是他觉得没什么问题。好好干吧！你适合这活！做个快乐的平凡人，这个是我们全家的心愿。</p>
 
       
     </div>
@@ -603,7 +412,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/02/22/mumu-say/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/29/the-disappear-text/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -617,7 +426,110 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/02/22/mumu-say/" class="post-title-link" itemprop="url">木木说</a>
+            <a href="/2014/04/29/the-disappear-text/" class="post-title-link" itemprop="url">消失的文字</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2014-04-29 06:06:31 / 修改时间：06:10:02" itemprop="dateCreated datePublished" datetime="2014-04-29T06:06:31+08:00">2014-04-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E4%BE%BF%E8%AF%B4%E8%AF%B4/" itemprop="url" rel="index"><span itemprop="name">随便说说</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/29/the-disappear-text/" class="post-meta-item leancloud_visitors" data-flag-title="消失的文字" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/29/the-disappear-text/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/29/the-disappear-text/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>106</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>早上起来码字，发现昨天下午又1个小时左右时间的工作白费了。修改的文件最终显示修改时间为16:09，我明明记得16:57分合上的电脑。<br>有没有可能是Intel Rapid Start Technology技术的问题。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/26/svnmanager-installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/26/svnmanager-installation/" class="post-title-link" itemprop="url">windows下svnmanager1.10的安装</a>
         </h2>
 
         <div class="post-meta">
@@ -627,7 +539,119 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-02-22 14:21:00" itemprop="dateCreated datePublished" datetime="2014-02-22T14:21:00+08:00">2014-02-22</time>
+              <time title="创建时间：2014-04-26 16:05:26" itemprop="dateCreated datePublished" datetime="2014-04-26T16:05:26+08:00">2014-04-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2015-02-01 17:51:10" itemprop="dateModified" datetime="2015-02-01T17:51:10+08:00">2015-02-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2014/04/26/svnmanager-installation/" class="post-meta-item leancloud_visitors" data-flag-title="windows下svnmanager1.10的安装" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2014/04/26/svnmanager-installation/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/26/svnmanager-installation/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>924</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>以前都是在ubuntu下安装svnmanager，很多问题都没出现，这次新机器来了后安装了一次，发现问题还蛮多的。</p>
+<p>第一个问题就是创建svn库的问题，在页面上创建了，数据库里也有了，但是硬盘上就是没有相应的目录，svnmanager也不报错。看了看apache的错误日志有“’LANG’ 不是内部或外部命令，也不是可运行的程序或批处理文件”字样，一开始以为是我的配置问题，找了好久，包括命令行的路径什么的。是在没辙，只能去看程序，php没用过，但能看的大概，当然问题也找到了。在datamodule.php这个文件中，<code>$ret = exec(&quot;LANG=&quot;.$lang.&quot;;$svnadmin_cmd --config-dir $svn_config_dir create $a_dir&quot;);</code>，这句话非常可疑，因为这里刚好也是执行一个Lang开头的命令行，而且根据我对svnadmin创建svn库的了解，实际上用svnadmin create [目录名]就行了，把这句改成<code>$ret = exec(&quot;svnadmin create $a_dir&quot;);</code>，问题解决了。（LANG命令在linux系统中是设置当前默认的语言，windows下没用，所以在该文件中还存在另两个类似的命令也要改掉，只要把<code>LANG=&quot;.$lang.&quot;;</code>去掉就行了）</p>
+<p>第二个问题是删除svn库的时候，物理目录已经删除了，但是报错，然后数据库中还保存相应的信息，要进行第二次删除。其实问题跟第二次类似。<code>$ret = exec(&quot;move /y $arg_repo_path $arg_trash_path&quot;);</code>，这句话根据作者的理解如果执行正常的话是没有返回值的，但是不同的系统这个返回值是不一样的。所以只能把它后面的一个判断删除，问题也解决了。</p>
+<p>最后别忘了安装<a target="_blank" rel="noopener" href="http://pear.php.net/package/PEAR/download">pear</a>与<a target="_blank" rel="noopener" href="http://pear.php.net/package/VersionControl_SVN/download">VersionControl_SVN</a>，这个是操作subversion的关键，但是这里的安装，如果仅仅是给svnmanager用的话也不用弄得很复杂，只要把这两个下载来的包，解压到svnmanager的安装目录下就行了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/14/child-future-money/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Levi Wang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="之间居">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2014/04/14/child-future-money/" class="post-title-link" itemprop="url">孩子、未来与钱</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2014-04-14 14:07:36" itemprop="dateCreated datePublished" datetime="2014-04-14T14:07:36+08:00">2014-04-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -647,7 +671,7 @@
             </span>
 
           
-            <span id="/2014/02/22/mumu-say/" class="post-meta-item leancloud_visitors" data-flag-title="木木说" title="阅读次数">
+            <span id="/2014/04/14/child-future-money/" class="post-meta-item leancloud_visitors" data-flag-title="孩子、未来与钱" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -662,8 +686,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/02/22/mumu-say/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/02/22/mumu-say/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/04/14/child-future-money/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/14/child-future-money/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -673,7 +697,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>159</span>
+              <span>324</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -692,9 +716,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>早上还躺在床上，母子俩在那里讲什么我没注意到，大概是叫木木多吃素菜吧。结果就听到木木在振振有词地说：妈妈，你知道春天主什么吗？春天主肝，所以春天要多吃荤菜，少吃素菜，吃素菜会长脂肪的。</p>
-<p>木木妈妈大笑地走出去，我还听到他在那里说：真的，我是从养生堂里看来的啦，婆婆看了里面的节目糖尿病都治好了。</p>
-<p>真是鬼话连篇，一点都不像我。</p>
+          <p>昨天睡前问了一下木木，你长大了想做什么样的人。木木说，我想做有钱人。觉得有点惊奇，因为我们这么小的时候对钱的概念是很模糊的，因为也很少有钱用，而木木平时表现出来对钱也并不是那么在乎。</p>
+<p>于是我接着问，你要钱干什么啊？有了钱我可以娶老婆，有孩子，还可以照顾他们。</p>
+<p>那你觉得女孩子会喜欢你什么才嫁给你呢？长得帅，有钱呗。</p>
+<p>那不是所有人都长得帅又有钱但是他们也有老婆、孩子啊。那是他对女孩子好吧。</p>
+<p>后面当然是作为父亲希望能够纠正小孩子的一些想法，像钱会自己掉下来吗？要学习什么之类的。但是思绪已经飘得很远了。</p>
+<p>金钱对人心的腐蚀感觉已经不可避免了，这个社会越来越变成金钱社会，金钱对人思想的禁锢也越来越厉害。小孩子从小对钱就这么敏感，不知道是适应的需要还是沉沦的结果。</p>
 
       
     </div>
@@ -714,7 +741,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/02/16/digital-citizen-textbook/">
+    <link itemprop="mainEntityOfPage" href="http://www.wanglianghui.cn/2014/04/12/codefirst-migration/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -728,7 +755,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2014/02/16/digital-citizen-textbook/" class="post-title-link" itemprop="url">数字公民教育教材</a>
+            <a href="/2014/04/12/codefirst-migration/" class="post-title-link" itemprop="url">codefirst中的数据迁移</a>
         </h2>
 
         <div class="post-meta">
@@ -738,14 +765,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2014-02-16 06:28:00" itemprop="dateCreated datePublished" datetime="2014-02-16T06:28:00+08:00">2014-02-16</time>
+              <time title="创建时间：2014-04-12 06:56:28" itemprop="dateCreated datePublished" datetime="2014-04-12T06:56:28+08:00">2014-04-12</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2014-04-01 13:17:28" itemprop="dateModified" datetime="2014-04-01T13:17:28+08:00">2014-04-01</time>
+                <time title="修改时间：2014-04-15 19:37:38" itemprop="dateModified" datetime="2014-04-15T19:37:38+08:00">2014-04-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -753,12 +780,12 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5%E6%8E%A2%E7%B4%A2/" itemprop="url" rel="index"><span itemprop="name">实践探索</span></a>
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">技术学习</span></a>
                 </span>
             </span>
 
           
-            <span id="/2014/02/16/digital-citizen-textbook/" class="post-meta-item leancloud_visitors" data-flag-title="数字公民教育教材" title="阅读次数">
+            <span id="/2014/04/12/codefirst-migration/" class="post-meta-item leancloud_visitors" data-flag-title="codefirst中的数据迁移" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -773,8 +800,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2014/02/16/digital-citizen-textbook/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2014/02/16/digital-citizen-textbook/" itemprop="commentCount"></span>
+    <a title="valine" href="/2014/04/12/codefirst-migration/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2014/04/12/codefirst-migration/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -784,14 +811,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.9k</span>
+              <span>400</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>1 分钟</span>
             </span>
 
         </div>
@@ -803,799 +830,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>最近需要策划一套《数字公民教育》教材，国内似乎还没有同题教材，所以很有挑战性。</p>
-<p><strong>难点</strong>：</p>
-<p>1.国外公民教育体系的甄别与借鉴。国外的数字公民教育起步比较早，因而已经积累了比较多的数字公民教育资料，但是存在的问题就是系统性不是很强，同时有很多内容也不适合中国国情。因此，如何借鉴这些成果并生成符合我国国情的教学内容是首要任务；</p>
-<p>2.与现有教育内容的区别与联系。数字公民教育与现有的信息技术课程，与说得比较多的信息素养、媒介教育等的区别与联系；</p>
-<p>3.教法问题。数字公民教育不能止于纸上谈兵，那么该如何实施？</p>
-<p><strong>现有资料</strong>：<br>数字公民网里的reps是一个比较好的框架，iste里的学生标准也可以参考，当然21世纪技能的参考性也很强。</p>
-<p><strong>工作方法</strong>：</p>
-<p>首先，通过发散性的方法，列出数字公民素养教育有可能包含的所有内容；</p>
-<p>其次，把上一步的结果进行重新归纳，这一步可以参考现有的框架；</p>
-<p>再次，用框架作为基点把所有想到的内容重新归类，同时补充新的材料；</p>
-<p>最后，列出一个多级列表，并初步考虑了适用年级。</p>
-<p>一个<strong>初步的结果</strong>：</p>
-<div align="center">
-<table style="width: 822px; height: 2321px;" border="1" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td width="90">
-<h1 align="center"><strong>课程</strong></h1>
-<h1 align="center"><strong>模块</strong></h1>
-</td>
-<td width="142">
-<h2 align="center"><strong>课程内容</strong></h2>
-</td>
-<td width="413">
-<h3 align="center"><strong>内容分解</strong></h3>
-</td>
-<td width="169">
-<h3 align="center"><strong>水平等级</strong></h3>
-</td>
-</tr>
-<tr>
-<td rowspan="23" width="90">
-<h1 align="center">一.交流</h1>
-</td>
-<td rowspan="3" valign="top" width="142">
-<h2>1.交流方式</h2>
-<p> </p>
-</td>
-<td valign="top" width="413">
-<h3>a.     了解人类的多种交流方式，以及如何通过这些交流方式与人正确交流</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     了解多种数字交流方式</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      通过各种交流方式与人交流</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）3（下）</h3>
-<h3>4（上）</h3>
-</td>
-</tr>
-<tr>
-<td rowspan="6" valign="top" width="142">
-<h2>2.发送email</h2>
-<p> </p>
-</td>
-<td valign="top" width="413">
-<h3>a.     了解email的各个部件</h3>
-<p> </p>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     编写简单的email</h3>
-<p> </p>
-</td>
-<td valign="top" width="169">
-<p>3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      识别高效的email与低效的email交流</h3>
-<p> </p>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     编写复杂的email，包括附件等</h3>
-<p> </p>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     高级email使用，回复全部、转发等</h3>
-<p> </p>
-</td>
-<td valign="top" width="169">
-<p>5（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>f.      识别不同类别的email，不同的发送对象与发送目的</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-<p>5（上）5（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="4" valign="top" width="142">
-<h2>3.文本消息</h2>
-<p> </p>
-</td>
-<td valign="top" width="413">
-<h3>a.     认识到文本消息作为一种交流方式</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     对不同的交流对象的正确编写文本消息</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-<p>5（上）5（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      认识到文本消息一经发送不可撤销的特点</h3>
-</td>
-<td valign="top" width="169">
-<p>3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     能通过文本消息介绍自己</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="5" valign="top" width="142">
-<h2>4.网络礼仪</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     通过网络感知他人的存在</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     知道在网络上什么该做什么不该做</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      发布别人的图片需要征得他人同意</h3>
-</td>
-<td valign="top" width="169">
-<p>3（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     对自己发布的图片与视频要能够正确描述</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）6（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     对拍视频并上传视频到网络要以不影响他人为前提</h3>
-</td>
-<td valign="top" width="169">
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="5" valign="top" width="142">
-<h2>5.网络欺凌</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     理解什么是网络欺凌</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     让学生理解网络欺凌的后果是什么</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      让学生明白遇到网络欺凌应该怎么做</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-<p>5（上）5（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     不能成为网络欺凌的看客</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）6（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     学生应该能够对网络欺凌做出评价</h3>
-</td>
-<td valign="top" width="169">
-<p>6（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="32" width="90">
-<h1>二.信息素养</h1>
-</td>
-<td rowspan="10" valign="top" width="142">
-<h2>6.搜索策略</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     给学生介绍一些恰当的网站</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     使用简单的目录列表与搜索引擎</h3>
-</td>
-<td valign="top" width="169">
-<p>3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      了解不同的网站具有不同的搜索特点</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     了解关键词概念</h3>
-</td>
-<td valign="top" width="169">
-<p>3（上）3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     通过关键词来定位信息</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>f.      通过多次关键词来逼近需要的信息</h3>
-</td>
-<td valign="top" width="169">
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>g.     使用高级搜索选项</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>h.     发展高级的搜索策略</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）</p>
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>i.       了解在线黄页、数据库与搜索引擎的区别</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>j.       使用布尔条件进行搜索</h3>
-</td>
-<td valign="top" width="169">
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="7" valign="top" width="142">
-<h2>7.评价网站</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     意识到不是所有的网站都能相信</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     讨论什么样的网站才是好网站，值得相信</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）4（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      对老师提供的不同网站进行浏览并评价</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     意识到不同网站有可能提供类似信息（可以相互印证）</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     能够识别不同的域名</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>f.      学会评价不同网站提供的类似信息</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>g.     学会用权威性、准确性、覆盖领域、网站目的、客观性与潜在访问者等方面来评价网站</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）5（下）</p>
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="4" valign="top" width="142">
-<h2>8.组织信息</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     熟悉不同的组织信息的方法</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     学会如何追踪特定网站的信息（书签，rss）</h3>
-</td>
-<td valign="top" width="169">
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      使用在线书签，并通过网络分享书签</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）5（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     在线做笔记与批注</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="11" valign="top" width="142">
-<h2>9.版权与下载</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     了解常用图片分享网站</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     知道网络知识共享的特点</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      当使用来自网上的信息的时候，要主动标记出处</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     了解知识产权的一般意义</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     能够区别下载与盗版的行为</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>f.      定义剽窃行为</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>g.     学会如何正确使用别人的创造的知识，并作规范的标注</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>h.     了解剽窃知识产权的伦理含义</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>i.       了解版权问题</h3>
-</td>
-<td valign="top" width="169">
-<p>5（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>j.       学生了解版权的不同应用情形</h3>
-</td>
-<td valign="top" width="169">
-<p>5（下）</p>
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>k.      理解并应用版权友好的协议</h3>
-</td>
-<td valign="top" width="169">
-<p>6（上）6（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="20" width="90">
-<h1 align="center">三.网络安全</h1>
-</td>
-<td rowspan="7" valign="top" width="142">
-<h2>10.一般的安全知识</h2>
-</td>
-<td valign="top" width="413">
-<h3>a.     学生需要了解如果有陌生人联系他，需要告诉家长</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     学生理解密码的功能</h3>
-</td>
-<td valign="top" width="169">
-<p>3（上）3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      学生需要了解除了家长与教师不能跟其他人分享密码，</h3>
-</td>
-<td valign="top" width="169">
-<p>3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     学生需要了解不能在网上回答关于个人信息的问题</h3>
-</td>
-<td valign="top" width="169">
-<p>3（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     理解垃圾信息</h3>
-</td>
-<td valign="top" width="169">
-<p>4（上）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>f.      学生理解色情短信的危险</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>g.     学生理解哪些信息可以在网上共享</h3>
-</td>
-<td valign="top" width="169">
-<p>4（下）</p>
-<p>5（上）5（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="2" valign="top" width="142">
-<h2>11.权力与义务</h2>
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     把使用网络技术作为一种特权来看待，其背后必然要恪守一定的义务</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（上）4（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     明白使用网络是有限制的</h3>
-</td>
-<td valign="top" width="169">
-<p>6（下）</p>
-</td>
-</tr>
-<tr>
-<td rowspan="2" valign="top" width="142">
-<h2>12.隐私与数字足迹</h2>
-</td>
-<td valign="top" width="413">
-<h3>a.     学生理解隐私的概念</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     学生理解数字足迹的作用</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（上）</h3>
-</td>
-</tr>
-<tr>
-<td rowspan="6" valign="top" width="142">
-<h2>13.网络广告</h2>
-</td>
-<td valign="top" width="413">
-<h3>a.     能够识别弹出窗口意味着广告</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     能够了解网络广告只是为了说服购买</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      能够主动忽略各种网络广告</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     能够识别网络内容的广告意图</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>e.     能够识别网络广告投递的目的性</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>  f.    能够识别更加隐蔽的广告形式</h3>
-</td>
-<td valign="top" width="169">
-<h3>6（上）6（下）</h3>
-</td>
-</tr>
-<tr>
-<td rowspan="3" valign="top" width="142">
-<h2>14.色请与暴力内容</h2>
-</td>
-<td valign="top" width="413">
-<h3>a.     学生碰到让他们不舒服的信息要立刻关闭并告诉家长</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     理解什么是合适的内容，什么是不合适的内容</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>  c.   理解色情与暴力文学的潜在危害</h3>
-</td>
-<td valign="top" width="169">
-<h3>5（上）5（下）</h3>
-</td>
-</tr>
-<tr>
-<td rowspan="4" width="90">
-<h1 align="center">四.网购</h1>
-</td>
-<td rowspan="4" valign="top" width="142">
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     理解网络购物</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     了解在线购物的优缺点</h3>
-</td>
-<td valign="top" width="169">
-<h3>5（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      成为一个精明的在线卖家</h3>
-</td>
-<td valign="top" width="169">
-<h3>6（上）6（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.   理解购物网站的条约</h3>
-</td>
-<td valign="top" width="169">
-<h3>6（上）</h3>
-</td>
-</tr>
-<tr>
-<td rowspan="5" width="90">
-<h1 align="center">五.健康</h1>
-</td>
-<td rowspan="5" valign="top" width="142">
-<h3> </h3>
-</td>
-<td valign="top" width="413">
-<h3>a.     学生要注意太长时间使用数字设备是不健康的</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>b.     调整耳机的音量以免伤害听力</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>c.      避免长时间坐在电脑前面</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（上）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>d.     意识到适当地中断技术是必须的</h3>
-</td>
-<td valign="top" width="169">
-<h3>3（下）</h3>
-</td>
-</tr>
-<tr>
-<td valign="top" width="413">
-<h3>f.    保持数字生活与现实生活的平衡</h3>
-</td>
-<td valign="top" width="169">
-<h3>4（下）</h3>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
+          <p>当我们使用codefirst的方式开发系统的时候，数据表是在代码第一次运行的时候生成的。但是有时候我们会在数据表已经生成了以后，对实体类进行修改。这也就意味着要有新的数据表来与之对应，所以在运行的时候会有异常弹出。大意是“entity framework监测到数据模型发生改变，需要进行codefirst migration”。</p>
+<p>codefirst migration的过程如下</p>
+<ol>
+<li><p>Enable-Migrations 启用迁移</p>
+</li>
+<li><p>Add-Migration 为挂起的Model变化添加迁移脚本</p>
+</li>
+<li><p>Update-Database 将挂起的迁移更新到数据库</p>
+</li>
+<li><p>Get-Migrations 获取已经应用的迁移</p>
+</li>
+</ol>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>如果你在visual studio中创建的是website，那么恭喜你，虽然能够用codefirst，但这个migration大概是用不了了，至少我没成功过。建议创建成webApplication，这个可以的。</p>
 
       
     </div>
@@ -1614,7 +861,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/23/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/25/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1682,7 +929,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">191</span>
+          <span class="site-state-item-count">208</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1739,12 +986,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">266k</span>
+    <span title="站点总字数">388k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7:23</span>
+    <span title="站点阅读时长">10:47</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
