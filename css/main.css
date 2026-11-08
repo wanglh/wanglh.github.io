@@ -1249,7 +1249,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #58edff;
+    background: #1accb9;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2728,6 +2728,10 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+.giscus {
+  max-width: unset;
+  box-sizing: border-box;
 }
 .post-body .link-grid {
   display: grid;

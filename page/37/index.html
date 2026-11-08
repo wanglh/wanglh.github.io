@@ -217,14 +217,6 @@
     </span>
 
   
-    <span id="/2012/09/13/these-days/" class="post-meta-item leancloud_visitors" data-flag-title="这些天的流水账" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -325,14 +317,6 @@
     </span>
 
   
-    <span id="/2012/09/04/bike-child/" class="post-meta-item leancloud_visitors" data-flag-title="木木与自行车" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -417,14 +401,6 @@
       <time title="创建时间：2012-09-01 16:00:00 / 修改时间：08:12:56" itemprop="dateCreated datePublished" datetime="2012-09-01T16:00:00+08:00">2012-09-01</time>
     </span>
 
-  
-    <span id="/2012/09/01/school-open/" class="post-meta-item leancloud_visitors" data-flag-title="开学了" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -526,14 +502,6 @@
     </span>
 
   
-    <span id="/2012/08/29/new-bike/" class="post-meta-item leancloud_visitors" data-flag-title="买了辆自行车" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -624,14 +592,6 @@
       <time title="修改时间：2014-04-01 13:43:18" itemprop="dateModified" datetime="2014-04-01T13:43:18+08:00">2014-04-01</time>
     </span>
 
-  
-    <span id="/2012/08/26/chinese-tag/" class="post-meta-item leancloud_visitors" data-flag-title="添加中文分类支持" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -733,14 +693,6 @@
     </span>
 
   
-    <span id="/2012/08/26/moodle-cookie/" class="post-meta-item leancloud_visitors" data-flag-title="moodle-cookie问题" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -836,17 +788,32 @@
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI","appKey":"xLCpMzWwwFK4K3UOboZVg1aK","serverURLs":"https://enfcvfdt.api.lncldglobal.com","placeholder":"来吧，说几句","avatar":"hide","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":false,"requiredFields":[],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.3/Valine.min.js","el":"#valine-comments","path":"/page/37/"}</script>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"wanglh/wanglh.github.io","repo_id":"MDEwOlJlcG9zaXRvcnk4Mzk2MjYxMQ==","category":"Announcements","category_id":"DIC_kwDOBQEq884DKsIG","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
 <script>
 document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.valine.el)
-    .then(() => NexT.utils.getScript(
-      CONFIG.valine.libUrl,
-      { condition: window.Valine }
-    ))
-    .then(() => {
-      new Valine(CONFIG.valine);
-    });
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
 });
 </script>
 

@@ -220,14 +220,6 @@
     </span>
 
   
-    <span id="/2017/12/22/%E2%80%9Coriginal-aspiration%E2%80%9D/" class="post-meta-item leancloud_visitors" data-flag-title="不忘初心，牢记使命" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -329,14 +321,6 @@
     </span>
 
   
-    <span id="/2017/09/11/net-core-mysql-code-first/" class="post-meta-item leancloud_visitors" data-flag-title=".net core环境中基于mysql的code first" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -437,14 +421,6 @@
         </span>
     </span>
 
-  
-    <span id="/2017/09/08/summary-for-summer-holiday/" class="post-meta-item leancloud_visitors" data-flag-title="暑假总结" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -548,14 +524,6 @@
     </span>
 
   
-    <span id="/2017/07/20/web-api/" class="post-meta-item leancloud_visitors" data-flag-title="web-api开发" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -656,14 +624,6 @@
         </span>
     </span>
 
-  
-    <span id="/2017/06/10/mvc-controller/" class="post-meta-item leancloud_visitors" data-flag-title="MVC之控制器" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
   
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
@@ -772,14 +732,6 @@
     </span>
 
   
-    <span id="/2017/06/01/mvc-agreement/" class="post-meta-item leancloud_visitors" data-flag-title="ASP.NET MVC的约定" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -882,17 +834,32 @@
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"EnfCvFDTog4zc1nfCuHUQw6d-MdYXbMMI","appKey":"xLCpMzWwwFK4K3UOboZVg1aK","serverURLs":"https://enfcvfdt.api.lncldglobal.com","placeholder":"来吧，说几句","avatar":"hide","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":true,"enableQQ":false,"requiredFields":[],"libUrl":"https://cdnjs.cloudflare.com/ajax/libs/valine/1.5.3/Valine.min.js","el":"#valine-comments","path":"/page/19/"}</script>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"wanglh/wanglh.github.io","repo_id":"MDEwOlJlcG9zaXRvcnk4Mzk2MjYxMQ==","category":"Announcements","category_id":"DIC_kwDOBQEq884DKsIG","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"}</script>
+
 <script>
 document.addEventListener('page:loaded', () => {
-  NexT.utils.loadComments(CONFIG.valine.el)
-    .then(() => NexT.utils.getScript(
-      CONFIG.valine.libUrl,
-      { condition: window.Valine }
-    ))
-    .then(() => {
-      new Valine(CONFIG.valine);
-    });
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
 });
 </script>
 
